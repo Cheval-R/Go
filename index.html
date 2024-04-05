@@ -35,28 +35,40 @@
 		<h3>У нас есть всё для классного отдыха с друзьями!</h3>
 		<ul>
 			<li style="padding-left: 20px;">
-				<img src="./img/vr.jpg" alt="VR-очки" height="228">
-				<p>VR очки</p>
+				<figure>
+					<img src="./img/vr.jpg" alt="VR-очки" height="228">
+					<figcaption>VR очки</figcaption>
+				</figure>
 			</li>
 			<li style="padding-left: 20px;">
-				<img src="./img/audio.jpg" alt="Диджейский пульт" height="228">
-				<p>Аудио-система 5.1 с отличным звуком</p>
+				<figure>
+					<img src="./img/audio.jpg" alt="Диджейский пульт" height="228">
+					<figcaption>Аудио-система 5.1 с отличным звуком</figcaption>
+				</figure>
 			</li>
 			<li style="padding-left: 20px;">
-				<img src="./img/micro.jpg" alt="Караоке" height="228">
-				<p>Караоке (4 микрофона)</p>
+				<figure>
+					<img src="./img/micro.jpg" alt="Караоке" height="228">
+					<figcaption>Караоке (4 микрофона)</figcaption>
+				</figure>
 			</li>
 			<li style="padding-left: 20px;">
-				<img src="./img/game.jpg" alt="Настольные игры" height="228">
-				<p>Настольные игры</p>
+				<figure>
+					<img src="./img/game.jpg" alt="Настольные игры" height="228">
+					<figcaption>Настольные игры</figcaption>
+				</figure>
 			</li>
 			<li style="padding-left: 20px">
-				<img src="./img/netflix.jpg" alt="Монитор с изображением логотипа Netflix" height="228">
-				<p>Кино сервисы Netflix, IVI, MegoGo, Кинопоиск, Okko</p>
+				<figure>
+					<img src="./img/netflix.jpg" alt="Монитор с изображением логотипа Netflix" height="228">
+					<figcaption>Кино сервисы Netflix, IVI, MegoGo, Кинопоиск, Okko</figcaption>
+				</figure>
 			</li>
 			<li style="padding-left: 20px">
-				<img src="./img/sony.jpg" alt="Приставка Sony PlayStation 4" height="228">
-				<p>PlayStation 5</p>
+				<figure>
+					<img src="./img/sony.jpg" alt="Приставка Sony PlayStation 4" height="228">
+					<figcaption>PlayStation 5</figcaption>
+				</figure>
 			</li>
 		</ul>
 	</section>
@@ -72,9 +84,13 @@
 	</section>
 
 	<section id="reserv">
-		<h3>Забронировать</h3>
+		<h3>Забронировать зал просто</h3>
 		<form action="https://jsonplaceholder.typicode.com/posts" method="post">
 			<fieldset>
+				<legend>Выбери зал</legend>
+				<!-- ? Как правильно связать несколько радиокнопок чтобы необходимо было выбрать один из пунктов? Правильно ли будет если указать только у одной кнопки атрибут required или лучше указывать на каждую? -->
+				<!-- ? Нужно ли указывать name для пунктов с возрастом и персональными данными? -->
+				<!-- ! Можно ли делать одинаковые има полей, если это разные формы? -->
 				<ul>
 					<li>
 						<label for="_80vibes">
@@ -84,19 +100,19 @@
 					</li>
 					<li>
 						<label for="starWars">
-							<input required type="radio" name="hallName" id="starWars" value="starWars">
+							<input type="radio" name="hallName" id="starWars" value="starWars">
 							<span>Star Wars</span>
 						</label>
 					</li>
 					<li>
 						<label for="wildWest">
-							<input required type="radio" name="hallName" id="wildWest" value="wildWest">
+							<input type="radio" name="hallName" id="wildWest" value="wildWest">
 							<span>Wild West</span>
 						</label>
 					</li>
 					<li>
 						<label for="neonStyle">
-							<input required type="radio" name="hallName" id="neonStyle" value="neonStyle">
+							<input type="radio" name="hallName" id="neonStyle" value="neonStyle">
 							<span>Neon Style</span>
 						</label>
 					</li>
@@ -182,58 +198,61 @@
 			</fieldset>
 			<fieldset>
 				<legend>Выберите дату и время</legend>
-				<p>
-					<label for="date">
-						<span>Дата*</span>
-						<input name="date" id="date" type="date" required>
-					</label>
-					<label for="time">
-						<span>Время*</span>
-						<input name="time" id="time" type="time" required>
-					</label>
-				</p>
+				<div>
+					<p>
+						<label for="date">
+							<span>Дата*</span>
+							<input name="date" id="date" type="date" required>
+						</label>
+						<label for="time">
+							<span>Время*</span>
+							<input name="time" id="time" type="time" required>
+						</label>
+					</p>
 
-				<p>
-					<label for="quantity">
-						<span>Количество человек*</span>
-						<input name="quantity" id="quantity" type="number" required>
-					</label>
-				</p>
+					<p>
+						<label for="quantity">
+							<span>Количество человек*</span>
+							<input name="quantity" id="quantity" type="number" required>
+						</label>
+					</p>
+				</div>
 
-				<p>
-					<label for="name_reserv">
-						<span>Имя*</span>
-						<input name="name_reserv" id="name_reserv" type="text" required>
-					</label>
-				</p>
+				<div>
+					<p>
+						<label for="name_reserv">
+							<span>Имя*</span>
+							<input name="name_reserv" id="name_reserv" type="text" required>
+						</label>
+					</p>
 
-				<p>
-					<label for="secondName_reserv">
-						<span>Фамилия*</span>
-						<input name="secondName_reserv" id="secondName_reserv" type="text" required>
-					</label>
-				</p>
+					<p>
+						<label for="secondName_reserv">
+							<span>Фамилия*</span>
+							<input name="secondName_reserv" id="secondName_reserv" type="text" required>
+						</label>
+					</p>
+				</div>
 
-				<p>
-					<label for="phoneNumber_reserv">
-						<span>Номер телефона*</span>
-						<input name="phoneNumber_reserv" id="phoneNumber_reserv" type="text">
-					</label>
-				</p>
+				<div>
+					<p>
+						<label for="phoneNumber_reserv">
+							<span>Телефон</span>
+							<input name="phoneNumber_reserv" id="phoneNumber_reserv" type="text">
+						</label>
+					</p>
 
-				<p>
-					<label for="proofAge">
-						<input type="checkbox" name="older" id="proofAge" required>
-						<span>Я старше 18 лет</span>
-					</label>
-				</p>
+					<p>
+						<label for="email_reserv">
+							<span>E-mail</span>
+							<input name="email_reserv" id="email_reserv" type="text">
+						</label>
+					</p>
+				</div>
 			</fieldset>
+
 			<p>
 				<button type="submit">Забронировать</button>
-				<label for="agreement">
-					<input id="agreement" type="checkbox" required>
-					<span>Я согласен на обработку данных</span>
-				</label>
 			</p>
 		</form>
 	</section>
@@ -274,6 +293,37 @@
 		</address>
 	</section>
 
+	<section id="reviews">
+		<h3>Отзывы посетителей</h3>
+		<article>
+			<figure>
+				<img src="#!" alt="Аватар покупателя Максима Самойлова">
+				<figcaption>Макс Самойлов</figcaption>
+			</figure>
+			<p>
+				Отмечали здесь день рождения компанией друзей, все было очень круто! VR игры это просто бомба, никогда еще я не был в таком полном игровом погружении. Сервис на высоте!
+			</p>
+		</article>
+		<article>
+			<figure>
+				<img src="#!" alt="Аватар покупателя Оксаны Григорьевой">
+				<figcaption>Оксана Григорьева</figcaption>
+			</figure>
+			<p>
+				Были в комнате Дикий Запад, пели в караоке под Шакиру, отличный получился корпоратив! У нас в городе больше нет подобных заведений
+			</p>
+		</article>
+		<article>
+			<figure>
+				<img src="#!" alt="Аватар покупателя Никиты Дяченко">
+				<figcaption>Никита Дяченко</figcaption>
+			</figure>
+			<p>
+				Немного подвисала игра в VR очках, а так все норм. Крутое оформление комнаты в стиле звездных войн, попал в атмосферу космоса.
+			</p>
+		</article>
+	</section>
+
 	<section class="callback">
 		<h3>Заказать звонок</h3>
 
@@ -283,8 +333,7 @@
 					<span>Имя</span>
 					<br>
 				</label>
-				<input name="name" id="name" type="text" required placeholder="Введите имя" pattern="^[а-яА-Яa-zA-Z]+$"
-					title="Введите имя латиницей или кириллицей">
+				<input name="name" id="name" type="text" required placeholder="Введите имя" pattern="^[а-яА-Яa-zA-Z]+$" title="Введите имя латиницей или кириллицей">
 			</p>
 
 			<p>
@@ -292,8 +341,7 @@
 					<span>Фамилия</span>
 					<br>
 				</label>
-				<input name="secondName" id="secondName" type="text" placeholder="Введите фамилию" pattern="^[а-яА-Яa-zA-Z]+$"
-					title="Введите фамилию латиницей или кириллицей">
+				<input name="secondName" id="secondName" type="text" placeholder="Введите фамилию" pattern="^[а-яА-Яa-zA-Z]+$" title="Введите фамилию латиницей или кириллицей">
 			</p>
 
 			<p>
@@ -301,8 +349,7 @@
 					<span>Номер телефона</span>
 					<br>
 				</label>
-				<input name="phoneNumber" id="phoneNumber" type="tel" required placeholder="+7 999-999-99-99"
-					pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" title="+7 999-999-99-99">
+				<input name="phoneNumber" id="phoneNumber" type="tel" required placeholder="+7 999-999-99-99" pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" title="+7 999-999-99-99">
 			</p>
 
 			<p>
