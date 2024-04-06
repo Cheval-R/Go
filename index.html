@@ -5,363 +5,343 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/svg+xml" href="./img/icon.svg">
+	<link rel="stylesheet" href="./css/style.css">
 	<title>Go</title>
 </head>
 
 <body>
-	<a href="/index.html"><img src="./img/logo.svg" alt="Логотип GO"></a>
-	<nav>
-		<h2>Меню</h2>
-		<ul>
-			<li>
-				<a href="#halls">Залы</a>
-			</li>
-			<li>
-				<a href="#about">О нас</a>
-			</li>
-			<li>
-				<a href="#reserv">Бронь</a>
-			</li>
-			<li>
-				<a href="#reviews">Отзывы</a>
-			</li>
-			<li>
-				<a href="#contacts">Контакты</a>
-			</li>
-		</ul>
-	</nav>
-
-	<section>
-		<h3>У нас есть всё для классного отдыха с друзьями!</h3>
-		<ul>
-			<li style="padding-left: 20px;">
-				<figure>
-					<img src="./img/vr.jpg" alt="VR-очки" height="228">
-					<figcaption>VR очки</figcaption>
-				</figure>
-			</li>
-			<li style="padding-left: 20px;">
-				<figure>
-					<img src="./img/audio.jpg" alt="Диджейский пульт" height="228">
-					<figcaption>Аудио-система 5.1 с отличным звуком</figcaption>
-				</figure>
-			</li>
-			<li style="padding-left: 20px;">
-				<figure>
-					<img src="./img/micro.jpg" alt="Караоке" height="228">
-					<figcaption>Караоке (4 микрофона)</figcaption>
-				</figure>
-			</li>
-			<li style="padding-left: 20px;">
-				<figure>
-					<img src="./img/game.jpg" alt="Настольные игры" height="228">
-					<figcaption>Настольные игры</figcaption>
-				</figure>
-			</li>
-			<li style="padding-left: 20px">
-				<figure>
-					<img src="./img/netflix.jpg" alt="Монитор с изображением логотипа Netflix" height="228">
-					<figcaption>Кино сервисы Netflix, IVI, MegoGo, Кинопоиск, Okko</figcaption>
-				</figure>
-			</li>
-			<li style="padding-left: 20px">
-				<figure>
-					<img src="./img/sony.jpg" alt="Приставка Sony PlayStation 4" height="228">
-					<figcaption>PlayStation 5</figcaption>
-				</figure>
-			</li>
-		</ul>
-	</section>
-
-	<section id="halls">
-		<h3>Наши залы</h3>
-		<ol>
-			<li>80's vibes</li>
-			<li>Star wars</li>
-			<li>Wild west</li>
-			<li>Neon style</li>
-		</ol>
-	</section>
-
-	<section id="reserv">
-		<h3>Забронировать зал просто</h3>
-		<form action="https://jsonplaceholder.typicode.com/posts" method="post">
-			<fieldset>
-				<legend>Выбери зал</legend>
-				<!-- ? Как правильно связать несколько радиокнопок чтобы необходимо было выбрать один из пунктов? Правильно ли будет если указать только у одной кнопки атрибут required или лучше указывать на каждую? -->
-				<!-- ? Нужно ли указывать name для пунктов с возрастом и персональными данными? -->
-				<!-- ! Можно ли делать одинаковые има полей, если это разные формы? -->
-				<ul>
-					<li>
-						<label for="_80vibes">
-							<input required type="radio" name="hallName" id="_80vibes" value="_80vibes">
-							<span>80`s Vibes</span>
-						</label>
-					</li>
-					<li>
-						<label for="starWars">
-							<input type="radio" name="hallName" id="starWars" value="starWars">
-							<span>Star Wars</span>
-						</label>
-					</li>
-					<li>
-						<label for="wildWest">
-							<input type="radio" name="hallName" id="wildWest" value="wildWest">
-							<span>Wild West</span>
-						</label>
-					</li>
-					<li>
-						<label for="neonStyle">
-							<input type="radio" name="hallName" id="neonStyle" value="neonStyle">
-							<span>Neon Style</span>
-						</label>
-					</li>
-				</ul>
-			</fieldset>
-			<fieldset>
-				<legend>Собери набор развлечений</legend>
-				<fieldset>
-					<legend>Приставка:</legend>
-					<ul>
-						<li>
-							<label for="playStation">
-								<input type="radio" name="console" id="playStation" value="playStation">
-								<span>PlayStation</span>
-							</label>
-						</li>
-						<li>
-							<label for="sega">
-								<input type="radio" name="console" id="sega" value="sega">
-								<span>Sega Mega Drive</span>
-							</label>
-						</li>
-						<li>
-							<label for="xbox">
-								<input type="radio" name="console" id="xbox" value="xbox">
-								<span>Xbox One S</span>
-							</label>
-						</li>
-						<li>
-							<label for="dendy">
-								<input type="radio" name="console" id="dendy" value="dendy">
-								<span>Dendy</span>
-							</label>
-						</li>
-					</ul>
-				</fieldset>
-				<fieldset>
-					<legend>Настольные игры:</legend>
-					<ul>
-						<li>
-							<label for="jenga">
-								<input type="checkbox" name="boardGame" id="jenga" value="monopoly">
-								<span>Jenga</span>
-							</label>
-						</li>
-						<li>
-							<label for="monopoly">
-								<input type="checkbox" name="boardGame" id="monopoly" value="monopoly">
-								<span>Monopoly</span>
-							</label>
-						</li>
-						<li>
-							<label for="munchkin">
-								<input type="checkbox" name="boardGame" id="munchkin" value="munchkin">
-								<span>Munchkin</span>
-							</label>
-						</li>
-						<li>
-							<label for="alias">
-								<input type="checkbox" name="boardGame" id="alias" value="alias">
-								<span>Alias</span>
-							</label>
-						</li>
-					</ul>
-				</fieldset>
-				<fieldset>
-					<legend>Дополнительно:</legend>
-					<ul>
-						<li>
-							<label for="karaoke">
-								<input type="checkbox" name="optional" id="karaoke">
-								<span>Караоке</span>
-							</label>
-						</li>
-						<li>
-							<label for="vr">
-								<input type="checkbox" name="optional" id="vr">
-								<span>VR</span>
-							</label>
-						</li>
-					</ul>
-				</fieldset>
-			</fieldset>
-			<fieldset>
-				<legend>Выберите дату и время</legend>
-				<div>
-					<p>
-						<label for="date">
-							<span>Дата*</span>
-							<input name="date" id="date" type="date" required>
-						</label>
-						<label for="time">
-							<span>Время*</span>
-							<input name="time" id="time" type="time" required>
-						</label>
-					</p>
-
-					<p>
-						<label for="quantity">
-							<span>Количество человек*</span>
-							<input name="quantity" id="quantity" type="number" required>
-						</label>
-					</p>
-				</div>
-
-				<div>
-					<p>
-						<label for="name_reserv">
-							<span>Имя*</span>
-							<input name="name_reserv" id="name_reserv" type="text" required>
-						</label>
-					</p>
-
-					<p>
-						<label for="secondName_reserv">
-							<span>Фамилия*</span>
-							<input name="secondName_reserv" id="secondName_reserv" type="text" required>
-						</label>
-					</p>
-				</div>
-
-				<div>
-					<p>
-						<label for="phoneNumber_reserv">
-							<span>Телефон</span>
-							<input name="phoneNumber_reserv" id="phoneNumber_reserv" type="text">
-						</label>
-					</p>
-
-					<p>
-						<label for="email_reserv">
-							<span>E-mail</span>
-							<input name="email_reserv" id="email_reserv" type="text">
-						</label>
-					</p>
-				</div>
-			</fieldset>
-
-			<p>
-				<button type="submit">Забронировать</button>
-			</p>
-		</form>
-	</section>
-
-	<section id="about">
-		<h3>
-			О нас
-		</h3>
-		<div>
-			<p>Для наших гостей мы создали <i>концептуально новое игровое пространство виртуальной реальнности</i> в
-				центральной
-				части города
-			</p>
-			<p>
-				Каждый день мы стараемся создавать для вас самую лучшую игровую атмосферу и радовать Вас топовыми игровыми
-				разработками со всего мира.
-			</p>
-			<blockquote>
-				<p><q><b>GAME OVER</b> - это место незабываемых впечатлений</q></p>
-				<cite>Аркажий Абакшин, создатель игровой территории GAME OVER</cite>
-			</blockquote>
-		</div>
-	</section>
-
-	<section id="contacts">
-		<h3>
-			Контакты
-		</h3>
-		<address>
-			<p>г. Москва ул. Аквамарина, 16</p>
-			<p><a href="tel:+79509302893">8(950)930-28-93</a></p>
-			<p><a href="mailto:gameover@gmail.com">GameOver@gmail.com</a></p>
-
+	<div class="wrapper">
+		<a href="/index.html"><img src="./img/logo.svg" alt="Логотип GO"></a>
+		<nav>
+			<h2>Меню</h2>
 			<ul>
-				<li><a href="#!">Vkontakte</a></li>
-				<li><a href="#!">Telegram</a></li>
+				<li>
+					<a href="#halls">Залы</a>
+				</li>
+				<li>
+					<a href="#about">О нас</a>
+				</li>
+				<li>
+					<a href="#reserv">Бронь</a>
+				</li>
+				<li>
+					<a href="#reviews">Отзывы</a>
+				</li>
+				<li>
+					<a href="#contacts">Контакты</a>
+				</li>
 			</ul>
-		</address>
-	</section>
+		</nav>
 
-	<section id="reviews">
-		<h3>Отзывы посетителей</h3>
-		<article>
-			<figure>
-				<img src="#!" alt="Аватар покупателя Максима Самойлова">
-				<figcaption>Макс Самойлов</figcaption>
-			</figure>
-			<p>
-				Отмечали здесь день рождения компанией друзей, все было очень круто! VR игры это просто бомба, никогда еще я не был в таком полном игровом погружении. Сервис на высоте!
-			</p>
-		</article>
-		<article>
-			<figure>
-				<img src="#!" alt="Аватар покупателя Оксаны Григорьевой">
-				<figcaption>Оксана Григорьева</figcaption>
-			</figure>
-			<p>
-				Были в комнате Дикий Запад, пели в караоке под Шакиру, отличный получился корпоратив! У нас в городе больше нет подобных заведений
-			</p>
-		</article>
-		<article>
-			<figure>
-				<img src="#!" alt="Аватар покупателя Никиты Дяченко">
-				<figcaption>Никита Дяченко</figcaption>
-			</figure>
-			<p>
-				Немного подвисала игра в VR очках, а так все норм. Крутое оформление комнаты в стиле звездных войн, попал в атмосферу космоса.
-			</p>
-		</article>
-	</section>
+		<section>
+			<h3>У нас есть всё для классного отдыха с друзьями!</h3>
+			<ul>
+				<li style="padding-left: 20px;">
+					<figure>
+						<img src="./img/vr.jpg" alt="VR-очки" height="228">
+						<figcaption>VR очки</figcaption>
+					</figure>
+				</li>
+				<li style="padding-left: 20px;">
+					<figure>
+						<img src="./img/audio.jpg" alt="Диджейский пульт" height="228">
+						<figcaption>Аудио-система 5.1 с отличным звуком</figcaption>
+					</figure>
+				</li>
+				<li style="padding-left: 20px;">
+					<figure>
+						<img src="./img/micro.jpg" alt="Караоке" height="228">
+						<figcaption>Караоке (4 микрофона)</figcaption>
+					</figure>
+				</li>
+				<li style="padding-left: 20px;">
+					<figure>
+						<img src="./img/game.jpg" alt="Настольные игры" height="228">
+						<figcaption>Настольные игры</figcaption>
+					</figure>
+				</li>
+				<li style="padding-left: 20px">
+					<figure>
+						<img src="./img/netflix.jpg" alt="Монитор с изображением логотипа Netflix" height="228">
+						<figcaption>Кино сервисы Netflix, IVI, MegoGo, Кинопоиск, Okko</figcaption>
+					</figure>
+				</li>
+				<li style="padding-left: 20px">
+					<figure>
+						<img src="./img/sony.jpg" alt="Приставка Sony PlayStation 4" height="228">
+						<figcaption>PlayStation 5</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</section>
 
-	<section class="callback">
-		<h3>Заказать звонок</h3>
+		<section id="halls">
+			<h3>Наши залы</h3>
+			<ol>
+				<li>80's vibes</li>
+				<li>Star wars</li>
+				<li>Wild west</li>
+				<li>Neon style</li>
+			</ol>
+		</section>
 
-		<form action="https://jsonplaceholder.typicode.com/posts" method="post">
-			<p>
-				<label for="name">
-					<span>Имя</span>
-					<br>
-				</label>
-				<input name="name" id="name" type="text" required placeholder="Введите имя" pattern="^[а-яА-Яa-zA-Z]+$" title="Введите имя латиницей или кириллицей">
-			</p>
+		<section id="reserv">
+			<h3>Забронировать зал просто</h3>
+			<form action="https://jsonplaceholder.typicode.com/posts" method="post">
+				<fieldset>
+					<legend>Выбери зал</legend>
+					<!-- ? Как правильно связать несколько радиокнопок чтобы необходимо было выбрать один из пунктов? Правильно ли будет если указать только у одной кнопки атрибут required или лучше указывать на каждую? -->
+					<!-- ? Нужно ли указывать name для пунктов с возрастом и персональными данными? -->
+					<!-- ! Можно ли делать одинаковые има полей, если это разные формы? -->
 
-			<p>
-				<label for="secondName">
-					<span>Фамилия</span>
-					<br>
-				</label>
-				<input name="secondName" id="secondName" type="text" placeholder="Введите фамилию" pattern="^[а-яА-Яa-zA-Z]+$" title="Введите фамилию латиницей или кириллицей">
-			</p>
+					<label for="_80vibes">
+						<input required type="radio" name="hallName" id="_80vibes" value="_80vibes">
+						80`s Vibes
+					</label>
 
-			<p>
-				<label for="phoneNumber">
-					<span>Номер телефона</span>
-					<br>
-				</label>
-				<input name="phoneNumber" id="phoneNumber" type="tel" required placeholder="+7 999-999-99-99" pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" title="+7 999-999-99-99">
-			</p>
+					<label for="starWars">
+						<input type="radio" name="hallName" id="starWars" value="starWars">
+						Star Wars
+					</label>
 
-			<p>
-				<label for="agree">
-					<input type="checkbox" id="agree" required>
-					<span>Согласен на обработку персональных данных</span>
-				</label>
-			</p>
-			<button type="submit">Перезвоните мне</button>
-		</form>
+					<label for="wildWest">
+						<input type="radio" name="hallName" id="wildWest" value="wildWest">
+						Wild West
+					</label>
 
-	</section>
+					<label for="neonStyle">
+						<input type="radio" name="hallName" id="neonStyle" value="neonStyle">
+						Neon Style
+					</label>
+				</fieldset>
+				<fieldset>
+					<legend>Собери набор развлечений</legend>
+					<fieldset>
+						<legend>Приставка:</legend>
+
+						<label for="playStation">
+							<input type="radio" name="console" id="playStation" value="playStation">
+							PlayStation
+						</label>
+
+						<label for="sega">
+							<input type="radio" name="console" id="sega" value="sega">
+							Sega Mega Drive
+						</label>
+
+						<label for="xbox">
+							<input type="radio" name="console" id="xbox" value="xbox">
+							Xbox One S
+						</label>
+
+						<label for="dendy">
+							<input type="radio" name="console" id="dendy" value="dendy">
+							Dendy
+						</label>
+					</fieldset>
+					<fieldset>
+						<legend>Настольные игры:</legend>
+						<label for="jenga">
+							<input type="checkbox" name="boardGame" id="jenga" value="monopoly">
+							Jenga
+						</label>
+
+						<label for="monopoly">
+							<input type="checkbox" name="boardGame" id="monopoly" value="monopoly">
+							Monopoly
+						</label>
+
+						<label for="munchkin">
+							<input type="checkbox" name="boardGame" id="munchkin" value="munchkin">
+							Munchkin
+						</label>
+
+						<label for="alias">
+							<input type="checkbox" name="boardGame" id="alias" value="alias">
+							Alias
+						</label>
+					</fieldset>
+					<fieldset>
+						<legend>Дополнительно:</legend>
+
+						<label for="karaoke">
+							<input type="checkbox" name="optional" id="karaoke">
+							Караоке
+						</label>
+
+						<label for="vr">
+							<input type="checkbox" name="optional" id="vr">
+							VR
+						</label>
+					</fieldset>
+				</fieldset>
+				<fieldset>
+					<legend>Выберите дату и время</legend>
+					<div>
+						<div>
+							<label for="date">
+								Дата
+								<input name="date" id="date" type="date" required>
+							</label>
+							<label for="time">
+								Время
+								<input name="time" id="time" type="time" required>
+							</label>
+						</div>
+
+						<div>
+							<label for="quantity">
+								Количество человек
+								<input name="quantity" id="quantity" type="number" required>
+							</label>
+						</div>
+					</div>
+
+					<div>
+						<p>
+							<label for="name_reserv">
+								Имя
+								<input name="name_reserv" id="name_reserv" type="text" required>
+							</label>
+						</p>
+
+						<p>
+							<label for="secondName_reserv">
+								Фамилия
+								<input name="secondName_reserv" id="secondName_reserv" type="text" required>
+							</label>
+						</p>
+					</div>
+
+					<div>
+						<p>
+							<label for="phoneNumber_reserv">
+								Телефон
+								<input name="phoneNumber_reserv" id="phoneNumber_reserv" type="text">
+							</label>
+						</p>
+
+						<p>
+							<label for="email_reserv">
+								E-mail
+								<input name="email_reserv" id="email_reserv" type="text">
+							</label>
+						</p>
+					</div>
+				</fieldset>
+
+				<button type="submit">Забронировать</button>
+			</form>
+		</section>
+
+		<section id="about">
+			<h3>
+				О нас
+			</h3>
+			<div>
+				<p>Для наших гостей мы создали <i>концептуально новое игровое пространство виртуальной реальнности</i> в
+					центральной
+					части города
+				</p>
+				<p>
+					Каждый день мы стараемся создавать для вас самую лучшую игровую атмосферу и радовать Вас топовыми игровыми
+					разработками со всего мира.
+				</p>
+				<blockquote>
+					<p class="quote"><q><b>GAME OVER</b> - это место незабываемых впечатлений</q></p>
+					<cite>Аркажий Абакшин, создатель игровой территории GAME OVER</cite>
+				</blockquote>
+			</div>
+		</section>
+
+		<section id="contacts">
+			<h3>
+				Контакты
+			</h3>
+			<address>
+				<p>г. Москва ул. Аквамарина, 16</p>
+				<p><a href="tel:+79509302893">8(950)930-28-93</a></p>
+				<p><a href="mailto:gameover@gmail.com">GameOver@gmail.com</a></p>
+
+				<ul>
+					<li><a href="#!">Vkontakte</a></li>
+					<li><a href="#!">Telegram</a></li>
+				</ul>
+			</address>
+		</section>
+
+		<section id="reviews">
+			<h3>Отзывы посетителей</h3>
+			<ul>
+				<li>
+					<figure>
+						<img src="#!" alt="Аватар покупателя Максима Самойлова">
+						<figcaption>Макс Самойлов</figcaption>
+					</figure>
+					<p>
+						Отмечали здесь день рождения компанией друзей, все было очень круто! VR игры это просто бомба, никогда еще я не был в таком полном игровом погружении. Сервис на высоте!
+					</p>
+				</li>
+				<li>
+					<figure>
+						<img src="#!" alt="Аватар покупателя Оксаны Григорьевой">
+						<figcaption>Оксана Григорьева</figcaption>
+					</figure>
+					<p>
+						Были в комнате Дикий Запад, пели в караоке под Шакиру, отличный получился корпоратив! У нас в городе больше нет подобных заведений
+					</p>
+				</li>
+				<li>
+					<figure>
+						<img src="#!" alt="Аватар покупателя Никиты Дяченко">
+						<figcaption>Никита Дяченко</figcaption>
+					</figure>
+					<p>
+						Немного подвисала игра в VR очках, а так все норм. Крутое оформление комнаты в стиле звездных войн, попал в атмосферу космоса.
+					</p>
+				</li>
+			</ul>
+		</section>
+
+		<section class="callback">
+			<h3>Заказать звонок</h3>
+
+			<form action="https://jsonplaceholder.typicode.com/posts" method="post">
+				<p>
+					<label for="name">
+						Имя
+						<br>
+					</label>
+					<input name="name" id="name" type="text" required placeholder="Введите имя" pattern="^[а-яА-Яa-zA-Z]+$" title="Введите имя латиницей или кириллицей">
+				</p>
+
+				<p>
+					<label for="secondName">
+						Фамилия
+						<br>
+					</label>
+					<input name="secondName" id="secondName" type="text" placeholder="Введите фамилию" pattern="^[а-яА-Яa-zA-Z]+$" title="Введите фамилию латиницей или кириллицей">
+				</p>
+
+				<p>
+					<label for="phoneNumber">
+						Номер телефона
+						<br>
+					</label>
+					<input name="phoneNumber" id="phoneNumber" type="tel" required placeholder="+7 999-999-99-99" pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" title="+7 999-999-99-99">
+				</p>
+
+				<p>
+					<label for="agree">
+						<input type="checkbox" id="agree" required>
+						Согласен на обработку персональных данных
+					</label>
+				</p>
+				<button type="submit">Перезвоните мне</button>
+			</form>
+
+		</section>
+	</div>
 </body>
 
 </html>
