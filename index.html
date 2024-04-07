@@ -4,14 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/svg+xml" href="./img/icon.svg">
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="icon" type="image/svg+xml" href="./img/icons/icon.svg">
+	<link rel="stylesheet" href="./css/index.css">
 	<title>Go</title>
 </head>
 
 <body>
 	<div class="wrapper">
-		<a href="/index.html"><img src="./img/logo.svg" alt="Логотип GO"></a>
+		<a href="/index.html"><img src="./img/services/logo.svg" alt="Логотип GO"></a>
 		<nav>
 			<h2>Меню</h2>
 			<ul>
@@ -33,42 +33,42 @@
 			</ul>
 		</nav>
 
-		<section>
-			<h3>У нас есть всё для классного отдыха с друзьями!</h3>
+		<section class="services">
+			<h3 class="section__title">У нас есть всё для классного отдыха с друзьями!</h3>
 			<ul>
-				<li style="padding-left: 20px;">
+				<li>
 					<figure>
-						<img src="./img/vr.jpg" alt="VR-очки" height="228">
+						<img src="./img/services/vr.jpg" alt="VR-очки" height="228">
 						<figcaption>VR очки</figcaption>
 					</figure>
 				</li>
-				<li style="padding-left: 20px;">
+				<li>
 					<figure>
-						<img src="./img/audio.jpg" alt="Диджейский пульт" height="228">
+						<img src="./img/services/audio.jpg" alt="Диджейский пульт" height="228">
 						<figcaption>Аудио-система 5.1 с отличным звуком</figcaption>
 					</figure>
 				</li>
-				<li style="padding-left: 20px;">
+				<li>
 					<figure>
-						<img src="./img/micro.jpg" alt="Караоке" height="228">
+						<img src="./img/services/micro.jpg" alt="Караоке" height="228">
 						<figcaption>Караоке (4 микрофона)</figcaption>
 					</figure>
 				</li>
-				<li style="padding-left: 20px;">
+				<li>
 					<figure>
-						<img src="./img/game.jpg" alt="Настольные игры" height="228">
+						<img src="./img/services/game.jpg" alt="Настольные игры" height="228">
 						<figcaption>Настольные игры</figcaption>
 					</figure>
 				</li>
-				<li style="padding-left: 20px">
+				<li>
 					<figure>
-						<img src="./img/netflix.jpg" alt="Монитор с изображением логотипа Netflix" height="228">
+						<img src="./img/services/netflix.jpg" alt="Монитор с изображением логотипа Netflix" height="228">
 						<figcaption>Кино сервисы Netflix, IVI, MegoGo, Кинопоиск, Okko</figcaption>
 					</figure>
 				</li>
-				<li style="padding-left: 20px">
+				<li>
 					<figure>
-						<img src="./img/sony.jpg" alt="Приставка Sony PlayStation 4" height="228">
+						<img src="./img/services/sony.jpg" alt="Приставка Sony PlayStation 4" height="228">
 						<figcaption>PlayStation 5</figcaption>
 					</figure>
 				</li>
@@ -76,7 +76,7 @@
 		</section>
 
 		<section id="halls">
-			<h3>Наши залы</h3>
+			<h3 class="section__title">Наши залы</h3>
 			<ol>
 				<li>80's vibes</li>
 				<li>Star wars</li>
@@ -86,7 +86,7 @@
 		</section>
 
 		<section id="reserv">
-			<h3>Забронировать зал просто</h3>
+			<h3 class="section__title">Забронировать зал просто</h3>
 			<form action="https://jsonplaceholder.typicode.com/posts" method="post">
 				<fieldset>
 					<legend>Выбери зал</legend>
@@ -235,7 +235,7 @@
 		</section>
 
 		<section id="about">
-			<h3>
+			<h3 class="section__title">
 				О нас
 			</h3>
 			<div>
@@ -255,7 +255,7 @@
 		</section>
 
 		<section id="contacts">
-			<h3>
+			<h3 class="section__title">
 				Контакты
 			</h3>
 			<address>
@@ -271,7 +271,7 @@
 		</section>
 
 		<section id="reviews">
-			<h3>Отзывы посетителей</h3>
+			<h3 class="section__title">Отзывы посетителей</h3>
 			<ul>
 				<li>
 					<figure>
@@ -303,8 +303,19 @@
 			</ul>
 		</section>
 
-		<section class="callback">
-			<h3>Заказать звонок</h3>
+		<section id="faq">
+			<h3 class="section__title">Частые вопросы</h3>
+			<ul class="faq__list">
+				<li class="faq__item">Можно ли забронировать комнату онлайн?</li>
+				<li class="faq__item">Могут ли мне вернуть деньги за бронь?</li>
+				<li class="faq__item">Какая комната самая популярная?</li>
+				<li class="faq__item">Как получить VIP карту?</li>
+				<li class="faq__item">Какая комната самая популярная?</li>
+			</ul>
+		</section>
+
+		<section id="callback">
+			<h3 class="section__title">Заказать звонок</h3>
 
 			<form action="https://jsonplaceholder.typicode.com/posts" method="post">
 				<p>
