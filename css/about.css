@@ -1,0 +1,37 @@
+/* ! ABOUT SECTION */
+
+.about__desc {
+	padding-bottom: 70px;
+}
+
+.quote {
+	color: rgb(108, 2, 135);
+	font-size: 44px;
+	font-weight: 900;
+	line-height: 50px;
+}
+
+.quote--open {
+	position: relative;
+	vertical-align: top;
+	top: -5px;
+}
+
+.citation {
+	display: inline-block;
+	font-size: 44px;
+	line-height: 50px;
+	text-transform: uppercase;
+	margin: 0;
+	padding-bottom: 40px;
+}
+
+.about__cite {
+	display: flex;
+	column-gap: 30px;
+	justify-content: flex-end;
+}
+
+.about__cite>span {
+	max-width: 279.28px;
+}

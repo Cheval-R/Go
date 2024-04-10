@@ -1,0 +1,61 @@
+/* ! HALLS SECTION */
+
+.section__title {
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 50px;
+}
+
+.section__title--halls {
+	padding-bottom: 60px;
+}
+
+.halls__list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 60px;
+
+	list-style: none;
+}
+
+.halls__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 710px;
+}
+
+.hall-name {
+	font-size: 70px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+
+	max-width: 250px;
+}
+
+.halls__item--vibes {
+	background-image: url("./../img/halls/_80vibes.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.halls__item--star-wars {
+	background-image: url("./../img/halls/star-wars.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.halls__item--west {
+	background-image: url("./../img/halls/wild-west.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.halls__item--neon {
+	background-image: url("./../img/halls/neon-style.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}

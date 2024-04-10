@@ -1,21 +1,7 @@
-*
-{
-	box-sizing: border-box;
-}
-
-body
-{
-	background-color: #1b1b1b;
-	color: #fff;
-}
-
-.quote
-{
-	text-transform: uppercase;
-}
-
-.wrapper{
-	width: 1200px;
-	padding: 30px;
-	margin: 0 auto;
-}
+@import url("./global.css");
+@import url("./index.css");
+@import url("./hero.css");
+@import url("./halls.css");
+@import url("./about.css");
+@import url("./faq.css");
+@import url("./contacts.css");

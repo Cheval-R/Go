@@ -1,0 +1,40 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #1b1b1b;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+.container {
+	box-sizing: content-box;
+	width: 1180px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
+.section {
+	padding: 50px 0;
+}
+
+svg {
+	max-width: 100%;
+	height: auto;
+}

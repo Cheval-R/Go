@@ -1,5 +1,4 @@
-.faq__item
-{
+.faq__item {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -12,18 +11,15 @@
 	margin-bottom: 20px;
 }
 
-.faq__item:nth-child(2n)
-{
+.faq__item:nth-child(2n) {
 	background-color: #440F51;
 	color: #fff;
 }
 
-.faq__item:nth-child(1n+1)::after
-{
+.faq__item:nth-child(1n+1)::after {
 	content: url("./../img/icons/open-purple.svg");
 }
 
-.faq__item:nth-child(2n)::after
-{
+.faq__item:nth-child(2n)::after {
 	content: url("./../img/icons/open.svg");
 }
