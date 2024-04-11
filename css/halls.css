@@ -1,15 +1,7 @@
 /* ! HALLS SECTION */
 
-.section__title {
-	font-size: 40px;
-	font-weight: 700;
-	text-align: center;
-	text-transform: uppercase;
-	padding-bottom: 50px;
-}
-
 .section__title--halls {
-	padding-bottom: 60px;
+	margin-bottom: 60px;
 }
 
 .halls__list {

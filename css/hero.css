@@ -1,20 +1,27 @@
 /* ! HERO SECTION */
 
 .section--hero {
-	box-sizing: content-box;
-	position: relative;
 	padding-top: 146px;
+}
+
+.container--hero {
+	position: relative;
 	height: 794px;
 }
 
-.hero__background {
+.container--hero::after {
 	position: absolute;
-	top: 178px;
+
+	/* ? Есть ли более правильный способ избавиться прилипания в паддинг родителя? */
+	padding-right: inherit;
+	right: 0;
+	bottom: 0;
+
+	content: "";
 	height: 762px;
-	width: 100%;
+	width: 675px;
 	background-image: url("./../img/hero/hero-img.png");
 	background-repeat: no-repeat;
-	background-position: bottom right;
 }
 
 .title {

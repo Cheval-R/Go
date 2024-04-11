@@ -10,8 +10,7 @@
 </head>
 
 <body>
-	<div class="container">
-		<!-- <a href="/index.html"><img src="./img/services/logo.svg" alt="Логотип GO"></a>
+	<!-- <a href="/index.html"><img src="./img/services/logo.svg" alt="Логотип GO"></a>
 		<nav>
 			<h2>Меню</h2>
 			<ul>
@@ -75,23 +74,27 @@
 			</ul>
 		</section> -->
 
-		<section class="section section--hero">
+	<section class="section section--hero">
+		<div class="container container--hero">
 			<h1 class="title">Game Over</h1>
 			<p class="slogan">Новый формат игр и отдыха</p>
-			<div class="hero__background"></div>
-		</section>
+		</div>
+	</section>
 
-		<section class="section section--halls" id="halls">
-			<h3 class="section__title section__title--halls">Наши залы</h3>
-			<ol class="halls__list">
-				<li class="halls__item halls__item--vibes"><span class="hall-name">80's vibes</span></li>
-				<li class="halls__item halls__item--star-wars"><span class="hall-name">Star wars</span></li>
-				<li class="halls__item halls__item--west"><span class="hall-name">Wild west</span></li>
-				<li class="halls__item halls__item--neon"><span class="hall-name">Neon style</span></li>
-			</ol>
-		</section>
+	<section class="section section--halls" id="halls">
+			<div class="container">
+				<h3 class="section__title section__title--halls">Наши залы</h3>
+				<ol class="halls__list">
+					<li class="halls__item halls__item--vibes"><span class="hall-name">80's vibes</span></li>
+					<li class="halls__item halls__item--star-wars"><span class="hall-name">Star wars</span></li>
+					<li class="halls__item halls__item--west"><span class="hall-name">Wild west</span></li>
+					<li class="halls__item halls__item--neon"><span class="hall-name">Neon style</span></li>
+				</ol>
+			</div>
+	</section>
 
-		<section class="section section--reserv" id="reserv">
+	<section class="section section--reserv" id="reserv">
+		<div class="container">
 			<h3 class="section__title">Забронировать зал просто</h3>
 			<form action="https://jsonplaceholder.typicode.com/posts" method="post">
 				<fieldset>
@@ -238,9 +241,11 @@
 
 				<button type="submit">Забронировать</button>
 			</form>
-		</section>
+		</div>
+	</section>
 
-		<section class="section section--about" id="about">
+	<section class="section section--about" id="about">
+		<div class="container">
 			<h3 class="section__title">
 				О нас
 			</h3>
@@ -257,9 +262,11 @@
 					<cite class="about__cite"><img src="./img/about/creator.png" alt="Аватар создателя игровой территории GAME OVER, Аркадия Абакшина" width="80" height="80"> <span>Аркадий Абакшин, создатель игровой территории GAME OVER</span></cite>
 				</blockquote>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section class="section section--faq" id="faq">
+	<section class="section section--faq" id="faq">
+		<div class="container">
 			<h3 class="section__title">Частые вопросы</h3>
 			<ul class="faq__list">
 				<li class="faq__item">Можно ли забронировать комнату онлайн?</li>
@@ -268,9 +275,11 @@
 				<li class="faq__item">Как получить VIP карту?</li>
 				<li class="faq__item">Какая комната самая популярная?</li>
 			</ul>
-		</section>
+		</div>
+	</section>
 
-		<section class="section section--contacts" id="contacts">
+	<section class="section section--contacts" id="contacts">
+		<div class="container">
 			<h3 class="section__title">
 				Контакты
 			</h3>
@@ -292,7 +301,7 @@
 					<li class="socials__item">
 						<a class="socials__link" href="#!" aria-label="Ссылка на telegram">
 							<svg width="50.000000" height="50.000000" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									<path d="M49 25C49 31.36 46.47 37.46 41.97 41.97C37.46 46.47 31.36 49 25 49C18.63 49 12.53 46.47 8.02 41.97C3.52 37.46 1 31.36 1 25C1 18.63 3.52 12.53 8.02 8.02C12.53 3.52 18.63 1 25 1C31.36 1 37.46 3.52 41.97 8.02C46.47 12.53 49 18.63 49 25ZM25.86 18.71C23.52 19.68 18.85 21.7 11.86 24.74C10.72 25.19 10.13 25.64 10.07 26.07C9.98 26.8 10.9 27.09 12.14 27.48L12.67 27.64C13.89 28.04 15.54 28.51 16.4 28.53C17.18 28.54 18.04 28.23 19 27.57C25.54 23.15 28.91 20.92 29.12 20.88C29.27 20.84 29.48 20.8 29.62 20.92C29.76 21.05 29.75 21.28 29.73 21.35C29.64 21.73 26.05 25.07 24.19 26.8C23.62 27.34 23.2 27.72 23.12 27.81C22.94 28 22.75 28.18 22.56 28.36C21.42 29.46 20.56 30.28 22.6 31.63C23.58 32.28 24.37 32.81 25.15 33.34C26 33.92 26.86 34.5 27.96 35.23C28.24 35.41 28.51 35.6 28.77 35.79C29.76 36.5 30.66 37.13 31.76 37.03C32.4 36.97 33.07 36.37 33.4 34.57C34.2 30.32 35.76 21.11 36.12 17.32C36.14 17 36.13 16.69 36.08 16.37C36.05 16.12 35.93 15.89 35.74 15.72C35.47 15.53 35.14 15.44 34.81 15.44C33.91 15.46 32.52 15.94 25.86 18.71Z" />
+								<path d="M49 25C49 31.36 46.47 37.46 41.97 41.97C37.46 46.47 31.36 49 25 49C18.63 49 12.53 46.47 8.02 41.97C3.52 37.46 1 31.36 1 25C1 18.63 3.52 12.53 8.02 8.02C12.53 3.52 18.63 1 25 1C31.36 1 37.46 3.52 41.97 8.02C46.47 12.53 49 18.63 49 25ZM25.86 18.71C23.52 19.68 18.85 21.7 11.86 24.74C10.72 25.19 10.13 25.64 10.07 26.07C9.98 26.8 10.9 27.09 12.14 27.48L12.67 27.64C13.89 28.04 15.54 28.51 16.4 28.53C17.18 28.54 18.04 28.23 19 27.57C25.54 23.15 28.91 20.92 29.12 20.88C29.27 20.84 29.48 20.8 29.62 20.92C29.76 21.05 29.75 21.28 29.73 21.35C29.64 21.73 26.05 25.07 24.19 26.8C23.62 27.34 23.2 27.72 23.12 27.81C22.94 28 22.75 28.18 22.56 28.36C21.42 29.46 20.56 30.28 22.6 31.63C23.58 32.28 24.37 32.81 25.15 33.34C26 33.92 26.86 34.5 27.96 35.23C28.24 35.41 28.51 35.6 28.77 35.79C29.76 36.5 30.66 37.13 31.76 37.03C32.4 36.97 33.07 36.37 33.4 34.57C34.2 30.32 35.76 21.11 36.12 17.32C36.14 17 36.13 16.69 36.08 16.37C36.05 16.12 35.93 15.89 35.74 15.72C35.47 15.53 35.14 15.44 34.81 15.44C33.91 15.46 32.52 15.94 25.86 18.71Z" />
 							</svg>
 						</a>
 					</li>
@@ -314,9 +323,10 @@
 					</li>
 				</ul>
 			</address>
-		</section>
+		</div>
+	</section>
 
-		<!-- <section class="section section--reviews" id="reviews">
+	<!-- <section class="section section--reviews" id="reviews">
 			<h3 class="section__title">Отзывы посетителей</h3>
 			<ul>
 				<li>
@@ -387,7 +397,7 @@
 			</form>
 
 		</section> -->
-	</div>
+
 </body>
 
 </html>
