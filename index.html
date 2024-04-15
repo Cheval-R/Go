@@ -9,7 +9,7 @@
 	<title>Go</title>
 </head>
 
-<body>
+<body class="page">
 	<!-- <a href="/index.html"><img src="./img/services/logo.svg" alt="Логотип GO"></a>
 		<nav>
 			<h2>Меню</h2>
@@ -76,32 +76,29 @@
 
 	<section class="section section--hero">
 		<div class="container container--hero">
-			<h1 class="title">Game Over</h1>
-			<p class="slogan">Новый формат игр и отдыха</p>
+			<h1 class="hero__title">Game Over</h1>
+			<p class="hero__slogan">Новый формат игр и отдыха</p>
 		</div>
 	</section>
 
 	<section class="section section--halls" id="halls">
-			<div class="container">
-				<h3 class="section__title section__title--halls">Наши залы</h3>
-				<ol class="halls__list">
-					<li class="halls__item halls__item--vibes"><span class="hall-name">80's vibes</span></li>
-					<li class="halls__item halls__item--star-wars"><span class="hall-name">Star wars</span></li>
-					<li class="halls__item halls__item--west"><span class="hall-name">Wild west</span></li>
-					<li class="halls__item halls__item--neon"><span class="hall-name">Neon style</span></li>
-				</ol>
-			</div>
+		<div class="container">
+			<h3 class="section__title section__title--halls">Наши залы</h3>
+			<ol class="halls__list">
+				<li class="halls__item halls__item--vibes"><span class="hall-name">80's vibes</span></li>
+				<li class="halls__item halls__item--star-wars"><span class="hall-name">Star wars</span></li>
+				<li class="halls__item halls__item--west"><span class="hall-name">Wild west</span></li>
+				<li class="halls__item halls__item--neon"><span class="hall-name">Neon style</span></li>
+			</ol>
+		</div>
 	</section>
 
 	<section class="section section--reserv" id="reserv">
 		<div class="container">
 			<h3 class="section__title">Забронировать зал просто</h3>
-			<form action="https://jsonplaceholder.typicode.com/posts" method="post">
-				<fieldset>
+			<form class="reserv__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+				<fieldset class="form__halls">
 					<legend>Выбери зал</legend>
-					<!-- ? Как правильно связать несколько радиокнопок чтобы необходимо было выбрать один из пунктов? Правильно ли будет если указать только у одной кнопки атрибут required или лучше указывать на каждую? -->
-					<!-- ? Нужно ли указывать name для пунктов с возрастом и персональными данными? -->
-					<!-- ! Можно ли делать одинаковые има полей, если это разные формы? -->
 
 					<label for="_80vibes">
 						<input required type="radio" name="hallName" id="_80vibes" value="_80vibes">
@@ -123,7 +120,7 @@
 						Neon Style
 					</label>
 				</fieldset>
-				<fieldset>
+				<fieldset class="form__set">
 					<legend>Собери набор развлечений</legend>
 					<fieldset>
 						<legend>Приставка:</legend>
@@ -184,7 +181,7 @@
 						</label>
 					</fieldset>
 				</fieldset>
-				<fieldset>
+				<fieldset class="form__info">
 					<legend>Выберите дату и время</legend>
 					<div>
 						<div>
@@ -239,7 +236,7 @@
 					</div>
 				</fieldset>
 
-				<button type="submit">Забронировать</button>
+				<button class="form__button" type="submit">Забронировать</button>
 			</form>
 		</div>
 	</section>
@@ -258,7 +255,8 @@
 				</p>
 				<blockquote>
 					<span class="quote quote--open">“ </span>
-					<p class="citation">GAME OVER —<br>это место незабываемых впечатлений</p><span class="quote quote--close"> ”</span>
+					<p class="citation">GAME OVER —<br>это место незабываемых впечатлений</p>
+					<span class="quote quote--close"> ”</span>
 					<cite class="about__cite"><img src="./img/about/creator.png" alt="Аватар создателя игровой территории GAME OVER, Аркадия Абакшина" width="80" height="80"> <span>Аркадий Абакшин, создатель игровой территории GAME OVER</span></cite>
 				</blockquote>
 			</div>

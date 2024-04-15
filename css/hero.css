@@ -24,7 +24,7 @@
 	background-repeat: no-repeat;
 }
 
-.title {
+.page__title {
 	font-size: 150px;
 	font-weight: 900;
 	text-transform: uppercase;
@@ -33,7 +33,7 @@
 	margin: 0;
 }
 
-.slogan {
+.hero__slogan {
 	font-size: 28px;
 	padding-left: 100px;
 }
