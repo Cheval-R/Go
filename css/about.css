@@ -1,7 +1,30 @@
 /* ! ABOUT SECTION */
 
+.about__content {
+	line-height: 28px;
+	display: flex;
+}
+
+.about__content::before {
+	content: "";
+
+	display: block;
+	background-image: url("./../img/about/img.jpg");
+	background-size: 600px 596px;
+	background-repeat: no-repeat;
+	width: 600px;
+	height: 596px;
+	margin-right: 80px;
+}
+
+.about__text {
+	max-width: 500px;
+}
+
 .about__desc {
-	padding-bottom: 70px;
+	font-weight: 400;
+	line-height: 28px;
+	margin-bottom: 48px;
 }
 
 .quote {
@@ -13,25 +36,43 @@
 
 .quote--open {
 	position: relative;
-	vertical-align: top;
 	top: -5px;
 }
 
-.citation {
+.citation {}
+
+.citation__text {
 	display: inline-block;
 	font-size: 44px;
 	line-height: 50px;
 	text-transform: uppercase;
 	margin: 0;
-	padding-bottom: 40px;
+	margin-bottom: 40px;
+}
+
+.quote--open {
+	position: relative;
+	top: -5px;
 }
 
 .about__cite {
 	display: flex;
 	column-gap: 30px;
+	font-style: normal;
 	justify-content: flex-end;
 }
 
 .about__cite>span {
 	max-width: 279.28px;
+}
+
+.about__coll {
+	max-width: 500px;
+}
+
+.about__img {
+	max-width: 596px;
+	max-height: 600px;
+
+	margin-right: 80px;
 }

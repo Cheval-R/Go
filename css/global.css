@@ -6,7 +6,7 @@ html {
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 body {
@@ -71,6 +71,10 @@ iframe {
 	border: none;
 }
 
+blockquote{
+	margin: 0;
+}
+
 /*
 Доступно скрываю элементы
 */
@@ -92,7 +96,7 @@ iframe {
 
 .container {
 	box-sizing: content-box;
-	width: 1180px;
+	max-width: 1180px;
 	padding: 0 30px;
 	margin: 0 auto;
 }
