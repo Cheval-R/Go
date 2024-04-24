@@ -27,6 +27,15 @@
 	margin-bottom: 48px;
 }
 
+.about__desc span{
+	display: block;
+}
+
+.about__desc span:not(:last-child) {
+	margin-bottom: 25px;
+	;
+}
+
 .quote {
 	color: rgb(108, 2, 135);
 	font-size: 44px;
@@ -35,11 +44,16 @@
 }
 
 .quote--open {
-	position: relative;
+	/* position: absolute;
+	left: 0; */
+	margin-left: -30px;
 	top: -5px;
 }
 
-.citation {}
+.citation {
+	position: relative;
+	padding-left: 30px;
+}
 
 .citation__text {
 	display: inline-block;
@@ -48,11 +62,6 @@
 	text-transform: uppercase;
 	margin: 0;
 	margin-bottom: 40px;
-}
-
-.quote--open {
-	position: relative;
-	top: -5px;
 }
 
 .about__cite {

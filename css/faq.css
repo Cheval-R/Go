@@ -8,6 +8,9 @@
 	font-weight: 700;
 	font-size: 24px;
 	padding: 30px 70px;
+}
+
+.faq__item:not(:last-child){
 	margin-bottom: 20px;
 }
 

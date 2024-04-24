@@ -1,0 +1,26 @@
+.container--reviews {
+	max-width: 980px;
+}
+
+.reviews__item {
+	display: flex;
+	column-gap: 20px;
+}
+
+.reviews__item:not(:last-child) {
+	margin-bottom: 50px;
+}
+
+.reviews__image-wrapper {
+	text-align: center;
+	flex-shrink: 0;
+}
+
+.reviews__image {
+	margin-bottom: 11px;
+}
+
+.reviews__comment {
+	position: relative;
+	padding-top: 52px;
+}
