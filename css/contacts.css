@@ -1,9 +1,16 @@
 /* ! CONTACTS SECTION */
+
+.contacts{
+	margin-bottom: 156px;
+}
+
 .contacts__address {
+	display: flex;
+	justify-content: space-between;
 	font-style: normal;
 }
 
-.contacts__information {
+.contacts__data {
 	margin-bottom: 35px;
 }
 

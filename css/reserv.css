@@ -1,0 +1,253 @@
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.reserv {
+	background-color: rgb(68, 15, 81);
+}
+
+.reserv-form__block {
+	position: relative;
+
+	margin-bottom: 60px;
+	padding: 0 100px;
+
+}
+
+.reserv-form__block--halls {
+	padding: 0;
+}
+
+
+.reserv-form__halls {}
+
+.reserv-form__title {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28px;
+	text-align: center;
+
+	margin-bottom: 40px;
+}
+
+.reserv-form__title--subtitle {
+	text-align: left;
+	margin-bottom: 23px;
+}
+
+.reserv-form__halls-list {
+	display: flex;
+	gap: 60px;
+}
+
+.reserv-form__halls-item {}
+
+.halls-radio-input {
+	display: none;
+}
+
+.reserv-form__halls-item .halls-radio-input[type=radio]:checked+.halls-radio-label {
+	background-color: #ffe0a6;
+}
+
+.halls-radio-label {
+	display: inline-block;
+
+	color: rgb(0, 0, 0);
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 7px 15px;
+	background-color: #fff;
+	border-radius: 8px;
+
+	min-width: 250px;
+
+	transition: background-color 0.1s ease-in;
+}
+
+.reserv-form__row {
+	display: flex;
+	justify-content: space-between;
+	row-gap: 100px;
+}
+
+.reserv-form__list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.selector>input {
+	display: none;
+}
+
+.selector__label {
+	font-size: 22px;
+	line-height: 25px;
+
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.selector__label::before {
+	content: "";
+
+	width: 27px;
+	height: 27px;
+	background-color: #fff;
+
+	transition: background-color 0.1s ease-in;
+}
+
+.selector__label--radio::before {
+	border-radius: 100%;
+}
+
+.selector input[type=radio]:checked+.selector__label::before,
+.selector input[type=checkbox]:checked+.selector__label::before {
+	content: "\2714";
+	text-align: center;
+	color: #000;
+	background-color: #ffe0a6;
+}
+
+.reserv-form__row--contacts {
+	column-gap: 50px;
+	margin-bottom: 40px;
+}
+
+.reserv-form__col {
+	display: flex;
+	flex-direction: column;
+	row-gap: 36px;
+}
+
+.date-time {
+	display: flex;
+	column-gap: 32px;
+}
+
+.date-time__wrapper>input {
+	display: none;
+}
+
+.date-time__label {
+	display: block;
+	padding: 12px 27px 12px 20px;
+	background-color: #fff;
+	color: rgb(33, 30, 30);
+	width: 134px;
+}
+
+.date-time__caption {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.date-time__caption::after {
+	content: "";
+	display: block;
+	background-image: url("./../img/form/triangle.svg");
+	width: 21px;
+	height: 15px;
+}
+
+.person-count__label {
+	display: block;
+	padding: 12px 27px 12px 20px;
+	background-color: #fff;
+	color: rgb(33, 30, 30);
+	width: 300px;
+}
+
+.person-count__caption {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.person-count__caption::after {
+	content: "";
+	display: block;
+	background-image: url("./../img/form/triangle.svg");
+	width: 21px;
+	height: 15px;
+}
+
+.person-count__input {
+	display: none;
+}
+
+.name-label,
+.surname-label,
+.tel-label,
+.mail-label {
+	position: relative;
+}
+
+.name-label>input,
+.surname-label>input {
+	width: 280px;
+	height: 52px;
+
+}
+
+.tel-label>input,
+.mail-label>input {
+	width: 300px;
+	height: 52px;
+}
+
+.name-label::before,
+.surname-label::before,
+.tel-label::before,
+.mail-label::before {
+	display: block;
+	position: absolute;
+	top: calc(-16px - 9px);
+
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+.name-label::before {
+	content: "Имя";
+}
+
+.surname-label::before {
+	content: "Фамилия";
+}
+
+.tel-label::before {
+	content: "Телефон";
+}
+
+.mail-label::before {
+	content: "E-mail";
+}
+
+.reserv-form__button {
+	display: block;
+	padding: 16px 50px;
+	border-radius: 10px;
+	background-color: rgb(255, 255, 255);
+
+	color: rgb(108, 2, 135);
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 28px;
+	text-transform: uppercase;
+	margin-left: auto;
+}

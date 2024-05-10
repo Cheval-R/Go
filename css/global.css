@@ -61,6 +61,8 @@ ol {
 h1,
 h2,
 h3,
+h4,
+h5,
 p,
 figure,
 fieldset {
@@ -71,7 +73,7 @@ iframe {
 	border: none;
 }
 
-blockquote{
+blockquote {
 	margin: 0;
 }
 
@@ -111,4 +113,9 @@ blockquote{
 	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: 50px;
+}
+
+.page {
+	margin-top: 30px;
+	margin-bottom: 10px;
 }
