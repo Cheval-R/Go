@@ -88,7 +88,7 @@
 	outline-offset: 3px;
 	border-radius: 50%;
 	transition-property: color, outline-color;
-	transition-duration: 0.3s, 0.2s;
+	transition-duration: 0.2s, 0.2s;
 	transition-timing-function: ease-in;
 }
 
@@ -97,13 +97,13 @@
 }
 
 .socials__link:hover {
-	color: #cd06ff;
+	color: #EADEED;
 }
 
 .socials__link:focus {
-	outline-color: #cd06ff;
+	outline-color: #CD06FF;
 }
 
 .socials__link:active {
-	color: #840aa3;
+	color: #CD06FF;
 }

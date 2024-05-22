@@ -1,5 +1,5 @@
 .header{
-	padding-top: 0;
+	padding-top: 30px;
 }
 
 .header__content {
@@ -18,7 +18,26 @@
 }
 
 .recall-button {
+	color: #fff;
+	text-transform: uppercase;
 	padding: 12px 32px;
 	border: #CD06FF solid 3px;
 	border-radius: 10px;
+
+
+	transition: background-color 0.2s ease-in, border-color 0.2s ease-in;
+}
+
+.recall-button:hover,
+.recall-button:focus {
+	background-color: #6C0287;
+	border-color: #6C0287;
+
+	outline: 0;
+	outline-offset: 0;
+}
+
+.recall-button:active {
+	background-color: #640AA3;
+	border-color: #000;
 }

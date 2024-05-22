@@ -42,15 +42,28 @@ fieldset {
 	gap: 60px;
 }
 
-.reserv-form__halls-item {}
-
-.halls-radio-input {
+/* .halls-radio-input {
 	display: none;
+} */
+
+
+
+.reserv-form__halls-item .halls-radio-label:hover {
+	background-color: #EADEED;
+	border: 3px solid #640AA3;
 }
 
-.reserv-form__halls-item .halls-radio-input[type=radio]:checked+.halls-radio-label {
-	background-color: #ffe0a6;
+.reserv-form__halls-item .halls-radio-input[type=radio]:checked+.halls-radio-label,
+.reserv-form__halls-item .halls-radio-label:active {
+	background-color: #6C0287;
+	border: 3px solid #FFFFFF;
+	color: #fff;
 }
+
+.halls-radio-input:focus .reserv-form__halls  {
+	border-color: #640AA3;
+}
+
 
 .halls-radio-label {
 	display: inline-block;
@@ -63,7 +76,11 @@ fieldset {
 	text-transform: uppercase;
 	padding: 7px 15px;
 	background-color: #fff;
+	height: 55px;
+
 	border-radius: 8px;
+	border: 3px solid #00000000;
+
 
 	min-width: 250px;
 
@@ -82,9 +99,9 @@ fieldset {
 	row-gap: 20px;
 }
 
-.selector>input {
+/* .selector>input {
 	display: none;
-}
+} */
 
 .selector__label {
 	font-size: 22px;
@@ -133,9 +150,7 @@ fieldset {
 	column-gap: 32px;
 }
 
-.date-time__wrapper>input {
-	display: none;
-}
+
 
 .date-time__label {
 	display: block;
@@ -186,7 +201,50 @@ fieldset {
 }
 
 .person-count__input {
-	display: none;
+	padding: 12px 27px 12px 20px;
+	color: rgb(33, 30, 30);
+	width: 300px;
+
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.date-time__wrapper>input[type=text]::placeholder {
+	color: #000;
+}
+
+.date-time__wrapper>input[type=text]::after {
+	content: "";
+	display: block;
+	background-image: url("./../img/form/triangle.svg");
+	width: 21px;
+	height: 15px;
+}
+
+.date-time__wrapper>input {
+	padding: 12px 27px 12px 20px;
+	color: rgb(33, 30, 30);
+	width: 134px;
+
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.date-time__wrapper>input::-webkit-calendar-picker-indicator {
+	background-image: url("./../img/form/triangle.svg");
+
+}
+
+.person-count__input {
+	background-image: url("./../img/form/triangle.svg");
+	background-position: right 27px top 50%, 0 0;
+	background-repeat: no-repeat, repeat;
+
+	-moz-appearance: none;
+	/* Firefox */
+	-webkit-appearance: none;
+	/* Safari and Chrome */
+	appearance: none;
 }
 
 .name-label,
@@ -243,11 +301,45 @@ fieldset {
 	padding: 16px 50px;
 	border-radius: 10px;
 	background-color: rgb(255, 255, 255);
-
+	height: 60px;
 	color: rgb(108, 2, 135);
 	font-size: 22px;
 	font-weight: 700;
 	line-height: 28px;
 	text-transform: uppercase;
 	margin-left: auto;
+
+	border: 3px solid #00000000;
+
+}
+
+.reserv-form__button:hover {
+	background-color: #EADEED;
+	border: 3px solid #6C0287;
+}
+
+.reserv-form__button:focus {
+	border-color: #6C0287;
+
+
+	outline: 0;
+	outline-offset: 0;
+}
+
+.reserv-form__button:active {
+	background-color: #EADEED;
+	border: 3px solid #EADEED;
+}
+
+.reserv-form input,
+.reserv-form select {
+	border: 2px solid #00000000;
+	height: 52px;
+}
+
+.reserv-form input:focus,
+.reserv-form select:focus {
+	border: 2px solid #CD06FF;
+	outline: 0;
+	outline-offset: 0;
 }
