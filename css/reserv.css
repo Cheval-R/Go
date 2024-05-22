@@ -47,7 +47,6 @@ fieldset {
 } */
 
 
-
 .reserv-form__halls-item .halls-radio-label:hover {
 	background-color: #EADEED;
 	border: 3px solid #640AA3;
@@ -60,7 +59,7 @@ fieldset {
 	color: #fff;
 }
 
-.halls-radio-input:focus .reserv-form__halls  {
+.halls-radio-input:focus .reserv-form__halls {
 	border-color: #640AA3;
 }
 
@@ -84,7 +83,7 @@ fieldset {
 
 	min-width: 250px;
 
-	transition: background-color 0.1s ease-in;
+	transition: color 0.25s ease-in, background-color 0.25s ease-in, border-color 0.25s ease-in;
 }
 
 .reserv-form__row {
@@ -118,8 +117,14 @@ fieldset {
 	width: 27px;
 	height: 27px;
 	background-color: #fff;
-
+	border: 2px solid #00000000;
 	transition: background-color 0.1s ease-in;
+
+	transition: color 0.25s ease-in,background-color 0.25s ease-in, border-color 0.25s ease-in;
+}
+
+.selector__label:hover:not(:disabled)::before {
+	border-color: #CD06FF;
 }
 
 .selector__label--radio::before {
@@ -311,6 +316,8 @@ fieldset {
 
 	border: 3px solid #00000000;
 
+	transition: border-color 0.25s ease-in, background-color 0.25s ease-in;
+
 }
 
 .reserv-form__button:hover {
@@ -335,6 +342,8 @@ fieldset {
 .reserv-form select {
 	border: 2px solid #00000000;
 	height: 52px;
+
+	transition: border-color 0.25s ease-in;
 }
 
 .reserv-form input:focus,

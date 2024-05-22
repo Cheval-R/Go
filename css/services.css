@@ -7,8 +7,6 @@
 .section__title {}
 
 .section__title--services {
-	margin: 0 auto;
-	max-width: 980px;
 }
 
 .services__list {
@@ -25,6 +23,12 @@
 	flex-basis: 380px;
 	min-height: 228px;
 	padding: 6px 40px;
+
+	transition: scale 0.3s ease-in;
+}
+
+.services__item:hover{
+	scale: 1.1;
 }
 
 .services__item--vr {

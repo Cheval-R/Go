@@ -14,6 +14,35 @@
 	margin-bottom: 35px;
 }
 
+.contacts__data a
+{
+	border: 3px solid #00000000;
+	transition: color 0.25s ease-in, border-color 0.25s ease-in;
+}
+
+.contacts__data a:hover {
+	color: #6C0287;
+}
+
+.contacts__data a:focus{
+	outline: none;
+	border-color: #6C0287;
+	border-radius: 5px;
+
+	color: #CD06FF;
+}
+
+.contacts__data a:active {
+	color: #CD06FF;
+
+	transform: translate(0, 2px);
+	-webkit-transform: translate(0, 2px);
+	-o-transform: translate(0, 2px);
+	-moz-transform: translate(0, 2px);
+	outline: none;
+	border-color: #00000000;
+}
+
 .location,
 .phone,
 .mail {

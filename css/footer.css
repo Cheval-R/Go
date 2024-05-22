@@ -15,4 +15,25 @@
 
 .footer__developer-name {}
 
-.footer__developer-mail {}
+.footer__developer-mail {
+	border: 3px solid #00000000;
+	transition: color 0.25s ease-in, border-color 0.25s ease-in;
+}
+
+.footer__developer-mail:hover {
+	color: #6C0287;
+}
+
+.footer__developer-mail:focus{
+	outline: none;
+	border-color: #6C0287;
+	border-radius: 5px;
+
+	color: #CD06FF;
+}
+
+.footer__developer-mail:active {
+	color: #CD06FF;
+	outline: none;
+	border-color: #00000000;
+}
