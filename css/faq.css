@@ -4,7 +4,7 @@
 	align-content: center;
 	justify-content: space-between;
 
-	background-color: #fff;
+	background-color: white;
 	color: #1C1A1A;
 	font-weight: 700;
 	font-size: 24px;
@@ -17,24 +17,24 @@
 
 .faq__item:nth-child(even) {
 	background-color: #440F51;
-	color: #fff;
+	color: white;
 }
 
 
 .faq__open-button--purple circle {
-	stroke: #6C0287;
+	stroke: var(--dark-purp);
 }
 .faq__open-button--purple path {
 	transition: fill 0.1s ease-in;
-	fill: #6C0287;
+	fill: var(--dark-purp);
 }
 
 .faq__open-button--purple:hover{
-	fill: #6C0287;
+	fill: var(--dark-purp);
 }
 
 .faq__open-button--purple:hover path {
-	fill: #fff;
+	fill: white;
 }
 
 .faq__open-button--purple:active {
@@ -46,26 +46,26 @@
 }
 
 .faq__open-button--purple:active path {
-	fill: #6C0287;
+	fill: var(--dark-purp);
 }
 
 
 /* !white */
 
 .faq__open-button--white circle {
-	stroke: #fff;
+	stroke: white;
 }
 .faq__open-button--white path {
 	transition: fill 0.1s ease-in;
-	fill: #fff;
+	fill: white;
 }
 
 .faq__open-button--white:hover{
-	fill: #fff;
+	fill: white;
 }
 
 .faq__open-button--white:hover path {
-	fill: #6C0287;
+	fill: var(--dark-purp);
 }
 
 .faq__open-button--white:active {
@@ -77,7 +77,7 @@
 }
 
 .faq__open-button--white:active path {
-	fill: #fff;
+	fill: white;
 }
 
 

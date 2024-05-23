@@ -18,9 +18,38 @@
 
 .reviews__image {
 	margin-bottom: 11px;
+
+	background: radial-gradient(50.00% 50.00% at 50% 50%, rgba(196, 196, 196, 0), rgba(108, 2, 135, 0.5) 100%);
 }
 
 .reviews__comment {
 	position: relative;
 	padding-top: 52px;
+}
+
+.reviews__name {
+	display: flex;
+	flex-direction: column;
+	gap: 11px;
+	text-align: center;
+}
+
+.reviews__name::before {
+	content: "";
+	display: block;
+	width: 280px;
+	height: 280px;
+	border-radius: 140px;
+}
+
+.reviews__name--maks::before {
+	background: radial-gradient(50.00% 50.00% at 50% 50%, rgba(196, 196, 196, 0), rgba(108, 2, 135, 0.5) 100%), url("./../img/reviews/maksim.png");
+}
+
+.reviews__name--oksana::before {
+	background: radial-gradient(50.00% 50.00% at 50% 50%, rgba(196, 196, 196, 0), rgba(108, 2, 135, 0.5) 100%), url("./../img/reviews/oksana.png");
+}
+
+.reviews__name--nikita::before {
+	background: radial-gradient(50.00% 50.00% at 50% 50%, rgba(196, 196, 196, 0), rgba(108, 2, 135, 0.5) 100%), url("./../img/reviews/nikita.png");
 }

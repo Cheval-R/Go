@@ -54,9 +54,9 @@ fieldset {
 
 .reserv-form__halls-item .halls-radio-input[type=radio]:checked+.halls-radio-label,
 .reserv-form__halls-item .halls-radio-label:active {
-	background-color: #6C0287;
-	border: 3px solid #FFFFFF;
-	color: #fff;
+	background-color: var(--dark-purp);
+	border: 3px solid white;
+	color: white;
 }
 
 .halls-radio-input:focus .reserv-form__halls {
@@ -74,11 +74,11 @@ fieldset {
 	text-align: center;
 	text-transform: uppercase;
 	padding: 7px 15px;
-	background-color: #fff;
+	background-color: white;
 	height: 55px;
 
 	border-radius: 8px;
-	border: 3px solid #00000000;
+	border: 3px solid var(--opacity-color);
 
 
 	min-width: 250px;
@@ -116,15 +116,15 @@ fieldset {
 
 	width: 27px;
 	height: 27px;
-	background-color: #fff;
-	border: 2px solid #00000000;
+	background-color: white;
+	border: 2px solid var(--opacity-color);
 	transition: background-color 0.1s ease-in;
 
 	transition: color 0.25s ease-in,background-color 0.25s ease-in, border-color 0.25s ease-in;
 }
 
 .selector__label:hover:not(:disabled)::before {
-	border-color: #CD06FF;
+	border-color: var(--light-purp);
 }
 
 .selector__label--radio::before {
@@ -160,7 +160,7 @@ fieldset {
 .date-time__label {
 	display: block;
 	padding: 12px 27px 12px 20px;
-	background-color: #fff;
+	background-color: white;
 	color: rgb(33, 30, 30);
 	width: 134px;
 }
@@ -184,7 +184,7 @@ fieldset {
 .person-count__label {
 	display: block;
 	padding: 12px 27px 12px 20px;
-	background-color: #fff;
+	background-color: white;
 	color: rgb(33, 30, 30);
 	width: 300px;
 }
@@ -314,7 +314,7 @@ fieldset {
 	text-transform: uppercase;
 	margin-left: auto;
 
-	border: 3px solid #00000000;
+	border: 3px solid var(--opacity-color);
 
 	transition: border-color 0.25s ease-in, background-color 0.25s ease-in;
 
@@ -322,11 +322,11 @@ fieldset {
 
 .reserv-form__button:hover {
 	background-color: #EADEED;
-	border: 3px solid #6C0287;
+	border: 3px solid var(--dark-purp);
 }
 
 .reserv-form__button:focus {
-	border-color: #6C0287;
+	border-color: var(--dark-purp);
 
 
 	outline: 0;
@@ -340,7 +340,7 @@ fieldset {
 
 .reserv-form input,
 .reserv-form select {
-	border: 2px solid #00000000;
+	border: 2px solid var(--opacity-color);
 	height: 52px;
 
 	transition: border-color 0.25s ease-in;
@@ -348,7 +348,7 @@ fieldset {
 
 .reserv-form input:focus,
 .reserv-form select:focus {
-	border: 2px solid #CD06FF;
+	border: 2px solid var(--light-purp);
 	outline: 0;
 	outline-offset: 0;
 }

@@ -37,7 +37,7 @@
 }
 
 .quote {
-	color: rgb(108, 2, 135);
+	color: var(--dark-purp);
 	font-size: 44px;
 	font-weight: 900;
 	line-height: 50px;

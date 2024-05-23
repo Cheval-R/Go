@@ -121,7 +121,7 @@
 	right: 574px;
 
 	/* padding: 29px 34px 39px 34px; */
-	 border: 1px solid rgba(0, 0, 0, 0);
+	border: 1px solid rgba(0, 0, 0, 0);
 	/*border-radius: 100%; */
 
 	transition: fill 0.2s ease-in, border-color 0.2s ease-in;
@@ -133,24 +133,24 @@
 }
 
 .anchor-button:hover svg rect {
-	fill: #6C0287;
+	fill: var(--dark-purp);
 	/* transition: color 0.2s ease-in; */
 }
 
 .anchor-button:focus {
 	outline: none;
 
-	border: 1px solid #CD06FF;
+	border: 1px solid var(--light-purp);
 }
 
 .anchor-button:active circle {
-	stroke: #CD06FF;
+	stroke: var(--light-purp);
 }
 
 .anchor-button:active svg {
-	fill: #CD06FF;
+	fill: var(--light-purp);
 }
 
 .anchor-button:active svg rect {
-	fill: #fff;
+	fill: white;
 }

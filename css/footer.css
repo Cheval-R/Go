@@ -1,10 +1,12 @@
 .footer {
-	margin-bottom: 10px;
+	padding-bottom: 10px;
 	font-size: 14px;
 	line-height: 16px;
+
+	background: linear-gradient(180.00deg, rgb(27, 26, 27), rgb(55, 10, 55) 100%);
 }
 
-.footer__information{
+.footer__information {
 	display: flex;
 	justify-content: space-between;
 }
@@ -16,24 +18,24 @@
 .footer__developer-name {}
 
 .footer__developer-mail {
-	border: 3px solid #00000000;
+	border: 3px solid var(--opacity-color);
 	transition: color 0.25s ease-in, border-color 0.25s ease-in;
 }
 
 .footer__developer-mail:hover {
-	color: #6C0287;
+	color: var(--dark-purp);
 }
 
-.footer__developer-mail:focus{
+.footer__developer-mail:focus {
 	outline: none;
-	border-color: #6C0287;
+	border-color: var(--dark-purp);
 	border-radius: 5px;
 
-	color: #CD06FF;
+	color: var(--light-purp);
 }
 
 .footer__developer-mail:active {
-	color: #CD06FF;
+	color: var(--light-purp);
 	outline: none;
-	border-color: #00000000;
+	border-color: var(--opacity-color);
 }
