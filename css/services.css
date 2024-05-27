@@ -1,4 +1,6 @@
-.services {}
+.services {
+	
+}
 
 .section {}
 
@@ -13,6 +15,7 @@
 	flex-wrap: wrap;
 
 	gap: 40px 20px;
+	
 }
 
 .services__item {
@@ -67,8 +70,7 @@
 }
 
 .services__item:nth-child(3n+2) {
-	position: relative;
-	top: 70px;
+transform: translateY(70px);
 }
 
 .services__text {
