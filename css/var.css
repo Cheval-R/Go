@@ -1,7 +1,8 @@
-:root{
+:root {
 	--dark-purp: #6C0287;
 	--light-purp: #CD06FF;
+	--blind-purp: #EADEED;
+	--violet: #640AA3;
 
-
-	--opacity-color:#00000000;
+	--opacity-color: #00000000;
 }

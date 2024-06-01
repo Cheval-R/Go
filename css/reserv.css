@@ -1,4 +1,4 @@
-fieldset {
+/* fieldset {
 	border: none;
 	padding: 0;
 	margin: 0;
@@ -40,12 +40,8 @@ fieldset {
 .reserv-form__halls-list {
 	display: flex;
 	gap: 60px;
+	justify-content: center;
 }
-
-/* .halls-radio-input {
-	display: none;
-} */
-
 
 .reserv-form__halls-item .halls-radio-label:hover {
 	background-color: #EADEED;
@@ -68,20 +64,19 @@ fieldset {
 	display: inline-block;
 
 	color: rgb(0, 0, 0);
-	font-size: 30px;
+	font-size: clamp(20px, 2.05vw, 30px);
 	font-weight: 700;
 	line-height: 40px;
 	text-align: center;
 	text-transform: uppercase;
 	padding: 7px 15px;
 	background-color: white;
-	height: 55px;
+
+	max-height: 55px;
+	flex-basis: 250px;
 
 	border-radius: 8px;
 	border: 3px solid var(--opacity-color);
-
-
-	min-width: 250px;
 
 	transition: color 0.25s ease-in, background-color 0.25s ease-in, border-color 0.25s ease-in;
 }
@@ -97,10 +92,6 @@ fieldset {
 	flex-direction: column;
 	row-gap: 20px;
 }
-
-/* .selector>input {
-	display: none;
-} */
 
 .selector__label {
 	font-size: 22px;
@@ -120,7 +111,7 @@ fieldset {
 	border: 2px solid var(--opacity-color);
 	transition: background-color 0.1s ease-in;
 
-	transition: color 0.25s ease-in,background-color 0.25s ease-in, border-color 0.25s ease-in;
+	transition: color 0.25s ease-in, background-color 0.25s ease-in, border-color 0.25s ease-in;
 }
 
 .selector__label:hover:not(:disabled)::before {
@@ -162,7 +153,7 @@ fieldset {
 	padding: 12px 27px 12px 20px;
 	background-color: white;
 	color: rgb(33, 30, 30);
-	width: 134px;
+	max-width: 52px;
 }
 
 .date-time__caption {
@@ -181,12 +172,15 @@ fieldset {
 	height: 15px;
 }
 
+
+
 .person-count__label {
 	display: block;
 	padding: 12px 27px 12px 20px;
 	background-color: white;
 	color: rgb(33, 30, 30);
-	width: 300px;
+	width: 100%;
+
 }
 
 .person-count__caption {
@@ -208,7 +202,7 @@ fieldset {
 .person-count__input {
 	padding: 12px 27px 12px 20px;
 	color: rgb(33, 30, 30);
-	width: 300px;
+	width: 100%;
 
 	font-size: 18px;
 	line-height: 28px;
@@ -229,15 +223,13 @@ fieldset {
 .date-time__wrapper>input {
 	padding: 12px 27px 12px 20px;
 	color: rgb(33, 30, 30);
-	width: 134px;
-
+max-width: 134px;
 	font-size: 18px;
 	line-height: 28px;
 }
 
 .date-time__wrapper>input::-webkit-calendar-picker-indicator {
 	background-image: url("./../img/form/triangle.svg");
-
 }
 
 .person-count__input {
@@ -246,9 +238,7 @@ fieldset {
 	background-repeat: no-repeat, repeat;
 
 	-moz-appearance: none;
-	/* Firefox */
 	-webkit-appearance: none;
-	/* Safari and Chrome */
 	appearance: none;
 }
 
@@ -261,14 +251,14 @@ fieldset {
 
 .name-label>input,
 .surname-label>input {
-	width: 280px;
+	max-width: 280px;
 	height: 52px;
 
 }
 
 .tel-label>input,
 .mail-label>input {
-	width: 300px;
+	max-width: 300px;
 	height: 52px;
 }
 
@@ -351,4 +341,232 @@ fieldset {
 	border: 2px solid var(--light-purp);
 	outline: 0;
 	outline-offset: 0;
+} */
+
+.reserv {
+	background-color: #440F51;
+	padding: 80px 0;
 }
+
+.reserv-form {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.reserv-form__title {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.16;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+
+.reserv-form__halls {}
+
+.reserv-form__halls-wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 60px;
+}
+
+.reserv-form__halls-wrapper>input {
+	position: fixed;
+	transform: scale(0);
+}
+
+.reserv-form__halls-wrapper>label {
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1.33;
+
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+
+	flex-basis: 250px;
+	padding: 7px 15px 8px;
+	background-color: #fff;
+	color: #000;
+	border-radius: 8px;
+	/* border: var(--opacity-color) 3px solid; */
+
+}
+
+.reserv-form__halls-wrapper>input:hover+label {
+	background-color: var(--blind-purp);
+	outline: var(--violet) 3px solid;
+}
+
+.reserv-form__halls-wrapper>input:focus+label {
+	background-color: #fff;
+	color: #000;
+	outline: var(--dark-purp) 3px solid;
+}
+
+.reserv-form__halls-wrapper>input:active+label,
+.reserv-form__halls-wrapper>input:checked+label {
+	color: #fff;
+	background-color: var(--dark-purp);
+	outline: #fff 3px solid;
+}
+
+/* ! */
+
+.reserv-form__kit {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.reserv-form__kit-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: clamp(60px, 11.8vw, 160px);
+}
+
+
+.reserv-form__kit-col {}
+
+.reserv-form__title--subtitle {
+	margin-bottom: 23px;
+	text-align: left;
+}
+
+.reserv-form__kit-block {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+
+.reserv-form__kit-button {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.reserv-form__kit-button>input[type=checkbox] {
+	height: 25px;
+	width: 25px;
+	border-radius: 0%;
+}
+
+.reserv-form__kit-button>input[type=radio] {
+	height: 27px;
+	width: 27px;
+	border-radius: 0%;
+}
+
+.reserv-form__kit-button>input:focus-visible {
+	outline: var(--light-purp) 1px solid;
+}
+
+.reserv-form__kit-button>label {
+	font-size: 22px;
+}
+
+
+/* ! */
+
+.reserv-form__contacts {
+	max-width: 980px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.reserv-form__title--contacts {
+	margin-bottom: 0;
+}
+
+.reserv-form__contacts-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 50px;
+
+	margin-bottom: 40px;
+}
+
+.reserv-form__contacts-wrapper input,
+.reserv-form__contacts-wrapper select {
+	height: 52px;
+	width: 100%;
+}
+
+.reserv-form__contacts-col {
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+}
+
+.date-time__wrapper {
+	display: flex;
+	gap: 32px;
+}
+
+.date-time__wrapper input {
+	position: relative;
+	width: 134px;
+	padding: 12px 5px 12px 20px;
+}
+
+
+
+.person-count__input {
+	appearance: none;
+	width: 100%;
+	min-width: 0;
+	padding: 12px 20px;
+
+	font-size: 18px;
+	line-height: 1.55;
+}
+
+.person-count {
+	position: relative;
+	width: 100%;
+}
+
+.person-count::after {
+	content: url("./../img/form/triangle.svg");
+	display: block;
+	width: 21px;
+	height: 15px;
+	font-size: 1rem;
+	top: 18px;
+	right: 27px;
+	position: absolute;
+	color: #000;
+	pointer-events: none;
+}
+
+.reserv-form__name {}
+
+.reserv-form__surname {}
+
+.reserv-form__phone {}
+
+.reserv-form__mail {}
+
+
+.reserv-form__submit {
+	padding: 16px 50px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #fff;
+
+	font-size: 22px;
+	line-height: 1.27;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--dark-purp);
+
+	align-self: flex-end;
+}
+
+

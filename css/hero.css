@@ -1,6 +1,6 @@
 /* ! HERO SECTION */
 
-.hero {}
+.hero {padding-top: 0;}
 
 .hero__container {
 	position: relative;

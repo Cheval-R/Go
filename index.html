@@ -10,7 +10,7 @@
 </head>
 
 <body class="page">
-	<header class="header section">
+	<header class="header section" style="display: none;">
 		<div class="container">
 			<div class="header__content">
 				<a class="header__logo" href="./index.html"><img src="./img/header/logo.svg" alt="Логотип компании GameOver"></a>
@@ -30,7 +30,7 @@
 		</div>
 	</header>
 	<main>
-		<section class="hero section">
+		<section class="hero section" style="display: none;">
 			<div class="hero__container container">
 				<h1 class="hero__title">Game Over</h1>
 
@@ -63,7 +63,7 @@
 			</div>
 		</section>
 
-		<section class="services section">
+		<section class="services section" style="display: none;">
 			<div class="container">
 				<h2 class="section__title section__title--services">У&nbsp;нас есть все для классного<br> отдыха с&nbsp;друзьями!</h2>
 
@@ -90,7 +90,7 @@
 			</div>
 		</section>
 
-		<section class="halls section" id="halls">
+		<section class="halls section" id="halls" style="display: none;">
 			<div class="container">
 				<h2 class="section__title section__title--halls">Наши залы</h2>
 				<ol class="halls__list">
@@ -102,8 +102,8 @@
 			</div>
 		</section>
 
-		<section class="section reserv" id="reserv">
-			<div class="container">
+		<!-- <section class="section reserv" id="reserv">
+			<div class="container" >
 				<h2 class="section__title">Забронировать зал просто</h2>
 
 				<form class="reserv-form" method="post" action="https://jsonplaceholder.typicode.com/posts">
@@ -216,22 +216,13 @@
 							<fieldset class="reserv-form__col">
 								<div class="date-time">
 									<div class="date-time__wrapper">
-										<!-- <label class="date-time__label date-time__label--date" for="date-input">
-											<span class="date-time__caption">Дата</span>
-										</label> -->
 										<input type="text" name="date" id="date-input" placeholder="Дата" required onfocus="(this.type='date')" onblur="(this.type='text')">
 									</div>
 									<div class="date-time__wrapper">
-										<!-- <label class="date-time__label date-time__label--time" for="time-input">
-											<span class="date-time__caption">Время</span>
-										</label> -->
 										<input type="text" name="time" id="time-input" placeholder="Время" required onfocus="(this.type='time')" onblur="(this.type='text')">
 									</div>
 								</div>
 								<div class="person-count">
-									<!-- <label class="person-count__label" for="person-count">
-										<div class="person-count__caption">Сколько человек</div>
-									</label> -->
 									<select class="person-count__input" name="person-count" id="person-count" required>
 										<option value="" disabled selected hidden>Сколько человек</option>
 										<option value="1">1</option>
@@ -269,9 +260,152 @@
 					</div>
 				</form>
 			</div>
+		</section> -->
+
+		<section class="section reserv" id="reserv">
+			<div class="container">
+				<h2 class="section__title">Забронировать зал просто</h2>
+				<form class="reserv-form" method="post" action="https://jsonplaceholder.typicode.com/posts">
+					<fieldset class="reserv-form__halls">
+						<h3 class="reserv-form__title">Выбери зал</h3>
+
+						<div class="reserv-form__halls-wrapper">
+							<input type="radio" name="hall" value="vibes" id="vibes" required>
+							<label for="vibes">80’s vibes</label>
+
+							<input type="radio" name="hall" value="star-wars" id="star-wars" required>
+							<label for="star-wars">Star wars</label>
+
+							<input type="radio" name="hall" value="west" id="west" required>
+							<label for="west">wild west</label>
+
+							<input type="radio" name="hall" value="neon" id="neon" required>
+							<label for="neon">neon style</label>
+						</div>
+					</fieldset>
+
+					<fieldset class="reserv-form__kit">
+						<h3 class="reserv-form__title">Собери набор развлечений</h3>
+						<div class="reserv-form__kit-wrapper">
+							<div class="reserv-form__kit-col">
+								<h4 class="reserv-form__title reserv-form__title--subtitle">Приставка:</h4>
+
+								<div class="reserv-form__kit-block">
+
+									<div class="reserv-form__kit-button">
+										<input type="radio" name="console" value="ps" id="ps" required>
+										<label for="ps">PlayStation 5</label>
+									</div>
+
+									<div class="reserv-form__kit-button">
+										<input type="radio" name="console" value="smd" id="smd" required>
+										<label for="smd">Sega Mega Drive</label>
+									</div>
+
+									<div class="reserv-form__kit-button">
+										<input type="radio" name="console" value="xbox" id="xbox" required>
+										<label for="xbox">X-box One S</label>
+									</div>
+
+									<div class="reserv-form__kit-button">
+										<input type="radio" name="console" value="dendy" id="dendy" required>
+										<label for="dendy">Dendy</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="reserv-form__kit-col">
+								<h4 class="reserv-form__title reserv-form__title--subtitle">Настольные игры</h4>
+
+								<div class="reserv-form__kit-block">
+									<div class="reserv-form__kit-button">
+										<input type="checkbox" name="board-game" value="jenga" id="jenga" required>
+										<label for="jenga">Jenga</label>
+									</div>
+
+									<div class="reserv-form__kit-button">
+										<input type="checkbox" name="board-game" value="monopoly" id="monopoly" required>
+										<label for="monopoly">Monopoly</label>
+									</div>
+
+									<div class="reserv-form__kit-button">
+										<input type="checkbox" name="board-game" value="manchkin" id="manchkin" required>
+										<label for="manchkin">Манчкин</label>
+									</div>
+
+									<div class="reserv-form__kit-button">
+										<input type="checkbox" name="board-game" value="alias" id="alias" required>
+										<label for="alias">Alias</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="reserv-form__kit-col">
+								<h4 class="reserv-form__title reserv-form__title--subtitle">Дополнительно</h4>
+
+								<div class="reserv-form__kit-block">
+									<div class="reserv-form__kit-button">
+										<input type="checkbox" name="additional" value="karaoke" id="karaoke" required>
+										<label for="karaoke">Караоке</label>
+									</div>
+
+									<div class="reserv-form__kit-button">
+										<input type="checkbox" name="additional" value="vr" id="vr" required>
+										<label for="vr">VR</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="reserv-form__contacts">
+						<h3 class="reserv-form__title reserv-form__title--contacts">Выбери дату и время</h3>
+
+						<div class="reserv-form__contacts-wrapper">
+							<div class="reserv-form__contacts-col">
+								<!-- <div class="date-time__wrapper">
+									<div class="date-wrapper"><input type="text" id="date" name="date" required placeholder="Дата" onfocus="(this.type='date')" onblur="(this.type='text')"></div>
+
+									<div class="time-wrapper"><input type="text" id="time" name="time" required placeholder="Время" onfocus="(this.type='time')" onblur="(this.type='text')"></div>
+								</div> -->
+
+								<div class="date-time__wrapper">
+									<input type="text" id="date" name="date" required placeholder="Дата" onfocus="(this.type='date')" onblur="(this.type='text')" class="date-time__input">
+									<input type="text" id="time" name="time" required placeholder="Время" onfocus="(this.type='time')" onblur="(this.type='text')" class="date-time__input">
+								</div>
+
+								<div class="person-count">
+									<select class="person-count__input" name="person" id="person" required>
+										<option disabled selected hidden>Сколько человек</option>
+										<option value="1-3">1-3</option>
+										<option value="4-6">4-6</option>
+										<option value="7-9">7-9</option>
+										<option value="10-12">10-12</option>
+										<option value="13-15">13-15</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="reserv-form__contacts-col">
+								<input class="reserv-form__name" type="text" id="name" name="name" required>
+
+								<input class="reserv-form__surname" type="text" id="surname" name="surname" required>
+							</div>
+
+							<div class="reserv-form__contacts-col">
+								<input class="reserv-form__phone" type="tel" id="tel" name="phone" required>
+
+								<input class="reserv-form__mail" type="email" id="mail" name="email" required>
+							</div>
+						</div>
+
+						<button class="reserv-form__submit" type="submit">Забронировать</button>
+					</fieldset>
+				</form>
+			</div>
 		</section>
 
-		<section class="about section" id="about">
+		<section class="about section" id="about" style="display: none;">
 			<div class="container">
 				<h2 class="section__title">
 					О нас
@@ -291,7 +425,7 @@
 			</div>
 		</section>
 
-		<section class="reviews section" id="reviews">
+		<section class="reviews section" id="reviews" style="display: none;">
 			<div class="container container--reviews">
 				<h2 class="section__title">Отзывы посетителей</h2>
 				<ul class="reviews__list">
@@ -320,7 +454,7 @@
 			</div>
 		</section>
 
-		<section class="faq section" id="faq">
+		<section class="faq section" id="faq" style="display: none;">
 			<div class="container">
 				<h2 class="section__title">Частые вопросы</h2>
 				<ul class="faq__list">
@@ -368,7 +502,7 @@
 			</div>
 		</section>
 	</main>
-	<footer class="footer">
+	<footer class="footer" style="display: none;">
 		<div class="contacts section" id="contacts">
 			<div class="container">
 				<h2 class="section__title">
@@ -380,7 +514,7 @@
 							<div class="location">
 								<div class="location__text">
 									<span>г. Москва</span>
-									<span>ул. Аквамарина, 16</span>
+									<span>ул. Усачёва, 29 к3</span>
 								</div>
 							</div>
 							<p class="phone"><a href="tel:+79509302893">8 (950) 930 - 28 - 93</a></p>

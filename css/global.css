@@ -1,0 +1,122 @@
+html {
+	position: relative;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	overflow-x: hidden;
+	min-width: 320px;
+	/* !min-height: 100vh; */
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	font-size: 20px;
+	color: white;
+	background-color: #1b1b1b;
+	font-weight: 400;
+
+}
+
+
+img,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+svg {
+	max-height: 100%;
+}
+
+button {
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+fieldset {
+	margin: 0;
+}
+
+iframe {
+	border: none;
+}
+
+blockquote {
+	margin: 0;
+}
+
+/*
+Доступно скрываю элементы
+*/
+
+.visually-hidden {
+	position: fixed;
+	transform: scale(0);
+}
+
+
+/*
+Пример контейнера
+Если контейнер 1180px по макету,
+то для max-width прибавляем паддинги 30px*2, 
+в итоге 1240px
+Чтобы контент не прижимался к краям экрана
+*/
+
+.container {
+	box-sizing: content-box;
+	max-width: 1180px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
+.section {
+	padding: 50px 0;
+}
+
+.section__title {
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	min-width: 0;
+	padding: 0.01em 0 0 0;
+}

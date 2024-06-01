@@ -1,5 +1,6 @@
 .services {
-	
+	box-sizing: content-box;
+	height: 708px;
 }
 
 .section {}
@@ -15,7 +16,7 @@
 	flex-wrap: wrap;
 
 	gap: 40px 20px;
-	
+
 }
 
 .services__item {
