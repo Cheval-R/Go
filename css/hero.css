@@ -120,21 +120,17 @@
 	margin-bottom: 90px;
 	right: 574px;
 
-	/* padding: 29px 34px 39px 34px; */
 	border: 1px solid rgba(0, 0, 0, 0);
-	/*border-radius: 100%; */
 
 	transition: fill 0.2s ease-in, border-color 0.2s ease-in;
 }
 
 .anchor-button:hover svg {
 	fill: white;
-	/* transition: color 0.2s ease-in; */
 }
 
 .anchor-button:hover svg rect {
 	fill: var(--dark-purp);
-	/* transition: color 0.2s ease-in; */
 }
 
 .anchor-button:focus {
