@@ -480,16 +480,59 @@ max-width: 134px;
 	gap: 40px;
 }
 
+
+.reserv-form__contacts input:focus,
+.reserv-form__contacts select:focus,
+.reserv-form__submit:focus {
+	outline: var(--light-purp) 2px solid;
+
+}
+
+.reserv-form__name-wrapper,
+.reserv-form__surname-wrapper,
+.reserv-form__phone-wrapper,
+.reserv-form__mail-wrapper {
+	position: relative;
+}
+
+.reserv-form__name-wrapper::before,
+.reserv-form__surname-wrapper::before,
+.reserv-form__phone-wrapper::before,
+.reserv-form__mail-wrapper::before {
+	display: block;
+	position: absolute;
+	top: calc(-16px - 9px);
+
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+.reserv-form__name-wrapper::before {
+	content: "Имя";
+}
+
+.reserv-form__surname-wrapper::before {
+	content: "Фамилия";
+}
+
+.reserv-form__phone-wrapper::before {
+	content: "Телефон";
+}
+
+.reserv-form__mail-wrapper::before {
+	content: "E-mail";
+}
+
+
 .reserv-form__title--contacts {
 	margin-bottom: 0;
 }
 
 .reserv-form__contacts-wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 280px 1fr;
 	gap: 50px;
-
-	margin-bottom: 40px;
 }
 
 .reserv-form__contacts-wrapper input,
@@ -620,4 +663,66 @@ max-width: 134px;
 	background-image: url("./../img/form/triangle.svg");
 	width: 21px;
 	height: 15px;
+}
+
+.reserv-form__submit:hover {
+	background-color: var(--blind-purp);
+	outline: var(--violet) 3px solid;
+	/* box-shadow: 0px 0px 15px var(--violet); */
+	box-shadow: 0px 0px 15px var(--blind-purp);
+
+}
+
+.reserv-form__submit:focus {
+	background-color: #fff;
+	color: #000;
+	box-shadow: 0px 0px 15px var(--light-purp);
+
+}
+
+.reserv-form__submit:active {
+	color: #fff;
+	background-color: var(--dark-purp);
+	outline: #fff 3px solid;
+	/* box-shadow: 0px 0px 15px var(--dark-purp); */
+}
+
+@media (max-width: 1150px) {
+	.reserv {
+		padding: 60px 0;
+	}
+
+	.section__title {
+		font-size: 30px;
+	}
+
+	.reserv-form__title {
+		margin-bottom: 26px;
+	}
+
+	.reserv-form__halls-wrapper>label {
+		flex-basis: 180px;
+		padding: 10px 20px;
+		font-size: 20px;
+		line-height: 1.2;
+	}
+
+	.reserv-form__halls-wrapper {
+		max-width: 904px;
+		margin: 0 auto;
+	}
+
+	.reserv-form__contacts-wrapper {
+		grid-template-columns: 300px 1fr 1fr;
+	}
+
+	.reserv-form__submit {
+		padding: 13px 46px;
+		font-size: 18px;
+		line-height: 1.33;
+	}
+
+	.reserv-form__contacts {
+		gap: 50px;
+	}
 }

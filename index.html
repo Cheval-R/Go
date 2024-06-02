@@ -264,7 +264,7 @@
 
 		<section class="section reserv" id="reserv">
 			<div class="container">
-				<h2 class="section__title">Забронировать зал просто</h2>
+				<h2 class="section__title reserv__title">Забронировать зал просто</h2>
 				<form class="reserv-form" method="post" action="https://jsonplaceholder.typicode.com/posts">
 					<fieldset class="reserv-form__halls">
 						<h3 class="reserv-form__title">Выбери зал</h3>
@@ -372,12 +372,7 @@
 										<input type="text" id="time" name="time" required placeholder="Время" onfocus="(this.type='time')" onblur="(this.type='text')">
 									</div>
 								</div>
-
-								<!-- <div class="date-time__wrapper">
-									<input type="text" id="date" name="date" required placeholder="Дата" onfocus="(this.type='date')" onblur="(this.type='text')" class="date-time__input">
-									<input type="text" id="time" name="time" required placeholder="Время" onfocus="(this.type='time')" onblur="(this.type='text')" class="date-time__input">
-								</div> -->
-
+								
 								<div class="person-count">
 									<select class="person-count__input" name="person" id="person" required>
 										<option disabled selected hidden>Сколько человек</option>
@@ -390,16 +385,32 @@
 								</div>
 							</div>
 
-							<div class="reserv-form__contacts-col">
+							<!-- 							<div class="reserv-form__contacts-col">
+								<label class="reserv-form__name-label" for="name">Имя</label>
 								<input class="reserv-form__name" type="text" id="name" name="name" required>
 
+								<label class="reserv-form__surname-label" for="surname">Фамилия</label>
 								<input class="reserv-form__surname" type="text" id="surname" name="surname" required>
 							</div>
 
 							<div class="reserv-form__contacts-col">
+								<label class="reserv-form__phone-label" for="tel">Телефон</label>
 								<input class="reserv-form__phone" type="tel" id="tel" name="phone" required>
 
+								<label class="reserv-form__mail-label" for="mail">E-mail</label>
 								<input class="reserv-form__mail" type="email" id="mail" name="email" required>
+							</div> -->
+
+							<div class="reserv-form__contacts-col">
+								<div class="reserv-form__name-wrapper"><input class="reserv-form__name" type="text" id="name" name="name" required></div>
+
+								<div class="reserv-form__surname-wrapper"><input class="reserv-form__surname" type="text" id="surname" name="surname" required></div>
+							</div>
+
+							<div class="reserv-form__contacts-col">
+								<div class="reserv-form__phone-wrapper"><input class="reserv-form__phone" type="tel" id="tel" name="phone" required></div>
+
+								<div class="reserv-form__mail-wrapper"><input class="reserv-form__mail" type="email" id="mail" name="email" required></div>
 							</div>
 						</div>
 

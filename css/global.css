@@ -109,6 +109,7 @@ blockquote {
 .section__title {
 	font-size: 40px;
 	font-weight: 700;
+	line-height: 1.25;
 	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: 40px;
@@ -119,4 +120,10 @@ fieldset {
 	margin: 0;
 	min-width: 0;
 	padding: 0.01em 0 0 0;
+}
+
+@media (max-width: 1150px){
+	.reserv__title{
+		margin-bottom: 25px;
+	}
 }
