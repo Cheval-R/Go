@@ -570,3 +570,54 @@ max-width: 134px;
 }
 
 
+.date-wrapper,
+.time-wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.date-wrapper::after,
+.time-wrapper::after {
+	content: url("./../img/form/triangle.svg");
+	display: block;
+	width: 21px;
+	height: 15px;
+	font-size: 1rem;
+	top: 19px;
+	right: 27px;
+	position: absolute;
+	color: #000;
+	pointer-events: none;
+}
+
+.date-wrapper.no-icon::after {
+	display: none;
+}
+
+.time-wrapper>input[type=text]::placeholder,
+.date-wrapper>input[type=text]::placeholder {
+	color: #000;
+}
+
+.time-wrapper>input,
+.date-wrapper>input {
+	padding: 12px 27px 12px 20px;
+	color: rgb(33, 30, 30);
+	max-width: 134px;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.date-wrapper.no-icon>input {
+	padding-right: 5px;
+}
+
+.time-wrapper>input::-webkit-calendar-picker-indicator,
+.date-wrapper>input::-webkit-calendar-picker-indicator {
+	position: absolute;
+	top: 15px;
+	right: 23px;
+	background-image: url("./../img/form/triangle.svg");
+	width: 21px;
+	height: 15px;
+}
