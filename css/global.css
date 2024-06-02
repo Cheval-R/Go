@@ -123,7 +123,7 @@ fieldset {
 }
 
 @media (max-width: 1150px){
-	.reserv__title{
-		margin-bottom: 25px;
+	.section__title {
+		font-size: 30px;
 	}
 }
