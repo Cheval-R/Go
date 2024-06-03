@@ -1,15 +1,17 @@
 /* ! HERO SECTION */
 
-.hero {padding-top: 0;}
+.hero {
+	padding-top: 20px;
+}
 
 .hero__container {
 	position: relative;
-	min-height: 823px;
+	height: 823px;
 }
 
 .hero__container::after {
 	position: absolute;
-	z-index: -1;
+	z-index: 1;
 
 
 	box-sizing: content-box;
@@ -18,8 +20,8 @@
 	bottom: 0;
 
 	content: "";
-	min-height: 762px;
-	min-width: 675px;
+	height: 762px;
+	width: 675px;
 	background-image: url("./../img/hero/hero-img.png");
 	background-repeat: no-repeat;
 }
@@ -37,6 +39,7 @@
 	font-size: 28px;
 	padding-left: 100px;
 	margin-bottom: 30px;
+	line-height: 1.79;
 }
 
 .hero__about {
@@ -65,14 +68,15 @@
 	color: rgb(205, 6, 255);
 	font-size: 100px;
 	font-weight: 900;
-	line-height: 141px;
+	line-height: 1.41;
 }
 
 .focus-letter {
 	color: rgb(205, 6, 255);
 	font-size: 75px;
 	font-weight: 900;
-	line-height: 106px;
+	line-height: 1.41;
+	font-variant: small-caps;
 }
 
 .hero__button {
@@ -116,24 +120,65 @@
 .anchor-button {
 	position: absolute;
 
-	bottom: 0;
-	margin-bottom: 90px;
-	right: 574px;
+	bottom: 90px;
 
-	border: 1px solid rgba(0, 0, 0, 0);
+	width: 97px;
+	height: 97px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+
+	outline: 1px solid rgba(0, 0, 0, 0);
 
 	transition: fill 0.2s ease-in, border-color 0.2s ease-in;
+	z-index: 3;
+}
+
+.anchor-button svg {
+	border-radius: 100%;
+}
+
+.anchor-button,
+.anchor-button svg,
+.anchor-button svg rect,
+.anchor-button:active svg circle {
+	transition: 0.2s ease-in;
 }
 
 .anchor-button:hover svg {
-	fill: white;
+	background-color: white;
 }
 
 .anchor-button:hover svg rect {
 	fill: var(--dark-purp);
 }
 
-.anchor-button:focus {
+.anchor-button:hover svg circle {
+	stroke: var(--opacity-color);
+}
+
+
+.anchor-button:focus-visible {
+	outline: 1px solid var(--light-purp);
+}
+
+.anchor-button:active svg {
+	background-color: var(--light-purp);
+}
+
+.anchor-button:active svg circle {
+	stroke: var(--light-purp);
+}
+
+.anchor-button:active svg rect {
+	fill: #fff
+}
+
+
+
+/* .anchor-button:focus-visible {
 	outline: none;
 
 	border: 1px solid var(--light-purp);
@@ -149,4 +194,71 @@
 
 .anchor-button:active svg rect {
 	fill: white;
+} */
+
+
+@media (max-width: 1150px) {
+
+	.hero {
+		padding: 0;
+	}
+
+	.hero__container {
+		position: relative;
+		height: 583px;
+	}
+
+
+	.hero__container::after {
+		width: 453px;
+		height: 520px;
+		padding-right: unset;
+		right: 30px;
+		background-size: cover;
+		background-position: top;
+	}
+
+	.hero__title {
+		font-size: 120px;
+		letter-spacing: -10px;
+		margin-bottom: 20px;
+	}
+
+	.hero__slogan {
+		font-size: 22px;
+		line-height: 1.36;
+	}
+
+
+	.focus-number {
+		font-size: 80px;
+	}
+
+	.focus-letter {
+		font-size: 60px;
+	}
+
+	.hero__about-text {
+		font-size: 26px;
+	}
+
+	.hero__about {
+		margin-bottom: 80px;
+	}
+
+	.hero__button {
+		margin-left: 40px;
+		max-width: 296px;
+		font-size: 22px;
+		line-height: 1.36;
+		padding: 17px 48px;
+	}
+
+	.anchor-button {
+		height: 67px;
+		width: 67px;
+
+		bottom: 46px;
+	}
+
 }
