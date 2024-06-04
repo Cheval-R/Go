@@ -688,9 +688,7 @@ max-width: 134px;
 }
 
 @media (max-width: 1150px) {
-	.container {
-		max-width: 904px;
-	}
+
 
 	.reserv {
 		padding: 60px 0;
@@ -739,18 +737,11 @@ max-width: 134px;
 }
 
 @media (max-width: 900px) {
-	.container {
-		padding: 0 40px;
-	}
 
 	.reserv {
 		padding: 50px 0;
 	}
 
-	.section__title {
-		font-size: 24px;
-		line-height: 1.5;
-	}
 
 	.reserv__title {
 		margin-bottom: 40px;
@@ -839,9 +830,6 @@ max-width: 134px;
 
 
 @media (max-width:660px) {
-	.container {
-		padding: 0 20px;
-	}
 
 	.reserv {
 		padding: 30px 0;
