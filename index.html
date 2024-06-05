@@ -10,7 +10,7 @@
 </head>
 
 <body class="page">
-	<header class="header section">
+	<header class="header section" style="display: none;">
 		<div class="container">
 			<div class="header__content">
 				<a class="header__logo" href="./index.html"><img src="./img/header/logo.svg" alt="Логотип компании GameOver"></a>
@@ -38,7 +38,7 @@
 		</div>
 	</header>
 	<main>
-		<section class="hero section">
+		<section class="hero section" style="display: none;">
 			<div class="container hero__container">
 				<h1 class="hero__title">Game Over</h1>
 
@@ -67,7 +67,7 @@
 			</div>
 		</section>
 
-		<section class="services section">
+		<section class="services section" style="display: none;">
 			<div class="container">
 				<h2 class="section__title section__title--services">У&nbsp;нас есть все для классного<br> отдыха с&nbsp;друзьями!</h2>
 
@@ -94,7 +94,7 @@
 			</div>
 		</section>
 
-		<section class="halls section" id="halls">
+		<section class="halls section" id="halls" style="display: none;">
 			<div class="container">
 				<h2 class="section__title section__title--halls">Наши залы</h2>
 				<ol class="halls__list">
@@ -106,7 +106,7 @@
 			</div>
 		</section>
 
-		<section class="section reserv" id="reserv">
+		<section class="section reserv" id="reserv" style="display: none;">
 			<div class="container">
 				<h2 class="section__title reserv__title">Забронировать зал просто</h2>
 				<form class="reserv-form" method="post" action="https://jsonplaceholder.typicode.com/posts">
@@ -248,7 +248,7 @@
 			</div>
 		</section>
 
-		<section class="about section" id="about">
+		<section class="about section" id="about" style="display: none;">
 			<div class="container">
 				<h2 class="section__title ">
 					О нас
@@ -268,7 +268,7 @@
 			</div>
 		</section>
 
-		<section class="reviews section" id="reviews">
+		<section class="reviews section" id="reviews" style="display: none;">
 			<div class="container container--reviews">
 				<h2 class="section__title">Отзывы посетителей</h2>
 				<ul class="reviews__list">
@@ -297,49 +297,59 @@
 			</div>
 		</section>
 
-		<section class="faq section" id="faq" style="display: none;">
+		<section class="faq section" id="faq">
 			<div class="container">
-				<h2 class="section__title">Частые вопросы</h2>
+				<h2 class="section__title faq__title">Частые вопросы</h2>
 				<ul class="faq__list">
 					<li class="faq__item">
 						<span class="faq__task-text">Можно ли забронировать комнату онлайн?</span>
-						<svg class="faq__open-button faq__open-button--purple" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="23" cy="23" r="22" stroke="none" stroke-width="2" />
-							<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
-							<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
-						</svg>
+						<button class="faq__open-button faq__open-button--purple">
+							<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="23" cy="23" r="22" stroke="none" stroke-width="1" />
+								<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
+								<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
+							</svg>
+						</button>
 					</li>
 					<li class="faq__item">
 						<span class="faq__task-text">Могут ли мне вернуть деньги за бронь?</span>
-						<svg class="faq__open-button faq__open-button--white" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="23" cy="23" r="22" stroke="none" stroke-width="2" />
-							<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
-							<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
-						</svg>
+						<button class="faq__open-button faq__open-button--white">
+							<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="23" cy="23" r="22" stroke="none" stroke-width="1" />
+								<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
+								<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
+							</svg>
+						</button>
 					</li>
 					<li class="faq__item">
 						<span class="faq__task-text">Какая комната самая популярная?</span>
-						<svg class="faq__open-button faq__open-button--purple" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="23" cy="23" r="22" stroke="#6C0287" stroke-width="2" />
-							<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="#6C0287" />
-							<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="#6C0287" />
-						</svg>
+						<button class="faq__open-button faq__open-button--purple">
+							<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="23" cy="23" r="22" stroke="none" stroke-width="1" />
+								<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
+								<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
+							</svg>
+						</button>
 					</li>
 					<li class="faq__item">
 						<span class="faq__task-text">Как получить VIP карту?</span>
-						<svg class="faq__open-button faq__open-button--white" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="23" cy="23" r="22" stroke="none" stroke-width="2" />
-							<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
-							<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
-						</svg>
+						<button class="faq__open-button faq__open-button--white">
+							<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="23" cy="23" r="22" stroke="none" stroke-width="1" />
+								<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
+								<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
+							</svg>
+						</button>
 					</li>
 					<li class="faq__item">
 						<span class="faq__task-text">Какая комната самая популярная?</span>
-						<svg class="faq__open-button faq__open-button--purple" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="23" cy="23" r="22" stroke="#6C0287" stroke-width="2" />
-							<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="#6C0287" />
-							<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="#6C0287" />
-						</svg>
+						<button class="faq__open-button faq__open-button--purple">
+							<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="23" cy="23" r="22" stroke="none" stroke-width="1" />
+								<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
+								<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
+							</svg>
+						</button>
 					</li>
 				</ul>
 			</div>
