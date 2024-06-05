@@ -7,7 +7,7 @@
 .about__content {
 	line-height: 1.4;
 	/* display: flex; */
-	gap: 50px 60px;
+	gap: 55px 80px;
 	display: grid;
 	grid-template-columns: 600px 1fr;
 	grid-template-rows: 222px 1fr;
