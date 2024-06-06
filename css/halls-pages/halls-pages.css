@@ -1,0 +1,316 @@
+.return {
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+.return__text {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	font-size: 22px;
+	line-height: 1.27;
+}
+
+.return__text::before {
+	content: "";
+	display: block;
+
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("./../../img/icons/arrow.svg");
+	width: 31px;
+	height: 14px;
+}
+
+.section {}
+
+.intro {
+	padding-top: 10px;
+}
+
+.intro__name {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 90px;
+	line-height: 0.89;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	height: 750px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url("./../../img/halls-pages/vibes-bg.jpg");
+}
+
+@media (max-width:1150px) {
+	.return {
+		padding-top: 20px;
+	}
+
+	.intro__name {
+		height: 534px;
+	}
+}
+
+@media (max-width:900px) {
+	.return {
+		padding-top: 10px;
+	}
+
+	.return__text {
+		font-size: 16px;
+		line-height: 1.75;
+	}
+
+
+	.intro__name {
+		height: 402px;
+		font-size: 60px;
+		line-height: 1.2;
+	}
+}
+
+@media (max-width:560px) {
+	.return__text {
+		gap: 6px;
+		font-size: 12px;
+		line-height: 1.33;
+	}
+
+	.return__text::before {
+		width: 17px;
+		height: 8px;
+	}
+
+	.intro {
+		padding-top: 7px;
+	}
+
+	.intro__name {
+		height: 168px;
+		font-size: 30px;
+	}
+}
+
+
+
+/* !BRIDGE */
+
+.bridge {
+	box-sizing: content-box;
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.bridge__text {
+	font-size: 24px;
+	line-height: 1.5;
+	font-weight: 700;
+	text-align: center;
+}
+
+@media (max-width:1150px) {
+	.bridge {
+		max-width: 800px;
+	}
+
+	.bridge__text {
+		font-size: 20px;
+	}
+}
+
+@media (max-width:800px) {
+	.bridge {
+		max-width: 688px;
+	}
+
+	.bridge__text {
+		font-size: 16px;
+	}
+}
+
+
+/* ! ABOUT */
+
+.section {}
+
+.about-hall {}
+
+.about-hall__content::before {
+	content: "";
+	display: block;
+	flex-basis: 600px;
+	height: 424px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url("./../../img/halls/_80vibes.jpg");
+}
+
+.about-hall__content {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+}
+
+.about-hall__text {
+	flex-basis: 500px;
+
+
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	max-height: 155px;
+	line-height: 1.4;
+}
+
+@media (max-width:1150px) {
+	.about-hall__content::before {
+		height: 326px;
+		flex-basis: 461px;
+	}
+
+	.about-hall__content {
+		gap: 30px;
+	}
+
+	.about-hall__text {
+		font-size: 18px;
+		max-width: 413px;
+	}
+}
+
+@media (max-width:900px) {
+	.about-hall__content::before {
+		flex-basis: 461px;
+	}
+
+	.about-hall__content {
+		gap: 46px;
+	}
+
+	.about-hall__text {
+		font-size: 16px;
+		max-width: 313px;
+	}
+}
+
+@media (max-width:660px) {
+	.about-hall__content {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.about-hall__content::before {
+		width: 100%;
+		flex-basis: 230px;
+	}
+}
+
+@media(max-width:500px) {
+	.about-hall__content {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.about-hall__content::before {
+		width: 100%;
+		flex-basis: 180px;
+	}
+
+	.about-hall__text {
+		font-size: 12px;
+		line-height: 1.33;
+		align-self: flex-start;
+	}
+}
+
+
+/* !OTHER */
+
+.other {}
+
+.container {}
+
+.section__title {}
+
+.other__list {
+	display: flex;
+	gap: 20px;
+	justify-content: space-around;
+}
+
+.other__item {
+	font-size: 30px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	height: 229px;
+	flex-basis: 380px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.other__item--ww {
+	background-image: url("./../../img/halls/wild-west.jpg");
+}
+
+.other__item--sw {
+	background-image: url("./../../img/halls/star-wars.jpg");
+}
+
+.other__item--neon {
+	background-image: url("./../../img/halls/neon-style.jpg");
+}
+
+.other__link {
+	display: block;
+	width: 100px;
+}
+
+@media (max-width:1150px) {
+	.other__item {
+		height: 172px;
+	}
+}
+
+@media(max-width:900px) {
+	.other__list {
+		gap: 8px;
+	}
+
+	.other__item {
+		font-size: 20px;
+		height: 134px;
+	}
+}
+
+@media (max-width:500px) {
+	.other__item {
+		height: 100px;
+	}
+}
+
+@media (max-width:400px) {
+	.other__list {
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.other__item {
+		height: 140px;
+		flex-basis: auto;
+	}
+}
