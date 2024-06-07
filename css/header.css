@@ -65,6 +65,10 @@
 	outline-color: var(--dark-purp);
 }
 
+.navigation__link:active {
+	color: var(--light-purp);
+}
+
 .header__logo {
 	outline: var(--opacity-color) 2px solid;
 	transition: outline-color 0.2s ease-in, background-color 0.2s ease-in;

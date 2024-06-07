@@ -366,15 +366,12 @@ max-width: 134px;
 	text-align: center;
 }
 
-
-
-
-.reserv-form__halls {}
-
 .reserv-form__halls-wrapper {
 	display: flex;
 	justify-content: space-between;
 	gap: 60px;
+	border: 2px solid transparent;
+	/* Установить начальную рамку прозрачной */
 }
 
 .reserv-form__halls-wrapper>input {
@@ -387,19 +384,20 @@ max-width: 134px;
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 1.33;
-
 	display: flex;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
-
 	flex-basis: 250px;
 	padding: 7px 15px 8px;
 	background-color: #fff;
 	color: #000;
 	border-radius: 8px;
-	/* border: var(--opacity-color) 3px solid; */
+}
 
+.error {
+	border: 2px solid red;
+	/* Красная рамка при ошибке */
 }
 
 .reserv-form__halls-wrapper>input:hover+label {

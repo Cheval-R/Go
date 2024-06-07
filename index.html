@@ -25,11 +25,11 @@
 
 					</button>
 					<ul class="navigation__list">
-						<li class="navigation__item"><a class="navigation__link" href="#halls">Залы</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="#about">О нас</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="#reserv">Бронь</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="#reviews">Отзывы</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="#contacts">Контакты</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="./index.html#halls">Залы</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="./index.html#about">О нас</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="./index.html#reserv">Бронь</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="./index.html#reviews">Отзывы</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="./index.html#contacts">Контакты</a></li>
 					</ul>
 				</nav>
 
@@ -57,7 +57,7 @@
 
 				<a class="hero__button" href="#!">Забронировать</a>
 
-				<a class="anchor-button" href="#halls">
+				<a class="anchor-button" href="#services">
 					<svg width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<circle cx="49.0052" cy="49.005" r="47.515" stroke="white" />
 						<rect x="35.0713" y="44.4669" width="1.80181" height="19.8199" transform="rotate(-44.9975 35.0713 44.4669)" fill="white" />
@@ -67,7 +67,7 @@
 			</div>
 		</section>
 
-		<section class="services section">
+		<section class="services section" id="services">
 			<div class="container">
 				<h2 class="section__title section__title--services">У&nbsp;нас есть все для классного<br> отдыха с&nbsp;друзьями!</h2>
 
@@ -98,10 +98,10 @@
 			<div class="container">
 				<h2 class="section__title section__title--halls">Наши залы</h2>
 				<ol class="halls__list">
-					<li class="halls__item halls__item--vibes"><span class="hall-name">80's vibes</span></li>
-					<li class="halls__item halls__item--star-wars"><span class="hall-name">Star wars</span></li>
-					<li class="halls__item halls__item--west"><span class="hall-name">Wild west</span></li>
-					<li class="halls__item halls__item--neon"><span class="hall-name">Neon style</span></li>
+					<li class="halls__item halls__item--vibes"><a href="./vibes.html" class="halls__link"><span class="hall-name">80's vibes</span></a></li>
+					<li class="halls__item halls__item--star-wars"><a href="./star-wars.html" class="halls__link"><span class="hall-name">Star wars</span></a></li>
+					<li class="halls__item halls__item--west"><a href="./wild-west.html" class="halls__link"><span class="hall-name">Wild west</span></a></li>
+					<li class="halls__item halls__item--neon"><a href="./neon.html" class="halls__link"><span class="hall-name">Neon style</span></a></li>
 				</ol>
 			</div>
 		</section>
@@ -117,13 +117,13 @@
 							<input type="radio" name="hall" value="vibes" id="vibes" required>
 							<label for="vibes">80’s vibes</label>
 
-							<input type="radio" name="hall" value="star-wars" id="star-wars" required>
+							<input type="radio" name="hall" value="star-wars" id="star-wars">
 							<label for="star-wars">Star wars</label>
 
-							<input type="radio" name="hall" value="west" id="west" required>
+							<input type="radio" name="hall" value="west" id="west">
 							<label for="west">wild west</label>
 
-							<input type="radio" name="hall" value="neon" id="neon" required>
+							<input type="radio" name="hall" value="neon" id="neon">
 							<label for="neon">neon style</label>
 						</div>
 					</fieldset>
@@ -163,22 +163,22 @@
 
 								<div class="reserv-form__kit-block">
 									<div class="reserv-form__kit-button">
-										<input type="checkbox" name="board-game" value="jenga" id="jenga" required>
+										<input type="checkbox" name="board-game" value="jenga" id="jenga">
 										<label for="jenga">Jenga</label>
 									</div>
 
 									<div class="reserv-form__kit-button">
-										<input type="checkbox" name="board-game" value="monopoly" id="monopoly" required>
+										<input type="checkbox" name="board-game" value="monopoly" id="monopoly">
 										<label for="monopoly">Monopoly</label>
 									</div>
 
 									<div class="reserv-form__kit-button">
-										<input type="checkbox" name="board-game" value="manchkin" id="manchkin" required>
+										<input type="checkbox" name="board-game" value="manchkin" id="manchkin">
 										<label for="manchkin">Манчкин</label>
 									</div>
 
 									<div class="reserv-form__kit-button">
-										<input type="checkbox" name="board-game" value="alias" id="alias" required>
+										<input type="checkbox" name="board-game" value="alias" id="alias">
 										<label for="alias">Alias</label>
 									</div>
 								</div>
@@ -429,16 +429,7 @@
 	</footer>
 
 	<script src="./js/hide-triangle.js"></script>
-	<script>
-		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-			anchor.addEventListener('click', function (e) {
-				e.preventDefault();
 
-				document.querySelector(this.getAttribute('href')).scrollIntoView({
-					behavior: 'smooth'
-				});
-			});
-		});</script>
 </body>
 
 </html>

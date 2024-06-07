@@ -1,10 +1,10 @@
 /* ! HALLS SECTION */
 
-.halls{
+.halls {
 	padding-bottom: 100px;
 }
 
-.section__title--halls{
+.section__title--halls {
 	margin-bottom: 47px;
 }
 
@@ -25,12 +25,28 @@
 }
 
 .halls__item {
+	transition: scale 0.2s ease-in, transform  0.2s ease-in;
+}
+
+.halls__item:hover {
+	scale: 1.05;
+}
+
+.halls__link:focus-visible {
+	outline: 3px var(--dark-purp) solid;
+}
+
+.halls__item:active {
+	transform: translateY(5px);
+}
+
+.halls__link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 94px 0 95px;
-	/* flex-basis: 580px;
-	height: 349px; */
+	/* padding: 94px 0 95px; */
+	flex-basis: 580px;
+	height: 349px;
 	font-size: 70px;
 	line-height: 1.14;
 	font-weight: 700;
