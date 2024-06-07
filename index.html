@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/svg+xml" href="./img/icons/icon.svg">
-	<link rel="stylesheet" href="./css/halls-pages/halls-pages.css">
+	<link rel="stylesheet" href="./css/style.css">
 	<title>Go</title>
 </head>
 
@@ -429,6 +429,16 @@
 	</footer>
 
 	<script src="./js/hide-triangle.js"></script>
+	<script>
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});</script>
 </body>
 
 </html>
