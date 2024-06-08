@@ -25,6 +25,9 @@
 }
 
 .halls__item {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	transition: scale 0.2s ease-in, transform  0.2s ease-in;
 }
 
@@ -59,32 +62,25 @@
 
 }
 
+
 .halls__item--vibes {
 	background-image: url("./../img/halls/_80vibes.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+
 }
 
 .halls__item--star-wars {
 	background-image: url("./../img/halls/star-wars.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+
 }
 
 .halls__item--west {
 	background-image: url("./../img/halls/wild-west.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+
 }
 
 .halls__item--neon {
 	background-image: url("./../img/halls/neon-style.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+
 }
 
 

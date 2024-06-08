@@ -183,7 +183,7 @@
 }
 
 .about-hall__content--vibes::before {
-	background-image: url("./../../img/halls/_80vibes.jpg");
+	background-image: url("./../../img/halls/vibes.jpg");
 }
 
 .about-hall__content--sw::before {
@@ -332,7 +332,7 @@
 }
 
 .other__link--vibes {
-	background-image: url("./../../img/halls/_80vibes.jpg");
+	background-image: url("./../../img/halls/vibes.jpg");
 }
 
 .other__link--ww {
