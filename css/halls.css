@@ -28,7 +28,7 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	transition: scale 0.2s ease-in, transform  0.2s ease-in;
+	transition: scale 0.2s ease-in, transform 0.2s ease-in;
 }
 
 .halls__item:hover {
@@ -85,18 +85,20 @@
 
 
 @media (max-width: 1150px) {
-	.halls__item {
-		padding: 74px 0;
+	.halls__link {
+		height: 267px;
+		/* padding: 74px 0; */
 		font-size: 50px;
 		line-height: 1.2;
 	}
 }
 
 @media (max-width: 900px) {
-	.halls__item {
+	.halls__link {
+		height: 200px;
 		font-size: 40px;
 		line-height: 1.25;
-		padding: 62px 0 38px;
+		/* padding: 62px 0 38px; */
 	}
 
 	.hall-name {
@@ -105,10 +107,11 @@
 }
 
 @media (max-width: 560px) {
-	.halls__item {
+	.halls__link {
+		height: 168px;
 		font-size: 26px;
 		line-height: 1.31;
-		padding: 35px 0;
+		/* padding: 35px 0; */
 	}
 }
 
@@ -121,6 +124,6 @@
 	.halls__item {
 		font-size: 26px;
 		line-height: 1.31;
-		padding: 50px 0;
+		/* padding: 50px 0; */
 	}
 }

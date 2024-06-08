@@ -57,7 +57,7 @@
 	height: 750px;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 }
 
 .intro__name--vibes {
@@ -205,7 +205,7 @@
 }
 
 .about-hall__text {
-	flex-basis: 500px;
+	/* flex-basis: 500px; */
 
 
 	display: flex;
@@ -316,7 +316,7 @@
 }
 
 .other__link {
-	transition: scale 0.2s ease-in, transform  0.2s ease-in;
+	transition: scale 0.2s ease-in, transform 0.2s ease-in;
 }
 
 .other__link:hover {
@@ -353,7 +353,7 @@
 }
 
 @media (max-width:1150px) {
-	.other__link {
+	.other__item {
 		height: 172px;
 	}
 }
@@ -363,14 +363,22 @@
 		gap: 8px;
 	}
 
+	.other__item {
+		height: 134px;
+	}
+
 	.other__link {
 		font-size: 20px;
-		height: 134px;
 	}
 }
 
 @media (max-width:500px) {
-	.other__link {
+	.about-hall__text {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.other__item {
 		height: 100px;
 	}
 }
@@ -381,8 +389,10 @@
 		gap: 5px;
 	}
 
-	.other__link {
-		height: 140px;
-		flex-basis: auto;
+	.other__item {
+		height: unset;
+		flex-basis: 140px;
 	}
+	.about-hall__text {
+		text-align: left;}
 }
