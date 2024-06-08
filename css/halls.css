@@ -85,6 +85,10 @@
 
 
 @media (max-width: 1150px) {
+	.halls {
+		padding-bottom: 70px;
+	}
+
 	.halls__link {
 		height: 267px;
 		/* padding: 74px 0; */
@@ -94,6 +98,10 @@
 }
 
 @media (max-width: 900px) {
+	.halls {
+		padding-bottom: 62px;
+	}
+
 	.halls__link {
 		height: 200px;
 		font-size: 40px;
@@ -107,6 +115,10 @@
 }
 
 @media (max-width: 560px) {
+	.halls {
+		padding-bottom: 30px;
+	}
+
 	.halls__link {
 		height: 168px;
 		font-size: 26px;
