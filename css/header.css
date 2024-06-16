@@ -19,7 +19,7 @@
 	gap: 40px;
 }
 
-.burger-menu {
+.burger-btn {
 	display: none;
 }
 
@@ -87,6 +87,59 @@
 	background-color: var(--dark-purp);
 }
 
+/* !burger */
+
+.burger-menu {
+	background-color: rgba(27, 26, 27, 0.7);
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	display: none;
+}
+
+.burger-menu__wrapper {
+	padding: 60px 0 40px 0;
+	background-color: #1B1A1B;
+
+}
+
+.burger-nav {
+
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.burger-nav__item {
+	padding: 20px 0 20px;
+	transition: background-color 0.25s ease-in;
+}
+
+.burger-nav__link {
+	font-size: 22px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.burger-nav__item:hover {
+	background-color: var(--dark-purp);
+	font-weight: 700;
+}
+
+.burger-nav__item:active {
+	background-color: var(--light-purp);
+	font-weight: 700;
+}
+
+.recall-button--burger {
+	display: none;
+}
+
+
+
+
 @media (max-width: 1150px) {
 	.header__logo {
 		height: 55px;
@@ -123,7 +176,7 @@
 
 	.navigation {}
 
-	.burger-menu {
+	.burger-btn {
 		display: block;
 		height: 54px;
 		color: var(--dark-purp);
@@ -132,21 +185,23 @@
 		transition: color 0.2s ease-in, outline-color 0.2s ease-in;
 	}
 
-	.burger-menu:hover {
+	.burger-btn:hover {
 		color: var(--light-purp);
 	}
 
-	.burger-menu:focus-visible {
+	.burger-btn:focus-visible {
 		outline: 1px var(--light-purp) solid;
 	}
 
-	.burger-menu:active {
+	.burger-btn:active {
 		color: var(--violet);
 	}
 
 	.recall-button {
 		padding: 7px 23px 8px;
 	}
+
+
 }
 
 @media (max-width: 560px) {
@@ -154,7 +209,7 @@
 		padding: 20px 0;
 	}
 
-	.burger-menu {
+	.burger-btn {
 		width: 39px;
 		height: 39px;
 	}
@@ -163,8 +218,36 @@
 		width: 66px;
 		height: 42px;
 	}
+}
 
+@media (max-width: 450px) {
 	.recall-button {
 		display: none;
+	}
+
+	.burger-nav {
+		margin-bottom: 25px;
+	}
+
+	.burger-nav__item {
+		padding: 13px 0;
+	}
+
+	.burger-nav__link {
+		font-size: 14px;
+	}
+
+	.burger-menu__wrapper {
+		padding-top: 30px;
+	}
+
+	.recall-button--burger {
+		margin: 0 auto;
+		display: block;
+		align-self: center;
+		padding: 11px 23px;
+		max-width: 190px;
+		font-size: 14px;
+		line-height: 1;
 	}
 }
