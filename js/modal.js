@@ -14,13 +14,6 @@ close.click(function () {
 
 form.submit(function (event) {
 	event.preventDefault();
-	/* 	$.post('https://jsonplaceholder.typicode.com/posts', $(this).serialize().then(function () {
-			console.log(data); 
-			return data;
-		}).catch(function (err) {
-			console.log(err.status);
-		})); */
-
 	$.ajax({
 		url: 'https://jsonplaceholder.typicode.com/posts',
 		type: 'POST',

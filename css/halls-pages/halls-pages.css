@@ -205,8 +205,7 @@
 }
 
 .about-hall__text {
-	/* flex-basis: 500px; */
-
+	flex-basis: 500px;
 
 	display: flex;
 	flex-direction: column;
@@ -393,6 +392,8 @@
 		height: unset;
 		flex-basis: 140px;
 	}
+
 	.about-hall__text {
-		text-align: left;}
+		text-align: left;
+	}
 }

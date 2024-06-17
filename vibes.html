@@ -7,36 +7,81 @@
 	<link rel="icon" type="image/svg+xml" href="./img/icons/icon.svg">
 	<link rel="stylesheet" href="./css/style.css">
 	<title>Go</title>
+	<script defer src="./js/jquery-3.7.1.min.js"></script>
+	<script defer src="./js/modal.js"></script>
+	<script defer src="./js/burger.js"></script>
 </head>
 
 <body class="page">
-	<header class="header section">
+	<header class="header section" id="header">
 		<div class="container">
-			<div class="header__content">
-				<a class="header__logo" href="./index.html"><img src="./img/header/logo.svg" alt="Логотип компании GameOver"></a>
+			<div class="header__menu">
+				<div class="header__content">
+					<a class="header__logo" href="./index.html"><img src="./img/header/logo.svg" alt="Логотип компании GameOver"></a>
 
-				<nav class="navigation">
-					<button class="burger-menu" tabindex="1">
-						<svg width="54" height="29" viewBox="0 0 54 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-							<rect width="54" height="5" rx="2" />
-							<rect y="12" width="54" height="5" rx="2" />
-							<rect y="24" width="31" height="5" rx="2" />
-						</svg>
+					<nav class="navigation">
+						<button class="burger-btn burger-btn--open" tabindex="1">
+							<svg width="54" height="29" viewBox="0 0 54 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<rect width="54" height="5" rx="2" />
+								<rect y="12" width="54" height="5" rx="2" />
+								<rect y="24" width="31" height="5" rx="2" />
+							</svg>
+						</button>
 
-					</button>
-					<ul class="navigation__list">
-						<li class="navigation__item"><a class="navigation__link" href="./index.html#halls">Залы</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="./index.html#about">О нас</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="./index.html#reserv">Бронь</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="./index.html#reviews">Отзывы</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="./index.html#contacts">Контакты</a></li>
-					</ul>
-				</nav>
+						<ul class="navigation__list">
+							<li class="navigation__item"><a class="navigation__link" href="./index.html#halls">Залы</a></li>
+							<li class="navigation__item"><a class="navigation__link" href="./index.html#about">О нас</a></li>
+							<li class="navigation__item"><a class="navigation__link" href="./index.html#reserv">Бронь</a></li>
+							<li class="navigation__item"><a class="navigation__link" href="./index.html#reviews">Отзывы</a></li>
+							<li class="navigation__item"><a class="navigation__link" href="./index.html#contacts">Контакты</a></li>
+						</ul>
+					</nav>
 
-				<button class="recall-button" type="button">Заказать звонок</button>
+					<button class="recall-button" type="button">Заказать звонок</button>
+				</div>
+				<div class="burger-menu">
+					<div class="burger-menu__wrapper">
+						<ul class="burger-nav">
+							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#halls">Залы</a></li>
+							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#about">О нас</a></li>
+							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#reserv">Бронь</a></li>
+							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#reviews">Отзывы</a></li>
+							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#contacts">Контакты</a></li>
+						</ul>
+						<button class="recall-button recall-button--burger" type="button">Заказать звонок</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
+	<section class="modal">
+		<div class="modal__wrapper">
+			<h2 class="modal__title">
+				Заказать звонок
+			</h2>
+			<button class="modal__close" type="button">
+				<svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<rect y="38.4407" width="54.3632" height="5.03363" rx="2" transform="rotate(-45 0 38.4407)" />
+					<rect x="3.55957" width="54.3632" height="5.03363" rx="2" transform="rotate(45 3.55957 0)" />
+				</svg>
+			</button>
+			<form class="modal__form">
+				<div class="input-field">
+					<label for="name">Имя</label>
+					<input name="name" id="modal-name" type="text" required>
+				</div>
+
+				<div class="input-field">
+					<label for="phone">Телефон</label>
+					<input name="phone" id="modal-phone" type="tel" required>
+				</div>
+
+				<button class="reserv-form__submit reserv-form__submit--modal" type="submit">Позвоните мне</button>
+			</form>
+
+
+		</div>
+	</section>
 	<main>
 		<div class="return">
 			<div class="container"><a href="./index.html" class="return__link">Вернуться назад</a></div>
@@ -160,7 +205,6 @@
 		</div>
 	</footer>
 
-	<script src="./js/hide-triangle.js"></script>
 </body>
 
 </html>
