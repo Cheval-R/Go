@@ -15,8 +15,13 @@
 .modal__wrapper {
 	color: #fff;
 	position: relative;
+	width: 95%;
 	max-width: 600px;
-	margin: 115px auto 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
 	padding: 60px 0;
 
 	background-color: #440F51;

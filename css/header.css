@@ -112,12 +112,13 @@
 	text-align: center;
 }
 
-.burger-nav__item {
-	padding: 20px 0 20px;
-	transition: background-color 0.25s ease-in;
-}
+.burger-nav__item {}
 
 .burger-nav__link {
+	display: inline-block;
+	width: 100%;
+	padding: 20px 0 20px;
+	transition: background-color 0.25s ease-in;
 	font-size: 22px;
 	line-height: 1;
 	text-transform: uppercase;

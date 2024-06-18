@@ -8,7 +8,7 @@
 	gap: 20px;
 }
 
-.faq__item {
+.faq__acc-header {
 	display: flex;
 	align-items: center;
 	align-content: center;
@@ -25,46 +25,90 @@
 	margin-bottom: 20px;
 } */
 
-.faq__item:nth-child(even) {
+.faq__acc-header:nth-of-type(even) {
 	background-color: #440F51;
 	color: white;
 }
 
-.faq__open-button {
-	transition: outline-color 0.25s ease-in;
-	border-radius: 5px;
-}
-
-.faq__open-button svg {
-	transition: background-color 0.25s ease-in, stroke 0.25s ease-in;
+.accord-icon {
+	display: block;
+	width: 46px;
+	height: 46px;
+	background-image: url('./../img/icons/accord/open-purple.svg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	border-radius: 50%;
+	transition: background-image 0.5s ease;
 }
 
-.faq__open-button path {
-	transition: stroke 0.25s ease-in;
+
+.accord-icon--open {
+	display: block;
+	width: 46px;
+	height: 46px;
+	background-image: url("./../img/icons/accord/close-purple.svg");
 }
 
-.faq__open-button--purple path {
-	fill: var(--dark-purp);
+.faq__acc-header:nth-of-type(even) .accord-icon {
+	background-image: url("./../img/icons/accord/open.svg");
 }
 
-.faq__open-button--purple circle {
-	stroke: var(--dark-purp);
+.faq__acc-header:nth-of-type(even) .accord-icon--open {
+	background-image: url("./../img/icons/accord/close.svg");
 }
 
-.faq__open-button--purple:hover svg {
-	stroke: white;
-	background-color: #6C0287;
+
+
+@media (hover:hover) {
+	.accord-icon:hover {
+		background-image: url('./../img/icons/accord/open-purple-hover.svg');
+	}
+
+	.accord-icon--open:hover {
+		background-image: url("./../img/icons/accord/close-purple-hover.svg");
+	}
+
+	.faq__acc-header:nth-of-type(even) .accord-icon:hover {
+		background-image: url("./../img/icons/accord/open-hover.svg");
+	}
+
+	.faq__acc-header:nth-of-type(even) .accord-icon--open:hover {
+		background-image: url("./../img/icons/accord/close-hover.svg");
+	}
 }
 
-.faq__open-button--purple:focus-visible {
-	outline: var(--dark-purp) 2px solid;
+.faq__acc-content {
+	margin-top: -20px;
+	padding: 57px 70px 100px;
+	background-color: #fff;
+	color: #000;
+	font-size: 24px;
+	line-height: 1.17;
 }
 
-.faq__open-button--purple:active path.vertical {
-	stroke: var(--dark-purp);
+.faq__acc-content a {
+	font-weight: 700;
+	transition: color 0.2s ease-in, outline-color 0.2s ease-in;
+	outline: var(--opacity-color) 2px solid;
 }
 
+.faq__acc-content a:hover {
+	color: var(--dark-purp);
+}
+
+.faq__acc-content a:focus-visible {
+	color: var(--dark-purp);
+	outline-color: var(--dark-purp);
+}
+
+.faq__acc-content a:active {
+	color: var(--light-purp);
+}
+
+.accord-icon {
+	order: 1;
+}
 
 /* !white */
 
@@ -89,109 +133,75 @@
 	stroke: white;
 }
 
+@media (max-width:1150px) and (hover:hover) {
+	.faq__acc-header:nth-of-type(even) .accord-icon:hover {
+		background-image: url("./../img/icons/accord/open-purple-hover.svg");
+	}
+
+	.faq__acc-header:nth-of-type(even) .accord-icon--open:hover {
+		background-image: url("./../img/icons/accord/close-purple-hover.svg");
+	}
+}
 
 @media (max-width:1150px) {
-	.faq__item:nth-child(5) {
+	.faq__acc-header:nth-of-type(5) {
 		display: none;
+	}
+
+	.faq__acc-header:nth-of-type(even) .accord-icon {
+		background-image: url("./../img/icons/accord/open-purple.svg");
+	}
+
+	.faq__acc-header:nth-of-type(even) .accord-icon--open {
+		background-image: url("./../img/icons/accord/close-purple.svg");
 	}
 
 	.faq__list {
 		gap: 16px;
 	}
 
-	.faq__item {
+	.faq__acc-header {
 		font-size: 20px;
 		line-height: 1.2;
 		padding: 12px 20px 12px 25px;
 	}
 
-	.faq__item:nth-child(even) {
+	.faq__acc-header:nth-of-type(even) {
 		background-color: white;
 		color: #1C1A1A;
-	}
-
-	.faq__open-button--white path {
-		fill: var(--dark-purp);
-	}
-
-	.faq__open-button--purple circle {
-		stroke: var(--dark-purp);
-	}
-
-	.faq__open-button--white path {
-		fill: var(--dark-purp);
-	}
-
-	.faq__open-button--white circle {
-		stroke: var(--dark-purp);
-	}
-
-	.faq__open-button--white:hover svg {
-		stroke: white;
-		background-color: #6C0287;
-	}
-
-	.faq__open-button--white:focus-visible {
-		outline: var(--dark-purp) 2px solid;
-	}
-
-	.faq__open-button--white:active path.vertical {
-		stroke: var(--dark-purp);
 	}
 
 }
 
 @media (max-width:900px) {
-	.faq__item {
+	.faq__acc-header {
 		font-size: 18px;
 		line-height: 1.33;
 		padding: 12px 65px 12px 54px;
 	}
+
+	.faq__acc-content {
+		margin-top: -16px;
+		padding: 20px 50px 25px;
+		font-size: 16px;
+	}
 }
 
 @media (max-width:660px) {
-	.faq__item {
+	.faq__acc-header {
 		font-size: 12px;
 		padding: 7px 13px 7px 10px;
 	}
 
-	.faq__open-button {
+	.accord-icon,
+	.accord-icon--open {
 		max-width: 30px;
 		max-height: 30px;
 	}
-}
 
-
-/* .faq__item:nth-child(odd)::after {
-	content: "";
-	display: block;
-	background-image: url("./../img/icons/open-purple.svg");
-	width: 46px;
-	height: 46px;
-}
-
-.faq__item:nth-child(odd):hover::after{
-background-image: url("./../img/icons/open-purple-hover.svg");
-}
-
-.faq__item:nth-child(odd):active::after{
-background-image: url("./../img/icons/close-purple.svg");
-}
-
-
-.faq__item:nth-child(even)::after {
-	content: "";
-	content: "";
-	display: block;
-	background-image: url("./../img/icons/open.svg");
-	width: 46px;
-	height: 46px;
-}
-
-.faq__item:nth-child(even):hover::after{
-	background-image: url("./../img/icons/open-hover.svg");
+	.faq__acc-content {
+		margin-top: -16px;
+		padding: 10px 20px 15px;
+		font-size: 10px;
 	}
-	
-	.faq__item:nth-child(even):active::after{
-	background-image: url("./../img/icons/close.svg");
-	} */
+}

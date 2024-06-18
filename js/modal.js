@@ -12,6 +12,11 @@ close.click(function () {
 	modal.fadeToggle(500);
 });
 
+modal.on('click', function (event) {
+	if (event.target === this) {
+		modal.fadeToggle(500);
+	}
+})
 form.submit(function (event) {
 	event.preventDefault();
 	$.ajax({

@@ -1,5 +1,8 @@
 const burgerBtn = $('.burger-btn');
 const burgerMenu = $('.burger-menu');
+let link = $('.burger-nav__link')[0];
+
+console.log(link);
 
 burgerBtn.click(function () {
 	if (burgerBtn.hasClass('burger-btn--open')) {
@@ -24,3 +27,33 @@ burgerBtn.click(function () {
 		burgerMenu.slideUp(500);
 	}
 });
+
+burgerMenu.on('click', function (event) {
+	console.log(event.target);
+	if ((event.target === this || event.target == link) && !burgerBtn.hasClass('burger-btn--open')) {
+		burgerBtn.html(`
+			<svg width="54" height="29" viewBox="0 0 54 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				<rect width="54" height="5" rx="2" />
+				<rect y="12" width="54" height="5" rx="2" />
+				<rect y="24" width="31" height="5" rx="2" />
+			</svg>
+		`);
+		burgerBtn.toggleClass('burger-btn--open');
+		burgerMenu.slideUp(500);
+	}
+});
+
+// burgerMenu.on('click', $('.burger-nav__item'), function () {
+// 	if (!burgerBtn.hasClass('burger-btn--open')) {
+// 		burgerBtn.html(`
+// 			<svg width="54" height="29" viewBox="0 0 54 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+// 				<rect width="54" height="5" rx="2" />
+// 				<rect y="12" width="54" height="5" rx="2" />
+// 				<rect y="24" width="31" height="5" rx="2" />
+// 			</svg>
+// 		`);
+// 		burgerBtn.toggleClass('burger-btn--open');
+// 		burgerMenu.slideUp(500);
+// 	}
+
+// });

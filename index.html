@@ -11,11 +11,15 @@
 	<script defer src="./js/modal.js"></script>
 	<script defer src="./js/hide-triangle.js"></script>
 	<script defer src="./js/burger.js"></script>
+	<script defer src="./js/jquery-ui.min.js"></script>
+	<script defer src="./js/accord.js"></script>
+	<script defer src="./js/map.js"></script>
+	<script src="https://api-maps.yandex.ru/v3/?apikey=62e3fbe2-5fc5-4b7d-b9f0-86acc43edb26&lang=ru_RU"></script>
+
 
 </head>
 
 <body class="page">
-	<!-- <div style="display: none;"> -->
 	<header class="header section" id="header">
 		<div class="container">
 			<div class="header__menu">
@@ -303,7 +307,6 @@
 					О нас
 				</h2>
 				<div class="about__content">
-					<!-- <div class="about__text"> -->
 					<p class="about__desc">
 						<span>Для наших гостей мы&nbsp;создали концептуально новое игровое пространство виртуальной реальности в&nbsp;центральной части города.</span>
 						<span>Каждый день мы стараемся создавать для&nbsp;вас&nbsp;самую лучшую игровую атмосферу и&nbsp;радовать Вас топовыми игровыми разработками со&nbsp;всего мира.</span>
@@ -312,7 +315,6 @@
 						<p class="citation__text"><span class="quote quote--open">“ </span>GAME OVER — это место незабываемых впечатлений<span class="quote quote--close"> ”</span></p>
 						<cite class="about__cite"><img src="./img/about/creator.png" alt="Аватар создателя игровой территории GAME OVER, Аркадия Абакшина" width="80" height="80"> <span>Аркадий Абакшин,<br>создатель игровой территории GAME OVER</span></cite>
 					</blockquote>
-					<!-- </div> -->
 				</div>
 			</div>
 		</section>
@@ -322,23 +324,14 @@
 				<h2 class="section__title">Отзывы посетителей</h2>
 				<ul class="reviews__list">
 					<li class="reviews__item">
-						<!-- <figure class="reviews__image-wrapper">
-								<img class="reviews__image" src="./img/reviews/maksim.png" alt="Аватар посетителя">
-							</figure> -->
 						<p class="reviews__name reviews__name--maks">Макс Самойлов</p>
 						<p class="reviews__comment">Отмечали здесь день рождения с компанией друзей, все было очень круто! VR очки это просто бомба, никогда еще я не был в таком полном игровом погружении. Сервис на высоте!</p>
 					</li>
 					<li class="reviews__item">
-						<!-- <figure class="reviews__image-wrapper">
-								<img class="reviews__image" src="./img/reviews/oksana.png" alt="Аватар посетителя">
-							</figure> -->
 						<p class="reviews__name reviews__name--oksana">Оксана Григорьева</p>
 						<p class="reviews__comment">Были в&nbsp;комнате Дикий Запад, пели в&nbsp;караоке под Шакиру, отличный получился корпоратив! У&nbsp;нас в&nbsp;городе больше нет подобных заведений</p>
 					</li>
 					<li class="reviews__item">
-						<!-- <figure class="reviews__image-wrapper">
-								<img class="reviews__image" src="./img/reviews/nikita.png" alt="Аватар посетителя">
-							</figure> -->
 						<p class="reviews__name reviews__name--nikita">Никита Ященко</p>
 						<p class="reviews__comment">Немного подвисала игра в&nbsp;VR очках, а&nbsp;так все норм. Крутое оформление комнаты в&nbsp;стиле звездных войн, попал в&nbsp;атмосферу космоса</p>
 					</li>
@@ -346,64 +339,37 @@
 			</div>
 		</section>
 
-		<section class="faq section" id="faq">
-			<div class="container">
-				<h2 class="section__title faq__title">Частые вопросы</h2>
-				<ul class="faq__list">
-					<li class="faq__item">
-						<span class="faq__task-text">Можно ли забронировать комнату онлайн?</span>
-						<button class="faq__open-button faq__open-button--purple">
-							<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<circle cx="23" cy="23" r="22" stroke="none" stroke-width="1" />
-								<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
-								<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
-							</svg>
-						</button>
-					</li>
-					<li class="faq__item">
-						<span class="faq__task-text">Могут ли мне вернуть деньги за бронь?</span>
-						<button class="faq__open-button faq__open-button--white">
-							<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<circle cx="23" cy="23" r="22" stroke="none" stroke-width="1" />
-								<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
-								<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
-							</svg>
-						</button>
-					</li>
-					<li class="faq__item">
-						<span class="faq__task-text">Какая комната самая популярная?</span>
-						<button class="faq__open-button faq__open-button--purple">
-							<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<circle cx="23" cy="23" r="22" stroke="none" stroke-width="1" />
-								<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
-								<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
-							</svg>
-						</button>
-					</li>
-					<li class="faq__item">
-						<span class="faq__task-text">Как получить VIP карту?</span>
-						<button class="faq__open-button faq__open-button--white">
-							<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<circle cx="23" cy="23" r="22" stroke="none" stroke-width="1" />
-								<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
-								<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
-							</svg>
-						</button>
-					</li>
-					<li class="faq__item">
-						<span class="faq__task-text">Какая комната самая популярная?</span>
-						<button class="faq__open-button faq__open-button--purple">
-							<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<circle cx="23" cy="23" r="22" stroke="none" stroke-width="1" />
-								<path class="vertical" d="M22.8305 14H23.5085V34H22.8305V14Z" fill="none" />
-								<path d="M13 24.1695V23.4915H33V24.1695H13Z" fill="none" />
-							</svg>
-						</button>
-					</li>
-				</ul>
-			</div>
-		</section>
 	</main>
+	<div class="svg-background"></div>
+
+
+	<section class="faq section" id="faq">
+		<div class="container">
+			<h2 class="section__title faq__title">Частые вопросы</h2>
+			<div class="faq__list">
+				<h3 class="faq__acc-header">Можно ли забронировать комнату онлайн?</h3>
+				<div class="faq__acc-content">
+					<p>Да, забронировать комнату вы&nbsp;можете онлайн, заполнив форму на&nbsp;нашем сайте. Также вы&nbsp;можете забронировать комнату позвонив по&nbsp;телефону&nbsp;<a href="tel:+79999584838">8 (999) 958&nbsp;- 48&nbsp;- 38</a></p>
+				</div>
+				<h3 class="faq__acc-header">Могут ли мне вернуть деньги за бронь?</h3>
+				<div class="faq__acc-content">
+					<p>Возврат денежных средств за&nbsp;бронь возможен в&nbsp;определенных случаях. Пожалуйста, свяжитесь с&nbsp;нашей службой поддержки клиентов для получения более подробной информации по&nbsp;вашему запросу.</p>
+				</div>
+				<h3 class="faq__acc-header">Какая комната самая популярная?</h3>
+				<div class="faq__acc-content">
+					<p>Наиболее популярная комната среди наших гостей&nbsp;&mdash; NEON STYLE.</p>
+				</div>
+				<h3 class="faq__acc-header">Как получить VIP карту?</h3>
+				<div class="faq__acc-content">
+					<p>Получить VIP карту легко! Просто сделайте бронирование в&nbsp;нашем игровом клубе и&nbsp;начните собирать баллы лояльности. Каждое ваше посещение приближает вас к&nbsp;VIP статусу, который откроет доступ к&nbsp;эксклюзивным акциям, персональному обслуживанию и&nbsp;многим другим привилегиям. Чем больше вы&nbsp;играете, тем быстрее достигнете нашего VIP уровня!</p>
+				</div>
+				<h3 class="faq__acc-header">Какая комната самая популярная?</h3>
+				<div class="faq__acc-content">
+					<p>Наиболее популярная комната среди наших гостей&nbsp;&mdash; NEON STYLE.</p>
+				</div>
+			</div>
+		</div>
+	</section>
 	<footer class="footer">
 		<div class="contacts section" id="contacts">
 			<div class="container">
@@ -456,8 +422,8 @@
 							</li>
 						</ul>
 					</div>
-					<div class="contacts__map">
-						<img src="./img/map.jpg" alt="Изображение карты местоположения заведения">
+					<div class="contacts__map" id="map" style="width: 688px; height: 274px">
+						<!-- <img src="./img/map.jpg" alt="Изображение карты местоположения заведения"> -->
 					</div>
 				</address>
 			</div>
@@ -476,10 +442,6 @@
 			</div>
 		</div>
 	</footer>
-
-	<!-- </div> -->
-
-
 
 
 </body>
