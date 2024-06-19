@@ -6,3 +6,17 @@
 
 	--opacity-color: #00000000;
 }
+
+.reserv-form__halls-wrapper {
+	position: relative;
+}
+
+.just-validate-error-label {
+	position: absolute;
+	bottom: -25px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
