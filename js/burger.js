@@ -2,6 +2,7 @@ const burgerBtn = $('.burger-btn');
 const burgerMenu = $('.burger-menu');
 let link = $('.burger-nav__link')[0];
 
+
 console.log(link);
 
 burgerBtn.click(function () {
@@ -29,8 +30,8 @@ burgerBtn.click(function () {
 });
 
 burgerMenu.on('click', function (event) {
-	console.log(event.target);
-	if ((event.target === this || event.target == link) && !burgerBtn.hasClass('burger-btn--open')) {
+	console.log(event);
+	if ((event.target === this || event.target.className === "burger-nav__link") && !burgerBtn.hasClass('burger-btn--open')) {
 		burgerBtn.html(`
 			<svg width="54" height="29" viewBox="0 0 54 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 				<rect width="54" height="5" rx="2" />
