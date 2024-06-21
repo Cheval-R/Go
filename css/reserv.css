@@ -22,11 +22,11 @@
 }
 
 .reserv-form__halls-wrapper {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	gap: 60px;
 	border: 2px solid transparent;
-	/* Установить начальную рамку прозрачной */
 }
 
 .reserv-form__halls-wrapper>input {
@@ -224,7 +224,8 @@
 	gap: 32px;
 }
 
-.date-time__wrapper input {
+.date-time__wrapper input,
+.date-time__wrapper select {
 	position: relative;
 	width: 134px;
 	padding: 12px 5px 12px 20px;
@@ -232,7 +233,8 @@
 
 
 
-.person-count__input {
+.person-count__input,
+.time-selector {
 	appearance: none;
 	width: 100%;
 	min-width: 0;
@@ -247,7 +249,8 @@
 	width: 100%;
 }
 
-.person-count::after {
+.person-count::after,
+.time-selector::after {
 	content: url("./../img/form/triangle.svg");
 	display: block;
 	width: 21px;
@@ -270,7 +273,7 @@
 
 
 .reserv-form__submit {
-	
+
 	padding: 16px 50px;
 	background-color: #fff;
 	border-radius: 10px;
@@ -316,13 +319,31 @@
 }
 
 .time-wrapper>input[type=text]::placeholder,
-.date-wrapper>input[type=text]::placeholder {
+.date-wrapper>input[type=text]::placeholder,
+.person-count>input[type=number]::placeholder {
 	color: #000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+.person-count>input {
+	appearance: none;
+	-moz-appearance: textfield;
+}
+
+.date-wrapper>input {
+	padding: 12px 20px 12px 20px;
+}
+
+.time-wrapper>input {
+	padding: 12px 27px 12px 20px;
 }
 
 .time-wrapper>input,
 .date-wrapper>input {
-	padding: 12px 27px 12px 20px;
 	color: rgb(33, 30, 30);
 	max-width: 134px;
 	font-size: 18px;
@@ -362,8 +383,21 @@
 	color: #fff;
 	background-color: var(--dark-purp);
 	outline: #fff 3px solid;
-	
+
 	/* box-shadow: 0px 0px 15px var(--dark-purp); */
+}
+
+
+
+.just-validate-error-label {
+	font-size: 16px;
+	position: absolute;
+	bottom: -20px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
 }
 
 @media (max-width: 1150px) {
@@ -580,7 +614,7 @@
 		gap: 12px;
 	}
 
-	.time-wrapper>input,
+	.time-wrapper>select,
 	.date-wrapper>input {
 		padding: 12px 27px 12px 20px;
 		color: rgb(33, 30, 30);
@@ -589,7 +623,8 @@
 		line-height: 28px;
 	}
 
-	.date-time__wrapper input {
+	.date-time__wrapper input,
+	.date-time__wrapper select {
 		position: relative;
 		width: 100%;
 		padding: 12px 5px 12px 20px;

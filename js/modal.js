@@ -26,27 +26,6 @@ phoneMask.mask(phoneInput);
 
 const validator = new JustValidate('.modal__form');
 
-/*
-form.submit(function (event) {
-	event.preventDefault();
-	$.ajax({
-		url: 'https://jsonplaceholder.typicode.com/posts',
-		type: 'POST',
-		data: $(this).serialize(),
-		success(data) {
-			title.text('Спасибо! Ваша заявка успешно отправлена!');
-			form.slideUp(500);
-			title.css('margin', '0');
-		},
-		error() {
-			title.text('Извините. Что-то пошло не так, попробуйте позже');
-			form.slideUp(500);
-			title.css('margin', '0');
-		}
-	})
-}); */
-
-
 validator.addField('#modal-name', [
 	{
 		rule: 'required',

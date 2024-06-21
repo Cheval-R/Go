@@ -2,9 +2,6 @@ const burgerBtn = $('.burger-btn');
 const burgerMenu = $('.burger-menu');
 let link = $('.burger-nav__link')[0];
 
-
-console.log(link);
-
 burgerBtn.click(function () {
 	if (burgerBtn.hasClass('burger-btn--open')) {
 		burgerBtn.html(`
