@@ -13,6 +13,9 @@
 	<script defer src="./js/just-validate-plugin-date.production.min.js"></script>
 	<script defer src="./js/just-validate.production.min.js"></script>
 	<script src="https://api-maps.yandex.ru/v3/?apikey=62e3fbe2-5fc5-4b7d-b9f0-86acc43edb26&lang=ru_RU"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script defer src="./js/modal.js"></script>
 	<script defer src="./js/hide-triangle.js"></script>
 	<script defer src="./js/burger.js"></script>
@@ -20,6 +23,8 @@
 	<script defer src="./js/map.js"></script>
 	<script defer src="./js/validate.js"></script>
 	<script defer src="./js/datepicker.js"></script>
+	<script defer src="./js/swiper.js"></script>
+
 
 
 
@@ -321,20 +326,39 @@
 		<section class="reviews section" id="reviews">
 			<div class="container container--reviews">
 				<h2 class="section__title">Отзывы посетителей</h2>
-				<ul class="reviews__list">
-					<li class="reviews__item">
-						<p class="reviews__name reviews__name--maks">Макс Самойлов</p>
-						<p class="reviews__comment">Отмечали здесь день рождения с компанией друзей, все было очень круто! VR очки это просто бомба, никогда еще я не был в таком полном игровом погружении. Сервис на высоте!</p>
-					</li>
-					<li class="reviews__item">
-						<p class="reviews__name reviews__name--oksana">Оксана Григорьева</p>
-						<p class="reviews__comment">Были в&nbsp;комнате Дикий Запад, пели в&nbsp;караоке под Шакиру, отличный получился корпоратив! У&nbsp;нас в&nbsp;городе больше нет подобных заведений</p>
-					</li>
-					<li class="reviews__item">
-						<p class="reviews__name reviews__name--nikita">Никита Ященко</p>
-						<p class="reviews__comment">Немного подвисала игра в&nbsp;VR очках, а&nbsp;так все норм. Крутое оформление комнаты в&nbsp;стиле звездных войн, попал в&nbsp;атмосферу космоса</p>
-					</li>
-				</ul>
+				<div class="slider__wrapper">
+					<div class="swiper">
+						<ul class="reviews__list swiper-wrapper">
+							<li class="reviews__item swiper-slide">
+								<p class="reviews__name reviews__name--maks">Макс Самойлов</p>
+								<p class="reviews__comment">Отмечали здесь день рождения с компанией друзей, все было очень круто! VR очки это просто бомба, никогда еще я не был в таком полном игровом погружении. Сервис на высоте!</p>
+							</li>
+							<li class="reviews__item swiper-slide">
+								<p class="reviews__name reviews__name--oksana">Оксана Григорьева</p>
+								<p class="reviews__comment">Были в&nbsp;комнате Дикий Запад, пели в&nbsp;караоке под Шакиру, отличный получился корпоратив! У&nbsp;нас в&nbsp;городе больше нет подобных заведений</p>
+							</li>
+							<li class="reviews__item swiper-slide">
+								<p class="reviews__name reviews__name--nikita">Никита Ященко</p>
+								<p class="reviews__comment">Немного подвисала игра в&nbsp;VR очках, а&nbsp;так все норм. Крутое оформление комнаты в&nbsp;стиле звездных войн, попал в&nbsp;атмосферу космоса</p>
+							</li>
+						</ul>
+
+					</div>
+					<!-- If we need navigation buttons -->
+					<button class="button-prev slider-button">
+						<svg width="34" height="66" viewBox="0 0 34 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M32.5269 0L33.9411 1.41421L1.41422 33.9411L5.126e-06 32.5269L32.5269 0Z" fill="currentColor" />
+							<path d="M5.126e-06 32.5269L1.41422 31.1127L33.9411 63.6396L32.5269 65.0538L5.126e-06 32.5269Z" fill="currentColor" />
+						</svg>
+					</button>
+					<button class="button-next slider-button">
+						<svg width="34" height="66" viewBox="0 0 34 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M32.5269 0L33.9411 1.41421L1.41422 33.9411L5.126e-06 32.5269L32.5269 0Z" fill="currentColor" />
+							<path d="M5.126e-06 32.5269L1.41422 31.1127L33.9411 63.6396L32.5269 65.0538L5.126e-06 32.5269Z" fill="currentColor" />
+						</svg>
+
+					</button>
+				</div>
 			</div>
 		</section>
 

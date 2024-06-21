@@ -1,15 +1,16 @@
 .container--reviews {
-	max-width: 980px;
+	max-width: 1180px;
+	position: relative;
 }
 
-.reviews__list {
+/* .reviews__list {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	gap: 55px;
-}
+} */
 
 .reviews__item {
-	display: flex;
+	display: flex !important;
 	column-gap: 20px;
 }
 
@@ -65,14 +66,67 @@
 	background: radial-gradient(50.00% 50.00% at 50% 50%, rgba(196, 196, 196, 0), rgba(108, 2, 135, 0.5) 100%), url("./../img/reviews/nikita.png") no-repeat center / cover;
 }
 
+.slider__wrapper {
+	max-width: 1180px;
+	position: relative;
+	padding: 0 40px;
+}
+
+.swiper {
+	max-width: 980px;
+}
+
+.slider-button {
+	position: absolute;
+	/* top: 50%; */
+	color: var(--dark-purp);
+}
+
+.button-prev {
+	left: 0;
+}
+
+.button-next {
+	right: 0;
+	rotate: 180deg;
+}
+
+.slider-button {
+	z-index: 3;
+	width: 34px;
+	height: 66px;
+	overflow: auto;
+	margin: auto;
+	position: absolute;
+	top: calc(50% - 33px);
+	/* bottom: 0; */
+	/* right: 0; */
+}
+
 @media (max-width:1150px) {
-	.container--reviews {
-		max-width: 725px;
+	.slider__wrapper {
+		max-width: 904px;
+		position: relative;
 	}
 
-	.reviews__list {
-		gap: 40px;
+	.swiper {
+		max-width: 725px;
+		margin: 0 auto;
 	}
+
+	.slider-button {
+		width: 27px;
+		height: 51px;
+	}
+
+
+	.container--reviews {
+		max-width: 904px;
+	}
+
+	/* .reviews__list {
+		gap: 40px;
+	} */
 
 	.reviews__item {
 		column-gap: 38px;
@@ -99,12 +153,23 @@
 }
 
 @media (max-width:900px) {
+
+	.slider__wrapper {
+		max-width: 688px;
+		position: relative;
+	}
+
+	.swiper {
+		max-width: 561px;
+		margin: 0 auto;
+	}
+
 	.container--reviews {
-		max-width: 560px;
+		max-width: 688px;
 	}
 
 	.reviews__list {
-		gap: 30px;
+		/* gap: 30px; */
 		font-size: 16px;
 		line-height: 1.375;
 	}
@@ -128,13 +193,30 @@
 }
 
 
-@media (max-width:500px) {
+@media (max-width:550px) {
+
+	.slider__wrapper {
+		max-width: 688px;
+		position: relative;
+		padding: 0;
+	}
+
+	.swiper {
+		max-width: 561px;
+		margin: 0 auto;
+	}
+
+	.slider-button {
+		width: 15px;
+		height: 29px;
+	}
+
 	.container--reviews {
 		max-width: unset;
 	}
 
 	.reviews__list {
-		gap: 20px;
+		/* gap: 20px; */
 		font-size: 14px;
 		line-height: 1.43;
 	}
@@ -159,5 +241,11 @@
 		width: 153px;
 		height: 153px;
 		align-self: center;
+	}
+}
+
+@media (max-width:400px) {
+	.slider-button {
+		top: 13px;
 	}
 }
