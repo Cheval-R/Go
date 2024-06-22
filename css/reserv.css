@@ -345,7 +345,7 @@ input::-webkit-inner-spin-button {
 .time-wrapper>input,
 .date-wrapper>input {
 	color: rgb(33, 30, 30);
-	max-width: 134px;
+	width: 100%;
 	font-size: 18px;
 	line-height: 28px;
 }
