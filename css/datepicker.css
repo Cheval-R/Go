@@ -17,8 +17,8 @@
 	height: 1.8em;
 }
 
-.ui-datepicker .ui-datepicker-prev-hover,
-.ui-datepicker .ui-datepicker-next-hover {
+.ui-datepicker .ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker .ui-datepicker-next-hover {
 	top: 1px;
 }
 
@@ -238,13 +238,13 @@ td {
 }
 
 
-.ui-state-active,
-.ui-state-default:hover {
+.ui-datepicker .ui-state-active,
+.ui-datepicker .ui-state-default:hover {
 	background-color: var(--dark-purp);
 	color: white;
 }
 
-.ui-datepicker-unselectable:hover {
+.ui-datepicker .ui-datepicker-unselectable:hover {
 	background-color: unset;
 	color: black;
 }

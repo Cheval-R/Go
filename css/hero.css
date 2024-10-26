@@ -13,7 +13,6 @@
 	position: absolute;
 	z-index: 1;
 
-
 	box-sizing: content-box;
 	padding-right: inherit;
 	right: 0;
@@ -93,23 +92,31 @@
 	background-color: rgb(108, 2, 135);
 	box-shadow: 0px 0px 18px 0px rgb(108, 2, 135);
 
-	transition: background-color 0.2s ease-in, border-color 0.2s ease-in, transform 0.3s ease-in;
-
+	transition:
+		background-color 0.2s ease-in,
+		border-color 0.2s ease-in,
+		transform 0.3s ease-in;
 }
 
-.hero__button:hover,
-.hero__button:focus {
-	background-color: #840AA3;
-	box-shadow: 0px 0px 18px 0px #840AA3;
+.hero__button:hover {
+	background-color: #840aa3;
+	box-shadow: 0px 0px 18px 0px #840aa3;
 
 	outline: 0;
 	outline-offset: 0;
+}
 
+.hero__button:focus {
+	background-color: #840aa3;
+	box-shadow: 0px 0px 18px 0px #840aa3;
+
+	outline: 0;
+	outline-offset: 0;
 }
 
 .hero__button:active {
-	background-color: #640AA3;
-	box-shadow: 0px 0px 18px 0px #640AA3;
+	background-color: #640aa3;
+	box-shadow: 0px 0px 18px 0px #640aa3;
 
 	transform: translate(0, 3px);
 	-webkit-transform: translate(0, 3px);
@@ -130,9 +137,13 @@
 	right: 0;
 	text-align: center;
 
-	outline: 1px solid rgba(0, 0, 0, 0);
+	outline: 2px solid var(--opacity-color);
+	outline-offset: 5px;
+	border-radius: 10px;
 
-	transition: fill 0.2s ease-in, border-color 0.2s ease-in;
+	transition:
+		fill 0.2s ease-in,
+		border-color 0.2s ease-in;
 	z-index: 3;
 }
 
@@ -148,37 +159,40 @@
 }
 
 .anchor-button:hover svg {
-	background-color: white;
+	background-color: var(--dark-purp);
 }
 
 .anchor-button:hover svg rect {
-	fill: var(--dark-purp);
+	fill: white;
 }
 
 .anchor-button:hover svg circle {
 	stroke: var(--opacity-color);
 }
 
-
 .anchor-button:focus-visible {
-	outline: 1px solid var(--light-purp);
+	outline-color: var(--light-purp);
+}
+.anchor-button:focus-visible:hover{
+	outline-color: var(--dark-purp);
 }
 
+.anchor-button:focus-visible:active {
+	outline-color: var(--violet);
+}
 .anchor-button:active svg {
-	background-color: var(--light-purp);
+	background-color: var(--violet);
 }
 
 .anchor-button:active svg circle {
-	stroke: var(--light-purp);
+	stroke: var(--violet);
 }
 
 .anchor-button:active svg rect {
-	fill: #fff
+	fill: #fff;
 }
 
-
 @media (max-width: 1150px) {
-
 	.hero {
 		padding: 0;
 	}
@@ -187,7 +201,6 @@
 		position: relative;
 		height: 583px;
 	}
-
 
 	.hero__container::after {
 		width: 453px;
@@ -208,7 +221,6 @@
 		font-size: 22px;
 		line-height: 1.36;
 	}
-
 
 	.focus-number {
 		font-size: 80px;
@@ -240,11 +252,9 @@
 
 		bottom: 46px;
 	}
-
 }
 
-
-@media (max-width:900px) {
+@media (max-width: 900px) {
 	.hero__title {
 		font-size: 86px;
 		letter-spacing: -7px;
@@ -298,8 +308,7 @@
 	}
 }
 
-
-@media (max-width:660px) {
+@media (max-width: 660px) {
 	.hero__container {
 		height: 435px;
 	}
@@ -310,10 +319,9 @@
 		right: 20px;
 		/* bottom: 60px; */
 	}
-
 }
 
-@media (max-width:560px) {
+@media (max-width: 560px) {
 	.hero__title {
 		font-size: 35px;
 		letter-spacing: -2px;

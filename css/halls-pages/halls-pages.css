@@ -12,7 +12,9 @@
 	color: white;
 	/* Цвет текста и SVG */
 	max-width: 226px;
-	transition: color 0.2s ease-in, outline-color 0.2s ease-in;
+	transition:
+		color 0.2s ease-in,
+		outline-color 0.2s ease-in;
 	outline: var(--opacity-color) 2px solid;
 	border-radius: 10px;
 }
@@ -23,7 +25,8 @@
 	width: 31px;
 	height: 14px;
 	background-color: currentColor;
-	mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 16"%3E%3Cpath d="M0.293 7.293c-.39.39-.39 1.023 0 1.414l6.364 6.364c.39.39 1.023.39 1.414 0s.39-1.023 0-1.414L2.414 8l5.657-5.657c.39-.39.39-1.023 0-1.414S7.047.538 6.657.929L.293 7.293zM31 7H1v2h30V7z"/%3E%3C/svg%3E') center / contain no-repeat;
+	mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 16"%3E%3Cpath d="M0.293 7.293c-.39.39-.39 1.023 0 1.414l6.364 6.364c.39.39 1.023.39 1.414 0s.39-1.023 0-1.414L2.414 8l5.657-5.657c.39-.39.39-1.023 0-1.414S7.047.538 6.657.929L.293 7.293zM31 7H1v2h30V7z"/%3E%3C/svg%3E')
+		center / contain no-repeat;
 }
 
 .return__link:hover {
@@ -35,11 +38,15 @@
 	outline-color: var(--dark-purp);
 }
 
+.return__link:focus-visible:active {
+	outline-color: var(--violet);
+}
 .return__link:active {
-	color: var(--light-purp);
+	color: var(--violet);
 }
 
-.section {}
+.section {
+}
 
 .intro {
 	padding-top: 10px;
@@ -76,7 +83,7 @@
 	background-image: url("./../../img/halls-pages/wild_west-bg.jpg");
 }
 
-@media (max-width:1150px) {
+@media (max-width: 1150px) {
 	.return {
 		padding-top: 20px;
 	}
@@ -86,7 +93,7 @@
 	}
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
 	.return {
 		padding-top: 10px;
 	}
@@ -96,7 +103,6 @@
 		line-height: 1.75;
 	}
 
-
 	.intro__name {
 		height: 402px;
 		font-size: 60px;
@@ -104,7 +110,7 @@
 	}
 }
 
-@media (max-width:560px) {
+@media (max-width: 560px) {
 	.return__link {
 		gap: 6px;
 		font-size: 12px;
@@ -126,8 +132,6 @@
 	}
 }
 
-
-
 /* !BRIDGE */
 
 .bridge {
@@ -145,7 +149,7 @@
 	text-align: center;
 }
 
-@media (max-width:1150px) {
+@media (max-width: 1150px) {
 	.bridge {
 		max-width: 800px;
 	}
@@ -155,7 +159,7 @@
 	}
 }
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
 	.bridge {
 		max-width: 688px;
 	}
@@ -165,12 +169,13 @@
 	}
 }
 
-
 /* ! ABOUT */
 
-.section {}
+.section {
+}
 
-.about-hall {}
+.about-hall {
+}
 
 .about-hall__content::before {
 	content: "";
@@ -214,7 +219,7 @@
 	line-height: 1.4;
 }
 
-@media (max-width:1150px) {
+@media (max-width: 1150px) {
 	.about-hall__content::before {
 		height: 326px;
 		flex-basis: 461px;
@@ -230,7 +235,7 @@
 	}
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
 	.about-hall__content::before {
 		flex-basis: 461px;
 	}
@@ -245,7 +250,7 @@
 	}
 }
 
-@media (max-width:660px) {
+@media (max-width: 660px) {
 	.about-hall__content {
 		flex-direction: column;
 		gap: 15px;
@@ -257,7 +262,7 @@
 	}
 }
 
-@media(max-width:500px) {
+@media (max-width: 500px) {
 	.about-hall__content {
 		flex-direction: column;
 		gap: 15px;
@@ -275,14 +280,16 @@
 	}
 }
 
-
 /* !OTHER */
 
-.other {}
+.other {
+}
 
-.container {}
+.container {
+}
 
-.section__title {}
+.section__title {
+}
 
 .other__list {
 	display: flex;
@@ -308,14 +315,15 @@
 	align-items: center;
 	justify-content: center;
 
-
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
 .other__link {
-	transition: scale 0.2s ease-in, transform 0.2s ease-in;
+	transition:
+		scale 0.2s ease-in,
+		transform 0.2s ease-in;
 }
 
 .other__link:hover {
@@ -351,13 +359,13 @@
 	width: 100px;
 }
 
-@media (max-width:1150px) {
+@media (max-width: 1150px) {
 	.other__item {
 		height: 172px;
 	}
 }
 
-@media(max-width:900px) {
+@media (max-width: 900px) {
 	.other__list {
 		gap: 8px;
 	}
@@ -371,7 +379,7 @@
 	}
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
 	.about-hall__text {
 		text-align: center;
 		margin: 0 auto;
@@ -382,7 +390,7 @@
 	}
 }
 
-@media (max-width:400px) {
+@media (max-width: 400px) {
 	.other__list {
 		flex-direction: column;
 		gap: 5px;

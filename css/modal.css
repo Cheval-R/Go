@@ -13,10 +13,11 @@
 }
 
 .modal__wrapper {
+	border-radius: 10px;
 	color: #fff;
 	position: relative;
 	width: 95%;
-	max-width: 600px;
+	max-width: 380px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -24,7 +25,7 @@
 
 	padding: 60px 0;
 
-	background-color: #440F51;
+	background-color: #440f51;
 }
 
 .modal__form {
@@ -49,18 +50,19 @@
 	width: 280px;
 }
 
-.input-field>label {
+.input-field > label {
 	font-size: 14px;
 	margin-bottom: 6px;
 }
 
-.input-field>input {
+.input-field > input {
 	height: 52px;
 	outline: 3px solid var(--opacity-color);
 	transition: outline-color 0.25s ease-in;
+	border-radius: 10px;
 }
 
-.input-field>input:focus {
+.input-field > input:focus {
 	outline-color: var(--light-purp);
 }
 
@@ -80,7 +82,9 @@
 
 	outline-offset: 5px;
 	outline: 1px solid var(--opacity-color);
-	transition: color 0.25s ease-in, outline-color 0.25s ease-in;
+	transition:
+		color 0.25s ease-in,
+		outline-color 0.25s ease-in;
 }
 
 .modal__close:hover {
@@ -92,11 +96,10 @@
 }
 
 .modal__close:active {
-	color: #840AA3;
+	color: #840aa3;
 }
 
-
-@media (max-width:500px) {
+@media (max-width: 500px) {
 	.modal__wrapper {
 		padding: 60px 0 88px;
 	}
@@ -115,12 +118,12 @@
 		width: 220px;
 	}
 
-	.input-field>label {
+	.input-field > label {
 		font-size: 14px;
 		margin-bottom: 6px;
 	}
 
-	.input-field>input {
+	.input-field > input {
 		height: 42px;
 	}
 

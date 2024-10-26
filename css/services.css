@@ -3,13 +3,17 @@
 	height: 708px;
 }
 
-.section {}
+.section {
+}
 
-.container {}
+.container {
+}
 
-.section__title {}
+.section__title {
+}
 
-.section__title--services {}
+.section__title--services {
+}
 
 .services__list {
 	/* display: flex;
@@ -17,12 +21,12 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 40px 20px;
-
 }
 
 .services__item {
 	display: flex;
 	padding: 6px 40px;
+	border-radius: 10px;
 	flex-direction: column;
 	justify-content: flex-end;
 
@@ -41,7 +45,6 @@
 
 .services__item--vr {
 	background-image: url("./../img/services/vr.jpeg");
-
 }
 
 .services__item--audio {
@@ -64,7 +67,7 @@
 	background-image: url("./../img/services/sony.jpg");
 }
 
-.services__item:nth-child(3n+2) {
+.services__item:nth-child(3n + 2) {
 	transform: translateY(70px);
 }
 
@@ -108,11 +111,11 @@
 		max-width: 247px;
 	}
 
-	.services__item--film>.services__text {
+	.services__item--film > .services__text {
 		top: 83px;
 	}
 
-	.services__item:nth-child(3n+2) {
+	.services__item:nth-child(3n + 2) {
 		transform: translateY(53px);
 	}
 }
@@ -132,7 +135,7 @@
 		/* min-height: 200px; */
 	}
 
-	.services__item:nth-child(3n+2) {
+	.services__item:nth-child(3n + 2) {
 		transform: translateY(0);
 	}
 
@@ -145,7 +148,7 @@
 	} */
 }
 
-@media (max-width:660px) {
+@media (max-width: 660px) {
 	.services {
 		padding-top: 46px;
 	}

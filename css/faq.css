@@ -15,10 +15,11 @@
 	justify-content: space-between;
 
 	background-color: white;
-	color: #1C1A1A;
+	border-radius: 10px;
+	color: #1c1a1a;
 	font-weight: 700;
 	font-size: 24px;
-	padding: 21px 70px 20px;
+	padding: 15px 50px 20px 30px;
 }
 
 /* .faq__item:not(:last-child) {
@@ -26,7 +27,7 @@
 } */
 
 .faq__acc-header:nth-of-type(even) {
-	background-color: #440F51;
+	background-color: #440f51;
 	color: white;
 }
 
@@ -34,14 +35,13 @@
 	display: block;
 	width: 46px;
 	height: 46px;
-	background-image: url('./../img/icons/accord/open-purple.svg');
+	background-image: url("./../img/icons/accord/open-purple.svg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 50%;
 	transition: background-image 0.5s ease;
 }
-
 
 .accord-icon--open {
 	display: block;
@@ -58,52 +58,35 @@
 	background-image: url("./../img/icons/accord/close.svg");
 }
 
-
-
-@media (hover:hover) {
-	.accord-icon:hover {
-		background-image: url('./../img/icons/accord/open-purple-hover.svg');
+@media (hover: hover) {
+	.faq__acc-header:hover .accord-icon {
+		background-image: url("./../img/icons/accord/open-purple-hover.svg");
 	}
 
-	.accord-icon--open:hover {
+	.faq__acc-header:hover .accord-icon--open {
 		background-image: url("./../img/icons/accord/close-purple-hover.svg");
 	}
 
-	.faq__acc-header:nth-of-type(even) .accord-icon:hover {
+	.faq__acc-header:nth-of-type(even):hover .accord-icon {
 		background-image: url("./../img/icons/accord/open-hover.svg");
 	}
 
-	.faq__acc-header:nth-of-type(even) .accord-icon--open:hover {
+	.faq__acc-header:nth-of-type(even):hover .accord-icon--open {
 		background-image: url("./../img/icons/accord/close-hover.svg");
 	}
 }
 
 .faq__acc-content {
 	margin-top: -20px;
-	padding: 57px 70px 100px;
+	padding: 20px 40px 20px 30px;
 	background-color: #fff;
 	color: #000;
 	font-size: 24px;
 	line-height: 1.17;
 }
 
-.faq__acc-content a {
-	font-weight: 700;
-	transition: color 0.2s ease-in, outline-color 0.2s ease-in;
-	outline: var(--opacity-color) 2px solid;
-}
-
-.faq__acc-content a:hover {
-	color: var(--dark-purp);
-}
-
-.faq__acc-content a:focus-visible {
-	color: var(--dark-purp);
-	outline-color: var(--dark-purp);
-}
-
-.faq__acc-content a:active {
-	color: var(--light-purp);
+.faq__acc-content p {
+	font-size: 20px;
 }
 
 .accord-icon {
@@ -121,7 +104,7 @@
 }
 
 .faq__open-button--white:hover svg {
-	stroke: #6C0287;
+	stroke: #6c0287;
 	background-color: white;
 }
 
@@ -133,7 +116,7 @@
 	stroke: white;
 }
 
-@media (max-width:1150px) and (hover:hover) {
+@media (max-width: 1150px) and (hover: hover) {
 	.faq__acc-header:nth-of-type(even) .accord-icon:hover {
 		background-image: url("./../img/icons/accord/open-purple-hover.svg");
 	}
@@ -143,7 +126,7 @@
 	}
 }
 
-@media (max-width:1150px) {
+@media (max-width: 1150px) {
 	.faq__acc-header:nth-of-type(5) {
 		display: none;
 	}
@@ -168,12 +151,11 @@
 
 	.faq__acc-header:nth-of-type(even) {
 		background-color: white;
-		color: #1C1A1A;
+		color: #1c1a1a;
 	}
-
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
 	.faq__acc-header {
 		font-size: 18px;
 		line-height: 1.33;
@@ -187,7 +169,7 @@
 	}
 }
 
-@media (max-width:660px) {
+@media (max-width: 660px) {
 	.faq__acc-header {
 		font-size: 12px;
 		padding: 7px 13px 7px 10px;
