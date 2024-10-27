@@ -31,23 +31,6 @@
 	transition: 0.2s ease-in;
 }
 
-.halls__item:hover {
-	scale: 1.05;
-	color: var(--violet);
-}
-
-.halls__item:hover .halls__link {
-	-webkit-text-stroke: 1px rgba(255, 255, 255, 0.493);
-}
-
-.halls__link:focus-visible {
-	outline: 3px var(--dark-purp) solid;
-}
-
-.halls__item:active {
-	transform: translateY(5px);
-}
-
 .halls__link {
 	display: flex;
 	justify-content: center;
@@ -60,6 +43,29 @@
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
+	border-radius: 10px;
+
+	transition: outline-color 0.2s ease-in;
+
+	outline: 5px solid var(--opacity-color);
+	outline-offset: 5px;
+}
+
+.halls__item:hover {
+	scale: 1.05;
+	color: var(--violet);
+}
+
+.halls__item:hover .halls__link {
+	-webkit-text-stroke: 1px rgba(255, 255, 255, 0.493);
+}
+
+.halls__link:focus-visible {
+	outline-color: var(--dark-purp);
+}
+
+.halls__item:active {
+	transform: translateY(5px);
 }
 
 .hall-name {

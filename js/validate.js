@@ -1,4 +1,4 @@
-const reservValidator = new JustValidate('.reserv-form');
+const reservValidator = new JustValidate('.reserve-form');
 
 let currentDate = new Date();
 

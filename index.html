@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/svg+xml" href="./img/icons/icon.svg">
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/air-datepicker.css">
 	<title>Go</title>
 	<script defer src="./js/jquery-3.7.1.min.js"></script>
 	<script defer src="./js/jquery-ui.min.js"></script>
@@ -14,14 +15,14 @@
 	<script defer src="./js/just-validate.production.min.js"></script>
 	<script src="https://api-maps.yandex.ru/v3/?apikey=62e3fbe2-5fc5-4b7d-b9f0-86acc43edb26&lang=ru_RU"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script defer src="./js/air-datepicker.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script defer src="./js/modal.js"></script>
-	<script defer src="./js/hide-triangle.js"></script>
 	<script defer src="./js/burger.js"></script>
 	<script defer src="./js/accord.js"></script>
 	<script defer src="./js/map.js"></script>
-	<script defer src="./js/validate.js"></script>
+	<!-- <script defer src="./js/validate.js"></script> -->
 	<script defer src="./js/datepicker.js"></script>
 	<script defer src="./js/swiper.js"></script>
 
@@ -59,7 +60,7 @@
 						<ul class="navigation__list">
 							<li class="navigation__item"><a class="navigation__link" href="./index.html#halls">Залы</a></li>
 							<li class="navigation__item"><a class="navigation__link" href="./index.html#about">О нас</a></li>
-							<li class="navigation__item"><a class="navigation__link" href="./index.html#reserv">Бронь</a></li>
+							<li class="navigation__item"><a class="navigation__link" href="./index.html#reserve">Бронь</a></li>
 							<li class="navigation__item"><a class="navigation__link" href="./index.html#reviews">Отзывы</a></li>
 							<li class="navigation__item"><a class="navigation__link" href="./index.html#contacts">Контакты</a></li>
 						</ul>
@@ -72,7 +73,7 @@
 						<ul class="burger-nav">
 							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#halls">Залы</a></li>
 							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#about">О нас</a></li>
-							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#reserv">Бронь</a></li>
+							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#reserve">Бронь</a></li>
 							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#reviews">Отзывы</a></li>
 							<li class="burger-nav__item"><a class="burger-nav__link" href="./index.html#contacts">Контакты</a></li>
 						</ul>
@@ -105,7 +106,7 @@
 					<input name="phone" id="modal-phone" type="tel">
 				</div>
 
-				<button class="reserv-form__submit reserv-form__submit--modal" type="submit">Позвоните мне</button>
+				<button class="reserve-form__submit reserve-form__submit--modal" type="submit">Позвоните мне</button>
 			</form>
 
 
@@ -129,7 +130,7 @@
 					</div>
 				</div>
 
-				<a class="hero__button" href="./index.html#reserv">Забронировать</a>
+				<a class="hero__button" href="./index.html#reserve">Забронировать</a>
 
 				<a class="anchor-button" href="#services">
 					<svg width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -180,136 +181,120 @@
 			</div>
 		</section>
 
-		<section class="section reserv" id="reserv">
+		<section class="section reserve" id="reserve">
 			<div class="container">
 				<h2 class="section__title reserv__title">Забронировать зал просто</h2>
-				<form class="reserv-form" method="post">
-					<fieldset class="reserv-form__halls">
-						<h3 class="reserv-form__title">Выбери зал</h3>
+				<form class="reserve-form" method="post">
+					<fieldset style="display: none;" class="reserve-form__halls">
+						<legend class="reserve-form__legend">Выбери зал</legend>
 
-						<div class="reserv-form__halls-wrapper">
-							<input class="halls-radio" type="radio" name="hall" value="vibes" id="vibes">
-							<label for="vibes">80’s vibes</label>
+						<label class="hall-radio hall-radio--vibes" for="vibes">
+							<input class="visually-hidden" type="radio" name="hall" value="vibes" id="vibes">
+							<span>80’s vibes</span>
+						</label>
 
-							<input class="halls-radio" type="radio" name="hall" value="star-wars" id="star-wars">
-							<label for="star-wars">Star wars</label>
+						<label class="hall-radio hall-radio--star-wars" for="star-wars">
+							<input class="visually-hidden" type="radio" name="hall" value="star-wars" id="star-wars">
+							<span>Star wars</span>
+						</label>
 
-							<input class="halls-radio" type="radio" name="hall" value="west" id="west">
-							<label for="west">wild west</label>
+						<label class="hall-radio hall-radio--west" for="west">
+							<input class="visually-hidden" type="radio" name="hall" value="west" id="west">
+							<span>wild west</span>
+						</label>
 
-							<input class="halls-radio" type="radio" name="hall" value="neon" id="neon">
-							<label for="neon">neon style</label>
-						</div>
+						<label class="hall-radio hall-radio--neon" for="neon">
+							<input class="visually-hidden" type="radio" name="hall" value="neon" id="neon">
+							<span>neon style</span>
+						</label>
 					</fieldset>
 
-					<fieldset class="reserv-form__kit">
-						<h3 class="reserv-form__title">Собери набор развлечений</h3>
-						<div class="reserv-form__kit-wrapper">
-							<div class="reserv-form__kit-col">
-								<h4 class="reserv-form__title reserv-form__title--subtitle">Приставка:</h4>
+					<div style="display: none;" class="reserve-form__kit">
+						<h3 class="reserve-form__legend">Собери набор развлечений</h3>
+						<fieldset class="reserve-form__column">
+							<legend class="reserve-form__legend reserve-form__legend--nested">Приставка:</legend>
+							<label class="reserve-form__label reserve-form__label--radio" for="playstation">
+								<input class="visually-hidden" type="radio" name="console" value="playstation" id="playstation">
+								<span>PlayStation 5</span>
+							</label>
+							<label class="reserve-form__label reserve-form__label--radio" for="sega">
+								<input class="visually-hidden" type="radio" name="console" value="sega" id="sega">
+								<span>Sega Mega Drive</span>
+							</label>
+							<label class="reserve-form__label reserve-form__label--radio" for="xbox">
+								<input class="visually-hidden" type="radio" name="console" value="xbox" id="xbox">
+								<span>X-box One S</span>
+							</label>
+							<label class="reserve-form__label reserve-form__label--radio" for="dendy">
+								<input class="visually-hidden" type="radio" name="console" value="dendy" id="dendy">
+								<span>Dendy</span>
+							</label>
+						</fieldset>
+						<fieldset class="reserve-form__column">
+							<legend class="reserve-form__legend reserve-form__legend--nested">Настольные игры</legend>
+							<label class="reserve-form__label">
+								<input class="visually-hidden" type="checkbox" id="jenga" name="jenga">
+								<span>Jenga</span>
+							</label>
+							<label class="reserve-form__label">
+								<input class="visually-hidden" type="checkbox" id="monopoly" name="monopoly">
+								<span>Monopoly</span>
+							</label>
+							<label class="reserve-form__label">
+								<input class="visually-hidden" type="checkbox" id="munchkin" name="munchkin">
+								<span>Манчкин</span>
+							</label>
+							<label class="reserve-form__label">
+								<input class="visually-hidden" type="checkbox" id="alias" name="alias">
+								<span>Alias</span>
+							</label>
+						</fieldset>
+						<fieldset class="reserve-form__column">
+							<legend class="reserve-form__legend reserve-form__legend--nested">Дополнительно</legend>
+							<label class="reserve-form__label">
+								<input class="visually-hidden" type="checkbox" id="karaoke" name="karaoke">
+								<span>Караоке</span>
+							</label>
+							<label class="reserve-form__label">
+								<input class="visually-hidden" type="checkbox" id="vr" name="vr">
+								<span>VR</span>
+							</label>
+						</fieldset>
 
-								<div class="reserv-form__kit-block">
+					</div>
 
-									<div class="reserv-form__kit-button">
-										<input type="radio" name="console" value="ps" id="ps">
-										<label for="ps">PlayStation 5</label>
-									</div>
-
-									<div class="reserv-form__kit-button">
-										<input type="radio" name="console" value="smd" id="smd">
-										<label for="smd">Sega Mega Drive</label>
-									</div>
-
-									<div class="reserv-form__kit-button">
-										<input type="radio" name="console" value="xbox" id="xbox">
-										<label for="xbox">X-box One S</label>
-									</div>
-
-									<div class="reserv-form__kit-button">
-										<input type="radio" name="console" value="dendy" id="dendy">
-										<label for="dendy">Dendy</label>
-									</div>
-								</div>
-							</div>
-
-							<div class="reserv-form__kit-col">
-								<h4 class="reserv-form__title reserv-form__title--subtitle">Настольные игры</h4>
-
-								<div class="reserv-form__kit-block">
-									<div class="reserv-form__kit-button">
-										<input type="checkbox" name="board-game" value="jenga" id="jenga">
-										<label for="jenga">Jenga</label>
-									</div>
-
-									<div class="reserv-form__kit-button">
-										<input type="checkbox" name="board-game" value="monopoly" id="monopoly">
-										<label for="monopoly">Monopoly</label>
-									</div>
-
-									<div class="reserv-form__kit-button">
-										<input type="checkbox" name="board-game" value="manchkin" id="manchkin">
-										<label for="manchkin">Манчкин</label>
-									</div>
-
-									<div class="reserv-form__kit-button">
-										<input type="checkbox" name="board-game" value="alias" id="alias">
-										<label for="alias">Alias</label>
-									</div>
-								</div>
-							</div>
-
-							<div class="reserv-form__kit-col">
-								<h4 class="reserv-form__title reserv-form__title--subtitle">Дополнительно</h4>
-
-								<div class="reserv-form__kit-block">
-									<div class="reserv-form__kit-button">
-										<input type="checkbox" name="additional" value="karaoke" id="karaoke">
-										<label for="karaoke">Караоке</label>
-									</div>
-
-									<div class="reserv-form__kit-button">
-										<input type="checkbox" name="additional" value="vr" id="vr">
-										<label for="vr">VR</label>
-									</div>
-								</div>
-							</div>
+					<fieldset class="reserve-form__data">
+						<legend class="reserve-form__legend">Выбери дату и время</legend>
+						<div class="reserve-form__date-time">
+							<label for="datepicker" class="reserve-form__input reserve-form__input--select">
+								<input type="text" id="datepicker" placeholder="">
+								<span>Дата</span>
+							</label>
+							<label for="time" class="reserve-form__input reserve-form__input--select">
+								<input type="text" id="time" placeholder="">
+								<span>Время</span>
+							</label>
 						</div>
-					</fieldset>
-
-					<fieldset class="reserv-form__contacts">
-						<h3 class="reserv-form__title reserv-form__title--contacts">Выбери дату и время</h3>
-
-						<div class="reserv-form__contacts-wrapper">
-							<div class="reserv-form__contacts-col">
-								<div class="date-time__wrapper">
-									<div class="date-wrapper">
-										<input type="text" id="date" name="date" placeholder="Дата"> <!-- onfocus="(this.type='date')" onblur="(this.type='text')" -->
-									</div>
-
-									<div class="time-wrapper">
-										<input type="text" id="time" name="time" placeholder="Время">
-									</div>
-								</div>
-
-								<div class="person-count">
-									<input type="number" class="person-count__input" name="person" id="person" placeholder="Сколько человек">
-								</div>
-							</div>
-
-							<div class="reserv-form__contacts-col">
-								<div class="reserv-form__name-wrapper"><input class="reserv-form__name" type="text" id="name" name="name"></div>
-
-								<div class="reserv-form__surname-wrapper"><input class="reserv-form__surname" type="text" id="surname" name="surname"></div>
-							</div>
-
-							<div class="reserv-form__contacts-col">
-								<div class="reserv-form__phone-wrapper"><input class="reserv-form__phone" type="tel" id="tel" name="phone"></div>
-
-								<div class="reserv-form__mail-wrapper"><input class="reserv-form__mail" type="email" id="mail" name="email"></div>
-							</div>
-						</div>
-
-						<button class="reserv-form__submit" type="submit">Забронировать</button>
+						<label for="people" class="reserve-form__input reserve-form__input--select">
+							<input type="text" id="people" placeholder="">
+							<span>Сколько человек</span>
+						</label>
+						<label for="name" class="reserve-form__input reserve-form__input--name">
+							<input type="text" id="name" placeholder="">
+							<span>Имя</span>
+						</label>
+						<label for="phone" class="reserve-form__input reserve-form__input--phone">
+							<input type="text" id="phone" placeholder="">
+							<span>Телефон</span>
+						</label>
+						<label for="surname" class="reserve-form__input reserve-form__input--surname">
+							<input type="text" id="surname" placeholder="">
+							<span>Фамилия</span>
+						</label>
+						<label for="email" class="reserve-form__input reserve-form__input--email">
+							<input type="text" id="email" placeholder="">
+							<span>E-mail</span>
+						</label>
 					</fieldset>
 				</form>
 			</div>
@@ -372,37 +357,34 @@
 			</div>
 		</section>
 
-	</main>
-	<div class="svg-background"></div>
-
-
-	<section class="faq section" id="faq">
-		<div class="container">
-			<h2 class="section__title faq__title">Частые вопросы</h2>
-			<div class="faq__list">
-				<h3 class="faq__acc-header">Можно ли забронировать комнату онлайн?</h3>
-				<div class="faq__acc-content">
-					<p>Да, забронировать комнату вы&nbsp;можете онлайн, заполнив форму на&nbsp;нашем сайте. Также вы&nbsp;можете забронировать комнату позвонив по&nbsp;телефону&nbsp;<a href="tel:+79999584838">8 (999) 958&nbsp;- 48&nbsp;- 38</a></p>
-				</div>
-				<h3 class="faq__acc-header">Могут ли мне вернуть деньги за бронь?</h3>
-				<div class="faq__acc-content">
-					<p>Возврат денежных средств за&nbsp;бронь возможен в&nbsp;определенных случаях. Пожалуйста, свяжитесь с&nbsp;нашей службой поддержки клиентов для получения более подробной информации по&nbsp;вашему запросу.</p>
-				</div>
-				<h3 class="faq__acc-header">Какая комната самая популярная?</h3>
-				<div class="faq__acc-content">
-					<p>Наиболее популярная комната среди наших гостей&nbsp;&mdash; NEON STYLE.</p>
-				</div>
-				<h3 class="faq__acc-header">Как получить VIP карту?</h3>
-				<div class="faq__acc-content">
-					<p>Получить VIP карту легко! Просто сделайте бронирование в&nbsp;нашем игровом клубе и&nbsp;начните собирать баллы лояльности. Каждое ваше посещение приближает вас к&nbsp;VIP статусу, который откроет доступ к&nbsp;эксклюзивным акциям, персональному обслуживанию и&nbsp;многим другим привилегиям. Чем больше вы&nbsp;играете, тем быстрее достигнете нашего VIP уровня!</p>
-				</div>
-				<h3 class="faq__acc-header">Какая комната самая популярная?</h3>
-				<div class="faq__acc-content">
-					<p>Наиболее популярная комната среди наших гостей&nbsp;&mdash; NEON STYLE.</p>
+		<section class="faq section" id="faq">
+			<div class="container">
+				<h2 class="section__title faq__title">Частые вопросы</h2>
+				<div class="faq__list">
+					<h3 class="faq__acc-header">Можно ли забронировать комнату онлайн?</h3>
+					<div class="faq__acc-content">
+						<p>Да, забронировать комнату вы&nbsp;можете онлайн, заполнив форму на&nbsp;нашем сайте. Также вы&nbsp;можете забронировать комнату позвонив по&nbsp;телефону&nbsp;<a href="tel:+79999584838">8 (999) 958&nbsp;- 48&nbsp;- 38</a></p>
+					</div>
+					<h3 class="faq__acc-header">Могут ли мне вернуть деньги за бронь?</h3>
+					<div class="faq__acc-content">
+						<p>Возврат денежных средств за&nbsp;бронь возможен в&nbsp;определенных случаях. Пожалуйста, свяжитесь с&nbsp;нашей службой поддержки клиентов для получения более подробной информации по&nbsp;вашему запросу.</p>
+					</div>
+					<h3 class="faq__acc-header">Какая комната самая популярная?</h3>
+					<div class="faq__acc-content">
+						<p>Наиболее популярная комната среди наших гостей&nbsp;&mdash; NEON STYLE.</p>
+					</div>
+					<h3 class="faq__acc-header">Как получить VIP карту?</h3>
+					<div class="faq__acc-content">
+						<p>Получить VIP карту легко! Просто сделайте бронирование в&nbsp;нашем игровом клубе и&nbsp;начните собирать баллы лояльности. Каждое ваше посещение приближает вас к&nbsp;VIP статусу, который откроет доступ к&nbsp;эксклюзивным акциям, персональному обслуживанию и&nbsp;многим другим привилегиям. Чем больше вы&nbsp;играете, тем быстрее достигнете нашего VIP уровня!</p>
+					</div>
+					<h3 class="faq__acc-header">Какая комната самая популярная?</h3>
+					<div class="faq__acc-content">
+						<p>Наиболее популярная комната среди наших гостей&nbsp;&mdash; NEON STYLE.</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</main>
 	<footer class="footer">
 		<div class="contacts section" id="contacts">
 			<div class="container">
