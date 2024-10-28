@@ -28,7 +28,7 @@
 	background-color: #440f51;
 }
 
-.modal__form {
+.modal-form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -104,7 +104,7 @@
 		padding: 60px 0 88px;
 	}
 
-	.modal__form {
+	.modal-form {
 		max-width: 280px;
 		gap: 50px;
 	}

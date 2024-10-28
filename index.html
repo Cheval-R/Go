@@ -95,7 +95,7 @@
 					<rect x="3.55957" width="54.3632" height="5.03363" rx="2" transform="rotate(45 3.55957 0)" />
 				</svg>
 			</button>
-			<form class="modal__form">
+			<form class="modal-form">
 				<div class="input-field">
 					<label for="name">Имя</label>
 					<input name="name" id="modal-name" type="text">
@@ -106,7 +106,7 @@
 					<input name="phone" id="modal-phone" type="tel">
 				</div>
 
-				<button class="reserve-form__submit reserve-form__submit--modal" type="submit">Позвоните мне</button>
+				<button class="button-submit" type="submit">Позвоните мне</button>
 			</form>
 
 
@@ -185,7 +185,7 @@
 			<div class="container">
 				<h2 class="section__title reserv__title">Забронировать зал просто</h2>
 				<form class="reserve-form" method="post">
-					<fieldset style="display: none;" class="reserve-form__halls">
+					<fieldset class="reserve-form__halls">
 						<legend class="reserve-form__legend">Выбери зал</legend>
 
 						<label class="hall-radio hall-radio--vibes" for="vibes">
@@ -209,7 +209,7 @@
 						</label>
 					</fieldset>
 
-					<div style="display: none;" class="reserve-form__kit">
+					<div class="reserve-form__kit">
 						<h3 class="reserve-form__legend">Собери набор развлечений</h3>
 						<fieldset class="reserve-form__column">
 							<legend class="reserve-form__legend reserve-form__legend--nested">Приставка:</legend>
@@ -271,12 +271,12 @@
 								<span>Дата</span>
 							</label>
 							<label for="time" class="reserve-form__input reserve-form__input--select">
-								<input type="text" id="time" placeholder="">
+								<input type="number" id="time" placeholder="">
 								<span>Время</span>
 							</label>
 						</div>
 						<label for="people" class="reserve-form__input reserve-form__input--select">
-							<input type="text" id="people" placeholder="">
+							<input type="number" id="people" placeholder="">
 							<span>Сколько человек</span>
 						</label>
 						<label for="name" class="reserve-form__input reserve-form__input--name">
@@ -296,6 +296,7 @@
 							<span>E-mail</span>
 						</label>
 					</fieldset>
+					<button style="display: none;" class="button-submit">забронировать</button>
 				</form>
 			</div>
 		</section>
